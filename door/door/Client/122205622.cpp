@@ -15,7 +15,7 @@ static char THIS_FILE[] = __FILE__;
 #endif
 
 /////////////////////////////////////////////////////////////////////////////
-// CWindsApp1111111
+// CWindsApp1111111777777777
 
 BEGIN_MESSAGE_MAP(CWindsApp, CWinApp)
 	//{{AFX_MSG_MAP(CWindsApp)
