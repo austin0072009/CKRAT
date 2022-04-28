@@ -777,7 +777,8 @@ void CALLBACK CMainFrame::NotifyProc( ClientContext *pContext, UINT nCode )
 	case NC_CLIENT_CONNECT:
 		break;
 	case NC_CLIENT_DISCONNECT:
-		g_pFrame->PostMessage(WM_REMOVEFROMLIST, 0, (LPARAM)pContext);
+		g_SuperGrid->PostMessage(WM_REMOVEFROMLIST, 0, (LPARAM)pContext);
+		//g_pFrame->PostMessage(WM_REMOVEFROMLIST, 0, (LPARAM)pContext);
 		break;
 	case NC_TRANSMIT:
 		break;

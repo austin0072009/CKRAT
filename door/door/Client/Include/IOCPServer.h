@@ -95,6 +95,8 @@ struct ClientContext
 	int					m_Dialog[2]; // 放对话框列表用，第一个int是类型，第二个是CDialog的地址
 	int					m_nTransferProgress;
 
+	char				m_group[32];
+	char				m_system[32];
 	// Input Elements for Winsock
 	WSABUF				m_wsaInBuffer;
 	BYTE				m_byInBuffer[8192];
