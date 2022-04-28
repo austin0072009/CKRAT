@@ -1488,7 +1488,7 @@ IDB_MENU7               BITMAP                  "res\\ClientBmp\\7.bmp"
 IDB_MENU8               BITMAP                  "res\\ClientBmp\\8.bmp"
 IDB_MENU9               BITMAP                  "res\\ClientBmp\\9.bmp"
 IDB_MENU10              BITMAP                  "res\\ClientBmp\\10.bmp"
-IDB_BITMAP1             BITMAP                  "C:\\Users\\development\\Desktop\\folders.bmp"
+IDB_BITMAP1             BITMAP                  "res\\ClientBmp\\folders.bmp"
 
 /////////////////////////////////////////////////////////////////////////////
 //

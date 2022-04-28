@@ -1,16 +1,16 @@
-﻿生成启动时间为 2022/4/18 20:00:22。
-     1>项目“C:\Users\development\Desktop\door\door\ShllCodeDec\ShllCodeDec.vcxproj”在节点 2 上(build 个目标)。
+﻿生成启动时间为 2022/4/28 19:41:54。
+     1>项目“C:\Users\andi\Documents\GitHub\CKRAT\door\door\ShllCodeDec\ShllCodeDec.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在对“.\Release\ShllCodeDec.unsuccessfulbuild”执行 Touch 任务。
        ClCompile:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Ob1 /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /GF /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp".\Release\ShllCodeDec.pch" /Fo".\Release\\" /Fd".\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt StdAfx.cpp  "stdafx.h"  "stdafx.h"
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Ob1 /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /GF /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp".\Release\ShllCodeDec.pch" /Fo".\Release\\" /Fd".\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt StdAfx.cpp  "stdafx.h"  "stdafx.h"
          StdAfx.cpp
          stdafx.h
      1>stdafx.h(24): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
          stdafx.h
      1>stdafx.h(24): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
-     1>已完成生成项目“C:\Users\development\Desktop\door\door\ShllCodeDec\ShllCodeDec.vcxproj”(build 个目标)的操作 - 失败。
+     1>已完成生成项目“C:\Users\andi\Documents\GitHub\CKRAT\door\door\ShllCodeDec\ShllCodeDec.vcxproj”(build 个目标)的操作 - 失败。
 
 生成失败。
 
-已用时间 00:00:00.13
+已用时间 00:00:01.27

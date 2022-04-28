@@ -1,84 +1,22 @@
-﻿生成启动时间为 2022/4/27 23:36:12。
-     1>项目“C:\Users\development\Desktop\door\door\Client\Client.vcxproj”在节点 2 上(build 个目标)。
+﻿生成启动时间为 2022/4/28 20:45:46。
+     1>项目“C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Client.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在创建“.\Release\Client.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
          所有输出均为最新。
          所有输出均为最新。
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IInclude /I..\common /Zi /nologo /W0 /WX- /Od /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm- /EHsc /MT /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release\\" /Fd".\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt MySuperGrid.cpp  /Zm1000 
-         MySuperGrid.cpp
-         _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
-         Automatically linking with ToolkitPro1501vc100S.lib
+         所有输出均为最新。
          所有输出均为最新。
        ResourceCompile:
          所有输出均为最新。
        Link:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Release\Client.exe" /INCREMENTAL:NO /NOLOGO ..\common\libxvidcore.lib ..\common\va_g729a.lib nafxcw.lib /MANIFEST:NO /DEBUG /PDB:"C:\Users\development\Desktop\door\door\Client\Release\Client.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Release\Client.lib" /MACHINE:X86 .\Release\Client.res
-         .\Release\Audio.obj
-         .\Release\122205622.obj
-         .\Release\122205622Doc.obj
-         .\Release\122205622View.obj
-         .\Release\AudioDlg.obj
-         .\Release\BmpToAvi.obj
-         .\Release\Buffer.obj
-         .\Release\ChangeGroup.obj
-         .\Release\cJSON.obj
-         .\Release\Client.obj
-         .\Release\ClientDoc.obj
-         .\Release\ClientView.obj
-         .\Release\Dib.obj
-         .\Release\Download.obj
-         .\Release\FileAttr.obj
-         .\Release\FileManagerDlg.obj
-         .\Release\FileTransferModeDlg.obj
-         .\Release\Generate.obj
-         .\Release\HtmlCtrl.obj
-         .\Release\Icons.obj
-         .\Release\IniFile.obj
-         .\Release\InputDlg.obj
-         .\Release\IOCPServer.obj
-         .\Release\KeyBoardDlg.obj
-         .\Release\LFileName.obj
-         .\Release\Login.obj
-         .\Release\LogView.obj
-         .\Release\MainFrm.obj
-         .\Release\MapDlg.obj
-         .\Release\MsgBox.obj
-         .\Release\MySuperGrid.obj
-         .\Release\OpenProxy.obj
-         .\Release\Openweb.obj
-         .\Release\PcView.obj
-         .\Release\PictureEx.obj
-         .\Release\ProxyMapDlg.obj
-         .\Release\QQInfoDlg.obj
-         .\Release\RegeditDlg.obj
-         .\Release\RegeditTextDlg.obj
-         .\Release\ScreenSpyDlg.obj
-         .\Release\ServiceDlg.obj
-         .\Release\ServiceInfoDlg.obj
-         .\Release\Setting.obj
-         .\Release\SEU_QQwry.obj
-         .\Release\ShellDlg.obj
-         .\Release\ShowWave.obj
-         .\Release\SortListCtrl.obj
-         .\Release\SoundToWav.obj
-         .\Release\Start.obj
-         .\Release\StdAfx.obj
-         .\Release\supergridctrl.obj
-         .\Release\SystemDlg.obj
-         .\Release\Systeminfo.obj
-         .\Release\TextChatDlg.obj
-         .\Release\Tools.obj
-         .\Release\TrueColorToolBar.obj
-         .\Release\Weather.obj
-         .\Release\WebCamDlg.obj
-         .\Release\XvidDec.obj
-         Client.vcxproj -> C:\Users\development\Desktop\door\door\Client\.\Release\Client.exe
+         所有输出均为最新。
+         Client.vcxproj -> C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\.\Release\Client.exe
        FinalizeBuildStatus:
          正在删除文件“.\Release\Client.unsuccessfulbuild”。
          正在对“.\Release\Client.lastbuildstate”执行 Touch 任务。
-     1>已完成生成项目“C:\Users\development\Desktop\door\door\Client\Client.vcxproj”(build 个目标)的操作。
+     1>已完成生成项目“C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Client.vcxproj”(build 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:06.98
+已用时间 00:00:00.25

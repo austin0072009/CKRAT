@@ -42,9 +42,9 @@
     <OutDir>.\Release\</OutDir>
     <IntDir>.\Release\</IntDir>
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\Users\development\Desktop\class;$(IncludePath)</IncludePath>
-    <ReferencePath>C:\Users\development\Desktop\class\Lib;$(ReferencePath)</ReferencePath>
-    <LibraryPath>C:\Users\development\Desktop\class\Lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\andi\Desktop\class;$(IncludePath)</IncludePath>
+    <ReferencePath>C:\Users\andi\Desktop\class\Lib;$(ReferencePath)</ReferencePath>
+    <LibraryPath>C:\Users\andi\Desktop\class\Lib;$(LibraryPath)</LibraryPath>
     <GenerateManifest>false</GenerateManifest>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

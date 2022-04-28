@@ -268,8 +268,8 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 		return -1;
 	}
 
-	m_wndStatusBar.SetPaneInfo(0, m_wndStatusBar.GetItemID(0), SBPS_STRETCH, NULL);
-	m_wndStatusBar.SetPaneInfo(1, m_wndStatusBar.GetItemID(1), SBPS_NORMAL, 121);
+	m_wndStatusBar.SetPaneInfo(0, m_wndStatusBar.GetItemID(0), SBPS_STRETCH, NULL);//fasong kuang
+	m_wndStatusBar.SetPaneInfo(1, m_wndStatusBar.GetItemID(1), SBPS_NORMAL, 121);//jieshou
 	m_wndStatusBar.SetPaneInfo(2, m_wndStatusBar.GetItemID(2), SBPS_NORMAL, 121);
 	m_wndStatusBar.SetPaneInfo(3, m_wndStatusBar.GetItemID(3), SBPS_NORMAL, 100);
 	RepositionBars(AFX_IDW_CONTROLBAR_FIRST, AFX_IDW_CONTROLBAR_LAST, 0); //显示状态栏
@@ -335,7 +335,7 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 		
 	LoadCommandBars(_T("CommandBars"));
 
-	CreateMessageBar("         Mandm远程管理系统,禁止用于一切非法用途,对使用者造成的一切损失,后果自负! 收徒学习免杀联系Qq794812423 ");
+	/*CreateMessageBar(" ");*/
 
 	LoadIcons();  //菜单图片显示
 

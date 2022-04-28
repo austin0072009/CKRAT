@@ -1,9 +1,9 @@
-﻿// Created by Microsoft (R) C/C++ Compiler Version 10.00.30319.01 (a833ab98).
+﻿// Created by Microsoft (R) C/C++ Compiler Version 10.00.30319.01 (c9dbbd34).
 //
-// c:\users\development\desktop\door\door\server\release\msxml3.tlh
+// c:\users\andi\documents\github\ckrat\door\door\server\release\msxml3.tlh
 //
 // C++ source equivalent of Win32 type library msxml3.dll
-// compiler-generated file created 04/18/22 at 20:05:31 - DO NOT EDIT!
+// compiler-generated file created 04/28/22 at 19:42:00 - DO NOT EDIT!
 
 #pragma once
 #pragma pack(push, 8)
@@ -4966,7 +4966,7 @@ ISchemaNotation : ISchemaItem
 // Wrapper method implementations
 //
 
-#include "c:\users\development\desktop\door\door\server\release\msxml3.tli"
+#include "c:\users\andi\documents\github\ckrat\door\door\server\release\msxml3.tli"
 
 } // namespace MSXML2
 
