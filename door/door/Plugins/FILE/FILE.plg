@@ -1,0 +1,58 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: FILE - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP9991.tmp" with contents
+[
+/nologo /MD /w /W0 /GX /O2 /I "..\..\common" /I "..\\" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_DLL" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Users\Administrator\Desktop\DLL +改了通讯头+UI\Plugins\Buffer.cpp"
+"C:\Users\Administrator\Desktop\DLL +改了通讯头+UI\Plugins\ClientSocket.cpp"
+"C:\Users\Administrator\Desktop\DLL +改了通讯头+UI\Plugins\FILE\FILE.cpp"
+"C:\Users\Administrator\Desktop\DLL +改了通讯头+UI\Plugins\FILE\FileManager.cpp"
+"C:\Users\Administrator\Desktop\DLL +改了通讯头+UI\Plugins\Manager.cpp"
+"C:\Users\Administrator\Desktop\DLL +改了通讯头+UI\Plugins\until.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP9991.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP9992.tmp" with contents
+[
+/nologo /MD /w /W0 /GX /O2 /I "..\..\common" /I "..\\" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_DLL" /Fp"Release/FILE.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Users\Administrator\Desktop\DLL +改了通讯头+UI\Plugins\FILE\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP9992.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP9993.tmp" with contents
+[
+ws2_32.lib advapi32.lib Wininet.lib shell32.lib /nologo /dll /incremental:no /pdb:"Release/FILE.pdb" /machine:I386 /out:"..\..\Bin\Plugins\FILE.dll" /implib:"Release/FILE.lib" 
+".\Release\Buffer.obj"
+".\Release\ClientSocket.obj"
+".\Release\FILE.obj"
+".\Release\FileManager.obj"
+".\Release\Manager.obj"
+".\Release\StdAfx.obj"
+".\Release\until.obj"
+]
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP9993.tmp"
+<h3>Output Window</h3>
+Compiling...
+StdAfx.cpp
+Compiling...
+Buffer.cpp
+ClientSocket.cpp
+FILE.cpp
+FileManager.cpp
+Manager.cpp
+until.cpp
+Generating Code...
+Linking...
+   Creating library Release/FILE.lib and object Release/FILE.exp
+
+
+
+<h3>Results</h3>
+FILE.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

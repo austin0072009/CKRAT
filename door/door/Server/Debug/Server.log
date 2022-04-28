@@ -1,0 +1,81 @@
+﻿生成启动时间为 2022/4/18 13:28:05。
+     1>项目“C:\Users\development\Desktop\door\door\Server\Server.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在对“.\Debug\Server.unsuccessfulbuild”执行 Touch 任务。
+       ClCompile:
+         所有输出均为最新。
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp".\Debug\Server.pch" /Fo".\Debug\\" /Fd".\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ClientSocket.cpp Server.cpp common\Buffer.cpp common\KernelManager.cpp common\Manager.cpp common\MemoryModule.cpp common\until.cpp
+         until.cpp
+     1>c:\users\development\desktop\door\door\server\common\until.cpp(4): warning C4627: “#include <process.h>”: 在查找预编译头使用时跳过
+                 将指令添加到“stdafx.h”或重新生成预编译头
+     1>c:\users\development\desktop\door\door\server\common\until.cpp(5): warning C4627: “#include <tlhelp32.h>”: 在查找预编译头使用时跳过
+                 将指令添加到“stdafx.h”或重新生成预编译头
+     1>c:\users\development\desktop\door\door\server\common\until.cpp(6): warning C4627: “#include <wininet.h>”: 在查找预编译头使用时跳过
+                 将指令添加到“stdafx.h”或重新生成预编译头
+     1>c:\users\development\desktop\door\door\server\common\until.cpp(7): warning C4627: “#include "until.h"”: 在查找预编译头使用时跳过
+                 将指令添加到“stdafx.h”或重新生成预编译头
+     1>c:\users\development\desktop\door\door\server\common\until.cpp(320): warning C4627: “#include <STDIO.H>”: 在查找预编译头使用时跳过
+                 将指令添加到“stdafx.h”或重新生成预编译头
+     1>c:\users\development\desktop\door\door\server\common\until.cpp(553): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
+         MemoryModule.cpp
+     1>c:\users\development\desktop\door\door\server\common\memorymodule.cpp(10): warning C4005: “POINTER_TYPE”: 宏重定义
+                 c:\users\development\desktop\door\door\server\common\memorymodule.cpp(8) : 参见“POINTER_TYPE”的前一个定义
+     1>c:\users\development\desktop\door\door\server\common\memorymodule.cpp(13): warning C4627: “#include <Windows.h>”: 在查找预编译头使用时跳过
+                 将指令添加到“stdafx.h”或重新生成预编译头
+     1>c:\users\development\desktop\door\door\server\common\memorymodule.cpp(17): warning C4627: “#include "until.h"”: 在查找预编译头使用时跳过
+                 将指令添加到“stdafx.h”或重新生成预编译头
+     1>c:\users\development\desktop\door\door\server\common\memorymodule.cpp(24): warning C4627: “#include "MemoryModule.h"”: 在查找预编译头使用时跳过
+                 将指令添加到“stdafx.h”或重新生成预编译头
+     1>c:\users\development\desktop\door\door\server\common\memorymodule.cpp(477): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
+         Manager.cpp
+     1>c:\users\development\desktop\door\door\server\common\manager.cpp(5): warning C4627: “#include "Manager.h"”: 在查找预编译头使用时跳过
+                 将指令添加到“stdafx.h”或重新生成预编译头
+     1>c:\users\development\desktop\door\door\server\common\manager.cpp(37): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
+         KernelManager.cpp
+     1>c:\users\development\desktop\door\door\server\common\kernelmanager.cpp(5): warning C4627: “#include "KernelManager.h"”: 在查找预编译头使用时跳过
+                 将指令添加到“stdafx.h”或重新生成预编译头
+     1>c:\users\development\desktop\door\door\server\common\kernelmanager.cpp(6): warning C4627: “#include "Loop.h"”: 在查找预编译头使用时跳过
+                 将指令添加到“stdafx.h”或重新生成预编译头
+     1>c:\users\development\desktop\door\door\server\common\kernelmanager.cpp(136): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
+         Buffer.cpp
+     1>c:\users\development\desktop\door\door\server\common\buffer.cpp(4): warning C4627: “#include "Buffer.h"”: 在查找预编译头使用时跳过
+                 将指令添加到“stdafx.h”或重新生成预编译头
+     1>c:\users\development\desktop\door\door\server\common\buffer.cpp(5): warning C4627: “#include "math.h"”: 在查找预编译头使用时跳过
+                 将指令添加到“stdafx.h”或重新生成预编译头
+     1>c:\users\development\desktop\door\door\server\common\buffer.cpp(198): fatal error C1010: 在查找预编译头时遇到意外的文件结尾。是否忘记了向源中添加“#include "stdafx.h"”?
+         Server.cpp
+     1>c:\users\development\desktop\door\door\server\common\login.h(40): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(110) : 参见“strcat”的声明
+     1>c:\users\development\desktop\door\door\server\common\login.h(114): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : 参见“strcpy”的声明
+     1>c:\users\development\desktop\door\door\server\common\login.h(117): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(110) : 参见“strcat”的声明
+     1>c:\users\development\desktop\door\door\server\common\login.h(119): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(110) : 参见“strcat”的声明
+     1>c:\users\development\desktop\door\door\server\common\login.h(125): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : 参见“strcpy”的声明
+     1>c:\users\development\desktop\door\door\server\common\login.h(392): warning C4244: “=”: 从“ULONGLONG”转换到“ULONG”，可能丢失数据
+     1>c:\users\development\desktop\door\door\server\common\login.h(393): warning C4244: “=”: 从“ULONGLONG”转换到“ULONG”，可能丢失数据
+     1>c:\users\development\desktop\door\door\server\common\login.h(419): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : 参见“strcpy”的声明
+     1>c:\users\development\desktop\door\door\server\common\login.h(428): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : 参见“strcpy”的声明
+     1>c:\users\development\desktop\door\door\server\common\login.h(436): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : 参见“strcpy”的声明
+     1>c:\users\development\desktop\door\door\server\common\login.h(439): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : 参见“strcpy”的声明
+     1>c:\users\development\desktop\door\door\server\common\login.h(377): warning C4101: “strPrint”: 未引用的局部变量
+     1>c:\users\development\desktop\door\door\server\server.cpp(203): warning C4101: “ProtectKey2”: 未引用的局部变量
+     1>c:\users\development\desktop\door\door\server\server.cpp(203): warning C4101: “ProtectKey1”: 未引用的局部变量
+     1>c:\users\development\desktop\door\door\server\server.cpp(249): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(188) : 参见“strncpy”的声明
+     1>c:\users\development\desktop\door\door\server\server.cpp(589): error C2440: “初始化”: 无法从“const char *”转换为“char *”
+                 转换丢失限定符
+         ClientSocket.cpp
+     1>c:\users\development\desktop\door\door\server\clientsocket.h(9): fatal error C1083: 无法打开包括文件:“Buffer.h”: No such file or directory
+         正在生成代码...
+     1>已完成生成项目“C:\Users\development\Desktop\door\door\Server\Server.vcxproj”(build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:00.78

@@ -1,0 +1,25 @@
+﻿生成启动时间为 2022/4/18 20:01:00。
+     1>项目“C:\Users\development\Desktop\door\door\ShllCodeDec\ShllCodeDec.vcxproj”在节点 2 上(rebuild 个目标)。
+     1>_PrepareForClean:
+         正在删除文件“Template\ShllCodeDec.lastbuildstate”。
+       InitializeBuildStatus:
+         正在创建“Template\ShllCodeDec.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W1 /WX- /O2 /Oy- /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Template\\" /Fd"Template\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ShllCodeDec.cpp StdAfx.cpp
+         ShllCodeDec.cpp
+         StdAfx.cpp
+         正在生成代码...
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\development\Desktop\door\door\Template\ShllCodeDec.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Template\ShllCodeDec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"C:\Users\development\Desktop\door\door\Template\ShllCodeDec.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\development\Desktop\door\door\Template\ShllCodeDec.lib" /MACHINE:X86 Template\ShllCodeDec.obj
+         Template\StdAfx.obj
+         ShllCodeDec.vcxproj -> C:\Users\development\Desktop\door\door\Template\ShllCodeDec.exe
+       Manifest:
+         c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\development\Desktop\door\door\Template\ShllCodeDec.exe;#1" /manifest Template\ShllCodeDec.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         正在删除文件“Template\ShllCodeDec.unsuccessfulbuild”。
+         正在对“Template\ShllCodeDec.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“C:\Users\development\Desktop\door\door\ShllCodeDec\ShllCodeDec.vcxproj”(rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.52

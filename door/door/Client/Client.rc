@@ -1,0 +1,1626 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+// Generated Help ID header file
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.hm"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\Client.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#include ""l.chs\\afxprint.rc""        // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MGICON_A            ICON                    "res\\guoqiico\\icon209.ico"
+IDR_MAINFRAME           ICON                    "res\\Client.ico"
+IDR_CLIENTTYPE          ICON                    "res\\ClientDoc.ico"
+IDI_ICON99              ICON                    "res\\GuoQiICO\\立陶宛.ico"
+IDI_ICON98              ICON                    "res\\GuoQiICO\\黎巴嫩.ico"
+IDI_ICON97              ICON                    "res\\GuoQiICO\\老挝.ico"
+IDI_ICON96              ICON                    "res\\GuoQiICO\\莱索托.ico"
+IDI_ICON95              ICON                    "res\\GuoQiICO\\拉脱维亚.ico"
+IDI_ICON94              ICON                    "res\\GuoQiICO\\肯尼亚.ico"
+IDI_ICON93              ICON                    "res\\GuoQiICO\\克罗地亚.ico"
+IDI_ICON92              ICON                    "res\\GuoQiICO\\科威特.ico"
+IDI_ICON91              ICON                    "res\\GuoQiICO\\科特迪瓦.ico"
+IDI_ICON90              ICON                    "res\\GuoQiICO\\科摩罗.ico"
+IDI_ICON9               ICON                    "res\\GuoQiICO\\阿塞拜疆.ico"
+IDI_ICON89              ICON                    "res\\GuoQiICO\\卡塔尔.ico"
+IDI_ICON88              ICON                    "res\\GuoQiICO\\喀麦隆.ico"
+IDI_ICON87              ICON                    "res\\GuoQiICO\\津巴布韦.ico"
+IDI_ICON86              ICON                    "res\\GuoQiICO\\捷克.ico"
+IDI_ICON85              ICON                    "res\\GuoQiICO\\柬埔寨.ico"
+IDI_ICON84              ICON                    "res\\GuoQiICO\\加蓬.ico"
+IDI_ICON83              ICON                    "res\\GuoQiICO\\加纳.ico"
+IDI_ICON82              ICON                    "res\\GuoQiICO\\加拿大.ico"
+IDI_ICON81              ICON                    "res\\GuoQiICO\\加勒比海共同体.ico"
+IDI_ICON80              ICON                    "res\\GuoQiICO\\几内亚比绍.ico"
+IDI_ICON8               ICON                    "res\\GuoQiICO\\阿曼.ico"
+IDI_ICON79              ICON                    "res\\GuoQiICO\\几内亚.ico"
+IDI_ICON78              ICON                    "res\\GuoQiICO\\吉尔吉斯斯坦.ico"
+IDI_ICON77              ICON                    "res\\GuoQiICO\\吉布提.ico"
+IDI_ICON76              ICON                    "res\\GuoQiICO\\基里巴斯.ico"
+IDI_ICON75              ICON                    "res\\GuoQiICO\\洪都拉斯.ico"
+IDI_ICON74              ICON                    "res\\GuoQiICO\\荷兰.ico"
+IDI_ICON73              ICON                    "res\\GuoQiICO\\韩国.ico"
+IDI_ICON72              ICON                    "res\\GuoQiICO\\海地.ico"
+IDI_ICON71              ICON                    "res\\GuoQiICO\\哈萨克斯坦.ico"
+IDI_ICON70              ICON                    "res\\GuoQiICO\\国协.ico"
+IDI_ICON7               ICON                    "res\\GuoQiICO\\阿联酋.ico"
+IDI_ICON69              ICON                    "res\\GuoQiICO\\圭亚那.ico"
+IDI_ICON68              ICON                    "res\\GuoQiICO\\古巴.ico"
+IDI_ICON67              ICON                    "res\\GuoQiICO\\格鲁吉亚.ico"
+IDI_ICON66              ICON                    "res\\GuoQiICO\\格林纳达.ico"
+IDI_ICON65              ICON                    "res\\GuoQiICO\\哥斯达黎加.ico"
+IDI_ICON64              ICON                    "res\\GuoQiICO\\哥伦比亚.ico"
+IDI_ICON63              ICON                    "res\\GuoQiICO\\刚果.ico"
+IDI_ICON62              ICON                    "res\\GuoQiICO\\刚果(金).ico"
+IDI_ICON61              ICON                    "res\\GuoQiICO\\冈比亚.ico"
+IDI_ICON60              ICON                    "res\\GuoQiICO\\佛得角.ico"
+IDI_ICON6               ICON                    "res\\GuoQiICO\\阿拉伯国家联盟.ico"
+IDI_ICON59              ICON                    "res\\GuoQiICO\\芬兰.ico"
+IDI_ICON58              ICON                    "res\\GuoQiICO\\斐济.ico"
+IDI_ICON57              ICON                    "res\\GuoQiICO\\菲律宾.ico"
+IDI_ICON56              ICON                    "res\\GuoQiICO\\梵蒂冈.ico"
+IDI_ICON55              ICON                    "res\\GuoQiICO\\法国.ico"
+IDI_ICON54              ICON                    "res\\GuoQiICO\\厄立特里亚.ico"
+IDI_ICON53              ICON                    "res\\GuoQiICO\\厄瓜多尔.ico"
+IDI_ICON52              ICON                    "res\\GuoQiICO\\俄罗斯.ico"
+IDI_ICON51              ICON                    "res\\GuoQiICO\\多米尼克.ico"
+IDI_ICON50              ICON                    "res\\GuoQiICO\\多米尼加.ico"
+IDI_ICON5               ICON                    "res\\GuoQiICO\\阿根廷.ico"
+IDI_ICON49              ICON                    "res\\GuoQiICO\\多哥.ico"
+IDI_ICON48              ICON                    "res\\GuoQiICO\\独立国家国协.ico"
+IDI_ICON47              ICON                    "res\\GuoQiICO\\东南亚国家协会.ico"
+IDI_ICON46              ICON                    "res\\GuoQiICO\\东帝汶.ico"
+IDI_ICON45              ICON                    "res\\GuoQiICO\\德国.ico"
+IDI_ICON44              ICON                    "res\\GuoQiICO\\丹麦.ico"
+IDI_ICON43              ICON                    "res\\GuoQiICO\\赤道几内亚.ico"
+IDI_ICON42              ICON                    "res\\GuoQiICO\\朝鲜.ico"
+IDI_ICON41              ICON                    "res\\GuoQiICO\\布隆迪.ico"
+IDI_ICON40              ICON                    "res\\GuoQiICO\\布基纳法索.ico"
+IDI_ICON4               ICON                    "res\\GuoQiICO\\阿富汗.ico"
+IDI_ICON39              ICON                    "res\\GuoQiICO\\不丹.ico"
+IDI_ICON38              ICON                    "res\\GuoQiICO\\博茨瓦纳.ico"
+IDI_ICON37              ICON                    "res\\GuoQiICO\\玻利维亚.ico"
+IDI_ICON36              ICON                    "res\\GuoQiICO\\波斯尼亚和黑塞哥维那.ico"
+IDI_ICON35              ICON                    "res\\GuoQiICO\\波兰.ico"
+IDI_ICON34              ICON                    "res\\GuoQiICO\\冰岛.ico"
+IDI_ICON33              ICON                    "res\\GuoQiICO\\比利时.ico"
+IDI_ICON32              ICON                    "res\\GuoQiICO\\贝宁.ico"
+IDI_ICON31              ICON                    "res\\GuoQiICO\\北大西洋公约组织.ico"
+IDI_ICON30              ICON                    "res\\GuoQiICO\\保加利亚.ico"
+IDI_ICON3               ICON                    "res\\GuoQiICO\\阿尔及利亚.ico"
+IDI_ICON29              ICON                    "res\\GuoQiICO\\白俄罗斯.ico"
+IDI_ICON28              ICON                    "res\\GuoQiICO\\巴西.ico"
+IDI_ICON27              ICON                    "res\\GuoQiICO\\巴拿马.ico"
+IDI_ICON26              ICON                    "res\\GuoQiICO\\巴林.ico"
+IDI_ICON25              ICON                    "res\\GuoQiICO\\巴勒斯坦.ico"
+IDI_ICON24              ICON                    "res\\GuoQiICO\\巴拉圭.ico"
+IDI_ICON23              ICON                    "res\\GuoQiICO\\巴基斯坦.ico"
+IDI_ICON22              ICON                    "res\\GuoQiICO\\巴哈马.ico"
+IDI_ICON21              ICON                    "res\\GuoQiICO\\巴布亚新几内亚.ico"
+IDI_ICON208             ICON                    "res\\GuoQiICO\\无IP数据库.ico"
+IDI_ICON207             ICON                    "res\\GuoQiICO\\波多黎各.ico"
+IDI_ICON206             ICON                    "res\\GuoQiICO\\台湾省.ico"
+IDI_ICON205             ICON                    "res\\GuoQiICO\\中非.ico"
+IDI_ICON204             ICON                    "res\\GuoQiICO\\智利.ico"
+IDI_ICON203             ICON                    "res\\GuoQiICO\\乍得.ico"
+IDI_ICON202             ICON                    "res\\GuoQiICO\\赞比亚.ico"
+IDI_ICON201             ICON                    "res\\GuoQiICO\\越南.ico"
+IDI_ICON200             ICON                    "res\\GuoQiICO\\约旦.ico"
+IDI_ICON20              ICON                    "res\\GuoQiICO\\巴巴多斯.ico"
+IDI_ICON2               ICON                    "res\\GuoQiICO\\阿尔巴尼亚.ico"
+IDI_ICON199             ICON                    "res\\GuoQiICO\\英国.ico"
+IDI_ICON198             ICON                    "res\\GuoQiICO\\英格兰.ico"
+IDI_ICON197             ICON                    "res\\GuoQiICO\\印度尼西亚.ico"
+IDI_ICON196             ICON                    "res\\GuoQiICO\\印度.ico"
+IDI_ICON195             ICON                    "res\\GuoQiICO\\意大利.ico"
+IDI_ICON194             ICON                    "res\\GuoQiICO\\以色列.ico"
+IDI_ICON193             ICON                    "res\\GuoQiICO\\伊朗.ico"
+IDI_ICON192             ICON                    "res\\GuoQiICO\\伊拉克.ico"
+IDI_ICON191             ICON                    "res\\GuoQiICO\\也门.ico"
+IDI_ICON190             ICON                    "res\\GuoQiICO\\亚美尼亚.ico"
+IDI_ICON19              ICON                    "res\\GuoQiICO\\澳门.ico"
+IDI_ICON189             ICON                    "res\\GuoQiICO\\牙买加.ico"
+IDI_ICON188             ICON                    "res\\GuoQiICO\\叙利亚.ico"
+IDI_ICON187             ICON                    "res\\GuoQiICO\\匈牙利.ico"
+IDI_ICON186             ICON                    "res\\GuoQiICO\\新西兰.ico"
+IDI_ICON185             ICON                    "res\\GuoQiICO\\新加坡.ico"
+IDI_ICON184             ICON                    "res\\GuoQiICO\\香港.ico"
+IDI_ICON183             ICON                    "res\\GuoQiICO\\希腊.ico"
+IDI_ICON182             ICON                    "res\\GuoQiICO\\西萨摩亚.ico"
+IDI_ICON181             ICON                    "res\\GuoQiICO\\西班牙.ico"
+IDI_ICON180             ICON                    "res\\GuoQiICO\\乌兹别克斯坦.ico"
+IDI_ICON18              ICON                    "res\\GuoQiICO\\澳大利亚.ico"
+IDI_ICON179             ICON                    "res\\GuoQiICO\\乌拉圭.ico"
+IDI_ICON178             ICON                    "res\\GuoQiICO\\乌克兰.ico"
+IDI_ICON177             ICON                    "res\\GuoQiICO\\乌干达.ico"
+IDI_ICON176             ICON                    "res\\GuoQiICO\\文莱.ico"
+IDI_ICON175             ICON                    "res\\GuoQiICO\\委内瑞拉.ico"
+IDI_ICON174             ICON                    "res\\GuoQiICO\\危地马拉.ico"
+IDI_ICON173             ICON                    "res\\GuoQiICO\\瓦努阿图.ico"
+IDI_ICON172             ICON                    "res\\GuoQiICO\\土库曼斯坦.ico"
+IDI_ICON171             ICON                    "res\\GuoQiICO\\土耳其.ico"
+IDI_ICON170             ICON                    "res\\GuoQiICO\\图瓦卢.ico"
+IDI_ICON17              ICON                    "res\\GuoQiICO\\奥地利.ico"
+IDI_ICON169             ICON                    "res\\GuoQiICO\\突尼斯.ico"
+IDI_ICON168             ICON                    "res\\GuoQiICO\\特立尼达和多巴哥.ico"
+IDI_ICON167             ICON                    "res\\GuoQiICO\\汤加.ico"
+IDI_ICON166             ICON                    "res\\GuoQiICO\\坦桑尼亚.ico"
+IDI_ICON165             ICON                    "res\\GuoQiICO\\泰国.ico"
+IDI_ICON164             ICON                    "res\\GuoQiICO\\太平洋共同体.ico"
+IDI_ICON163             ICON                    "res\\GuoQiICO\\塔吉克斯坦.ico"
+IDI_ICON162             ICON                    "res\\GuoQiICO\\索马里.ico"
+IDI_ICON161             ICON                    "res\\GuoQiICO\\所罗门群岛.ico"
+IDI_ICON160             ICON                    "res\\GuoQiICO\\苏里南.ico"
+IDI_ICON16              ICON                    "res\\GuoQiICO\\安提瓜和巴布达.ico"
+IDI_ICON159             ICON                    "res\\GuoQiICO\\苏丹.ico"
+IDI_ICON158             ICON                    "res\\GuoQiICO\\斯威士兰.ico"
+IDI_ICON157             ICON                    "res\\GuoQiICO\\斯洛文尼亚.ico"
+IDI_ICON156             ICON                    "res\\GuoQiICO\\斯洛伐克.ico"
+IDI_ICON155             ICON                    "res\\GuoQiICO\\斯里兰卡.ico"
+IDI_ICON154             ICON                    "res\\GuoQiICO\\圣文森特和格林纳丁斯.ico"
+IDI_ICON153             ICON                    "res\\GuoQiICO\\圣马力诺.ico"
+IDI_ICON152             ICON                    "res\\GuoQiICO\\圣卢西亚.ico"
+IDI_ICON151             ICON                    "res\\GuoQiICO\\圣基茨和尼维斯.ico"
+IDI_ICON150             ICON                    "res\\GuoQiICO\\圣多美和普林西比.ico"
+IDI_ICON15              ICON                    "res\\GuoQiICO\\安哥拉.ico"
+IDI_ICON149             ICON                    "res\\GuoQiICO\\沙特阿拉伯.ico"
+IDI_ICON148             ICON                    "res\\GuoQiICO\\塞舌尔.ico"
+IDI_ICON147             ICON                    "res\\GuoQiICO\\塞浦路斯.ico"
+IDI_ICON146             ICON                    "res\\GuoQiICO\\塞内加尔.ico"
+IDI_ICON145             ICON                    "res\\GuoQiICO\\塞拉利昂.ico"
+IDI_ICON144             ICON                    "res\\GuoQiICO\\塞尔维亚.ico"
+IDI_ICON143             ICON                    "res\\GuoQiICO\\萨尔瓦多.ico"
+IDI_ICON142             ICON                    "res\\GuoQiICO\\瑞士.ico"
+IDI_ICON141             ICON                    "res\\GuoQiICO\\瑞典.ico"
+IDI_ICON140             ICON                    "res\\GuoQiICO\\日本.ico"
+IDI_ICON14              ICON                    "res\\GuoQiICO\\安道尔.ico"
+IDI_ICON139             ICON                    "res\\GuoQiICO\\葡萄牙.ico"
+IDI_ICON138             ICON                    "res\\GuoQiICO\\帕劳.ico"
+IDI_ICON137             ICON                    "res\\GuoQiICO\\欧洲联盟.ico"
+IDI_ICON136             ICON                    "res\\GuoQiICO\\挪威.ico"
+IDI_ICON135             ICON                    "res\\GuoQiICO\\尼日利亚.ico"
+IDI_ICON134             ICON                    "res\\GuoQiICO\\尼日尔.ico"
+IDI_ICON133             ICON                    "res\\GuoQiICO\\尼加拉瓜.ico"
+IDI_ICON132             ICON                    "res\\GuoQiICO\\尼泊尔.ico"
+IDI_ICON131             ICON                    "res\\GuoQiICO\\瑙鲁.ico"
+IDI_ICON130             ICON                    "res\\GuoQiICO\\南非.ico"
+IDI_ICON13              ICON                    "res\\GuoQiICO\\爱沙尼亚.ico"
+IDI_ICON129             ICON                    "res\\GuoQiICO\\纳米比亚.ico"
+IDI_ICON128             ICON                    "res\\GuoQiICO\\墨西哥.ico"
+IDI_ICON127             ICON                    "res\\GuoQiICO\\莫桑比克.ico"
+IDI_ICON126             ICON                    "res\\GuoQiICO\\摩纳哥.ico"
+IDI_ICON125             ICON                    "res\\GuoQiICO\\摩洛哥.ico"
+IDI_ICON124             ICON                    "res\\GuoQiICO\\摩尔多瓦.ico"
+IDI_ICON123             ICON                    "res\\GuoQiICO\\缅甸.ico"
+IDI_ICON122             ICON                    "res\\GuoQiICO\\密克罗尼西亚联邦.ico"
+IDI_ICON121             ICON                    "res\\GuoQiICO\\秘鲁.ico"
+IDI_ICON120             ICON                    "res\\GuoQiICO\\孟加拉.ico"
+IDI_ICON12              ICON                    "res\\GuoQiICO\\爱尔兰.ico"
+IDI_ICON119             ICON                    "res\\GuoQiICO\\蒙古.ico"
+IDI_ICON118             ICON                    "res\\GuoQiICO\\美国国家组织.ico"
+IDI_ICON117             ICON                    "res\\GuoQiICO\\美国.ico"
+IDI_ICON116             ICON                    "res\\GuoQiICO\\毛里塔尼亚.ico"
+IDI_ICON115             ICON                    "res\\GuoQiICO\\毛里求斯.ico"
+IDI_ICON114             ICON                    "res\\GuoQiICO\\马绍尔群岛.ico"
+IDI_ICON113             ICON                    "res\\GuoQiICO\\马其顿.ico"
+IDI_ICON112             ICON                    "res\\GuoQiICO\\马里.ico"
+IDI_ICON111             ICON                    "res\\GuoQiICO\\马来西亚.ico"
+IDI_ICON110             ICON                    "res\\GuoQiICO\\马拉维.ico"
+IDI_ICON11              ICON                    "res\\GuoQiICO\\埃塞俄比亚.ico"
+IDI_ICON109             ICON                    "res\\GuoQiICO\\马耳他.ico"
+IDI_ICON108             ICON                    "res\\GuoQiICO\\马尔代夫.ico"
+IDI_ICON107             ICON                    "res\\GuoQiICO\\马达加斯加.ico"
+IDI_ICON106             ICON                    "res\\GuoQiICO\\罗马尼亚.ico"
+IDI_ICON105             ICON                    "res\\GuoQiICO\\卢旺达.ico"
+IDI_ICON104             ICON                    "res\\GuoQiICO\\卢森堡.ico"
+IDI_ICON103             ICON                    "res\\GuoQiICO\\列支敦士登.ico"
+IDI_ICON102             ICON                    "res\\GuoQiICO\\联合国.ico"
+IDI_ICON101             ICON                    "res\\GuoQiICO\\利比亚.ico"
+IDI_ICON100             ICON                    "res\\GuoQiICO\\利比果亚.ico"
+IDI_ICON10              ICON                    "res\\GuoQiICO\\埃及.ico"
+IDI_ICON1               ICON                    "res\\GuoQiICO\\中国.ico"
+IDI_SHENGMING           ICON                    "res\\LogIco\\公告.ico"
+IDI_SHANGXIAN           ICON                    "res\\LogIco\\上线.ico"
+IDI_XIAXIAN             ICON                    "res\\LogIco\\下线.ico"
+IDI_CHONGFUSHANGXIAN    ICON                    "res\\LogIco\\重复上线.ico"
+IDI_SCREENSYP           ICON                    "res\\ClientIco\\屏幕控制.ico"
+IDI_KEYBOARD            ICON                    "res\\ClientIco\\键盘记录.ico"
+IDI_WEBCAM              ICON                    "res\\ClientIco\\视频查看.ico"
+IDI_AUDIO               ICON                    "res\\ClientIco\\语音监听.ico"
+IDI_CMDSHELL            ICON                    "res\\ClientIco\\远程终端.ico"
+IDI_SYSICO_010          ICON                    "res\\HOSTLISTICO\\MAC.ico"
+IDI_SYSICO_009          ICON                    "res\\HOSTLISTICO\\QQ.ico"
+IDI_SYSICO_008          ICON                    "res\\HOSTLISTICO\\杀毒.ico"
+IDI_SYSICO_007          ICON                    "res\\HOSTLISTICO\\运行时间.ico"
+IDI_SYSICO_006          ICON                    "res\\HOSTLISTICO\\分辨率.ico"
+IDI_SYSICO_005          ICON                    "res\\HOSTLISTICO\\用户.ico"
+IDI_SYSICO_004          ICON                    "res\\HOSTLISTICO\\硬盘.ico"
+IDI_SYSICO_003          ICON                    "res\\HOSTLISTICO\\内存.ico"
+IDI_SYSICO_002          ICON                    "res\\HOSTLISTICO\\CPU.ico"
+IDI_SYSICO_001          ICON                    "res\\HOSTLISTICO\\操作系统.ico"
+IDI_SYSTEMICO_WIN       ICON                    "res\\SystemIco\\窗口管理.ico"
+IDI_ICONSERVICE         ICON                    "res\\ClientIco\\服务管理.ico"
+IDI_ICON_REGEDIT        ICON                    "res\\ClientIco\\注册表.ico"
+IDI_REZ_ICON1           ICON                    "res\\RezIco\\1.ico"
+IDI_ICON_REZ_1          ICON                    "res\\RezIco\\201.ico"
+IDI_ICON_REZ_2          ICON                    "res\\RezIco\\202.ico"
+IDI_ICON_REZ_3          ICON                    "res\\RezIco\\203.ico"
+IDI_ICON_REZ_4          ICON                    "res\\RezIco\\204.ico"
+IDI_ICON_REZ_5          ICON                    "res\\RezIco\\205.ico"
+IDI_ICON_REZ_6          ICON                    "res\\RezIco\\206.ico"
+IDI_MAP                 ICON                    "res\\ClientIco\\远程定位.ico"
+IDI_DAY_zhongyuzhuandayu ICON                    "res\\百度天气接口图标\\day\\zhongyuzhuandayu.ico"
+IDI_DAY_zhongyu         ICON                    "res\\百度天气接口图标\\day\\zhongyu.ico"
+IDI_DAY_zhongxuezhuandaxue ICON                    "res\\百度天气接口图标\\day\\zhongxuezhuandaxue.ico"
+IDI_DAY_zhongxue        ICON                    "res\\百度天气接口图标\\day\\zhongxue.ico"
+IDI_DAY_zhenyu          ICON                    "res\\百度天气接口图标\\day\\zhenyu.ico"
+IDI_DAY_zhenxue         ICON                    "res\\guoqiico\\ico00001.ico"
+IDI_DAY_yujiaxue        ICON                    "res\\百度天气接口图标\\day\\yujiaxue.ico"
+IDI_DAY_yin             ICON                    "res\\百度天气接口图标\\day\\yin.ico"
+IDI_DAY_yangsha         ICON                    "res\\百度天气接口图标\\day\\yangsha.ico"
+IDI_DAY_xiaoyuzhuanzhongyu ICON                    "res\\百度天气接口图标\\day\\xiaoyuzhuanzhongyu.ico"
+IDI_DAY_xiaoyu          ICON                    "res\\百度天气接口图标\\day\\xiaoyu.ico"
+IDI_DAY_xiaoxuezhuanzhongxue ICON                    "res\\百度天气接口图标\\day\\xiaoxuezhuanzhongxue.ico"
+IDI_DAY_xiaoxue         ICON                    "res\\百度天气接口图标\\day\\xiaoxue.ico"
+IDI_DAY_wu              ICON                    "res\\百度天气接口图标\\day\\wu.ico"
+IDI_DAY_tedabaoyu       ICON                    "res\\百度天气接口图标\\day\\tedabaoyu.ico"
+IDI_DAY_shachenbao      ICON                    "res\\百度天气接口图标\\day\\shachenbao.ico"
+IDI_DAY_qing            ICON                    "res\\百度天气接口图标\\day\\qing.ico"
+IDI_DAY_qiangshachenbao ICON                    "res\\百度天气接口图标\\day\\qiangshachenbao.ico"
+IDI_DAY_mai             ICON                    "res\\百度天气接口图标\\day\\mai.ico"
+IDI_DAY_leizhenyubanyoubingbao ICON                    "res\\百度天气接口图标\\day\\leizhenyubanyoubingbao.ico"
+IDI_DAY_leizhenyu       ICON                    "res\\百度天气接口图标\\day\\leizhenyu.ico"
+IDI_DAY_fuchen          ICON                    "res\\百度天气接口图标\\day\\fuchen.ico"
+IDI_DAY_duoyun          ICON                    "res\\百度天气接口图标\\day\\duoyun.ico"
+IDI_DAY_dongyu          ICON                    "res\\百度天气接口图标\\day\\dongyu.ico"
+IDI_DAY_dayuzhuanbaoyu  ICON                    "res\\百度天气接口图标\\day\\dayuzhuanbaoyu.ico"
+IDI_DAY_dayu            ICON                    "res\\百度天气接口图标\\day\\dayu.ico"
+IDI_DAY_daxuezhuanbaoxue ICON                    "res\\百度天气接口图标\\day\\daxuezhuanbaoxue.ico"
+IDI_DAY_daxue           ICON                    "res\\百度天气接口图标\\day\\daxue.ico"
+IDI_DAY_dabaoyuzhuantedabaoyu ICON                    "res\\百度天气接口图标\\day\\dabaoyuzhuantedabaoyu.ico"
+IDI_DAY_dabaoyu         ICON                    "res\\百度天气接口图标\\day\\dabaoyu.ico"
+IDI_DAY_baoyuzhuandabaoyu ICON                    "res\\百度天气接口图标\\day\\baoyuzhuandabaoyu.ico"
+IDI_DAY_baoyu           ICON                    "res\\百度天气接口图标\\day\\baoyu.ico"
+IDI_DAY_baoxue          ICON                    "res\\百度天气接口图标\\day\\baoxue.ico"
+IDI_NIGHT_zhongyuzhuandayu ICON                    "res\\百度天气接口图标\\night\\zhongyuzhuandayu.ico"
+IDI_NIGHT_zhongyu       ICON                    "res\\百度天气接口图标\\night\\zhongyu.ico"
+IDI_NIGHT_zhongxuezhuandaxue ICON                    "res\\百度天气接口图标\\night\\zhongxuezhuandaxue.ico"
+IDI_NIGHT_zhongxue      ICON                    "res\\百度天气接口图标\\night\\zhongxue.ico"
+IDI_NIGHT_zhenyu        ICON                    "res\\百度天气接口图标\\night\\zhenyu.ico"
+IDI_NIGHT_zhenxue       ICON                    "res\\百度天气接口图标\\night\\zhenxue.ico"
+IDI_NIGHT_yujiaxue      ICON                    "res\\百度天气接口图标\\night\\yujiaxue.ico"
+IDI_NIGHT_yin           ICON                    "res\\百度天气接口图标\\night\\yin.ico"
+IDI_NIGHT_yangsha       ICON                    "res\\百度天气接口图标\\night\\yangsha.ico"
+IDI_NIGHT_xiaoyuzhuanzhongyu ICON                    "res\\百度天气接口图标\\night\\xiaoyuzhuanzhongyu.ico"
+IDI_NIGHT_xiaoyu        ICON                    "res\\百度天气接口图标\\night\\xiaoyu.ico"
+IDI_NIGHT_xiaoxuezhuanzhongxue ICON                    "res\\百度天气接口图标\\night\\xiaoxuezhuanzhongxue.ico"
+IDI_NIGHT_xiaoxue       ICON                    "res\\百度天气接口图标\\night\\xiaoxue.ico"
+IDI_NIGHT_wu            ICON                    "res\\百度天气接口图标\\night\\wu.ico"
+IDI_NIGHT_tedabaoyu     ICON                    "res\\百度天气接口图标\\night\\tedabaoyu.ico"
+IDI_NIGHT_shachenbao    ICON                    "res\\百度天气接口图标\\night\\shachenbao.ico"
+IDI_NIGHT_qing          ICON                    "res\\百度天气接口图标\\night\\qing.ico"
+IDI_NIGHT_qiangshachenbao ICON                    "res\\百度天气接口图标\\night\\qiangshachenbao.ico"
+IDI_NIGHT_mai           ICON                    "res\\百度天气接口图标\\night\\mai.ico"
+IDI_NIGHT_leizhenyubanyoubingbao ICON                    "res\\百度天气接口图标\\night\\leizhenyubanyoubingbao.ico"
+IDI_NIGHT_leizhenyu     ICON                    "res\\百度天气接口图标\\night\\leizhenyu.ico"
+IDI_NIGHT_fuchen        ICON                    "res\\百度天气接口图标\\night\\fuchen.ico"
+IDI_NIGHT_duoyun        ICON                    "res\\百度天气接口图标\\night\\duoyun.ico"
+IDI_NIGHT_dongyu        ICON                    "res\\百度天气接口图标\\night\\dongyu.ico"
+IDI_NIGHT_dayuzhuanbaoyu ICON                    "res\\百度天气接口图标\\night\\dayuzhuanbaoyu.ico"
+IDI_NIGHT_dayu          ICON                    "res\\百度天气接口图标\\night\\dayu.ico"
+IDI_NIGHT_daxuezhuanbaoxue ICON                    "res\\百度天气接口图标\\night\\daxuezhuanbaoxue.ico"
+IDI_NIGHT_daxue         ICON                    "res\\百度天气接口图标\\night\\daxue.ico"
+IDI_NIGHT_dabaoyuzhuantedabaoyu ICON                    "res\\百度天气接口图标\\night\\dabaoyuzhuantedabaoyu.ico"
+IDI_NIGHT_dabaoyu       ICON                    "res\\百度天气接口图标\\night\\dabaoyu.ico"
+IDI_NIGHT_baoyuzhuandabaoyu ICON                    "res\\百度天气接口图标\\night\\baoyuzhuandabaoyu.ico"
+IDI_NIGHT_baoyu         ICON                    "res\\百度天气接口图标\\night\\baoyu.ico"
+IDI_NIGHT_baoxue        ICON                    "res\\百度天气接口图标\\night\\baoxue.ico"
+IDI_SYSTEM_NET          ICON                    "res\\SystemIco\\拨号密码.ico"
+IDI_SYSTEM_SOFTWARE     ICON                    "res\\SystemIco\\软件信息.ico"
+IDI_SYSTEM_HARF         ICON                    "res\\SystemIco\\硬件信息.ico"
+IDI_ICONSEND            ICON                    "res\\ClientIco\\发送.ico"
+IDI_ICONRECEIVE         ICON                    "res\\ClientIco\\下载.ico"
+IDI_ICONPORT            ICON                    "res\\ClientIco\\端口.ico"
+IDI_ICONOS              ICON                    "res\\ClientIco\\在线主机.ico"
+IDI_File                ICON                    "res\\iconew\\FILE.ico"
+IDI_MGICON_G            ICON                    "res\\ImagIoc\\Icon_G.ico"
+IDI_MGICON_F            ICON                    "res\\ImagIoc\\Icon_F.ico"
+IDI_MGICON_E            ICON                    "res\\ImagIoc\\Icon_E.ico"
+IDI_MGICON_D            ICON                    "res\\ImagIoc\\Icon_D.ico"
+IDI_MGICON_C            ICON                    "res\\ImagIoc\\Icon_C.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_TAB MENU
+BEGIN
+    POPUP "Tab"
+    BEGIN
+        MENUITEM "添加分组",                        ID_GROUP_ADD
+        MENUITEM "修改分组",                        ID_CHANGE
+        MENUITEM "删除分组",                        ID_GROUP_DEL
+    END
+END
+
+IDR_LOG MENU
+BEGIN
+    POPUP "LOGLIST"
+    BEGIN
+        MENUITEM "删除选定(&D)",                    IDM_EVENT_DELETE
+        MENUITEM "清空日志(&A)",                    IDM_ALL_DELETE
+        MENUITEM "保存选定(&S)",                    IDM_EVENT_SAVE
+        MENUITEM "复制选定(&C)",                    IDM_EVENT_COPY
+    END
+END
+
+IDR_MENU_LIST MENU
+BEGIN
+    POPUP "主机操作"
+    BEGIN
+        MENUITEM "文件管理(高速重写)",                  IDM_FILEMANAGER
+        MENUITEM "屏幕控制(自适应屏)",                  IDM_SCREENSPY
+        MENUITEM ":::远程终端:::",                  IDM_SHELL
+        MENUITEM ":::键盘记录:::",                  IDM_KEYBOARD
+        MENUITEM ":::系统信息:::",                  IDM_SYSTEMINFO
+        MENUITEM ":::系统管理:::",                  IDM_SYSTEM
+        MENUITEM ":::注 册  表:::",                IDM_REGEDIT
+        MENUITEM ":::好友信息:::",                  IDM_QQINFO
+        MENUITEM ":::Run启动:::",                 IDM_START
+        MENUITEM ":::选择全部:::",                  IDM_SELECT_ALL
+        MENUITEM ":::取消选择:::",                  IDM_UNSELECT_ALL
+        MENUITEM ":::更改分组:::",                  ID_CHANGE_GROUP
+        MENUITEM ":::更改备注:::",                  ID_REMARK
+        MENUITEM "代理映射(&D)",                    IDM_PROXY_MAP
+        MENUITEM "开关代理(&K)",                    IDM_PROXY
+        POPUP "会话管理(&H)"
+        BEGIN
+            MENUITEM "注销(&Z)",                      ID_LOGOFF
+            MENUITEM "重启(&C)",                      ID_REBOOT
+            MENUITEM "关机(&G)",                      ID_SHUTDOWN
+            MENUITEM SEPARATOR
+            MENUITEM "卸载(&X)",                      ID_UNINSTALL
+        END
+        POPUP "其他功能(&Q)"
+        BEGIN
+            MENUITEM "打开更新",                        ID_DOWNLOAD
+            MENUITEM "打开网页",                        ID_OPENWEB
+            MENUITEM "复制外网",                        ID_COPY_WANIP
+            MENUITEM "复制所有",                        ID_COPY_ALL
+        END
+    END
+END
+
+IDR_MENU_SERVICE MENU
+BEGIN
+    POPUP "Service"
+    BEGIN
+        MENUITEM "启动(&S)",                      ID_MENUITEM_START_SERVICE
+        MENUITEM "停止(&O)",                      ID_MENUITEM_STOP_SERVICE
+        MENUITEM "暂停(&U)",                      ID_MENUITEM_PAUSE_SERVICE
+        MENUITEM "恢复(&M)",                      ID_MENUITEM_REGAIN_SERVICE
+        MENUITEM "重新启动(&E)",                    ID_MENUITEM_REBOOT_SERVICE
+        MENUITEM SEPARATOR
+        MENUITEM "刷新(&R)",                      ID_MENUITEM_REFRESH_SERVICE
+        MENUITEM SEPARATOR
+        MENUITEM "属性(&R)",                      ID_MENUITEM_PROPERTIES_SERVICE
+        MENUITEM SEPARATOR
+        MENUITEM "删除服务(&D)",                    ID_MENUITEM_DEL_SERVICE
+    END
+END
+
+IDR_MENU_OPTIONS MENU
+BEGIN
+    POPUP "框架皮肤"
+    BEGIN
+        POPUP "设置皮肤"
+        BEGIN
+            MENUITEM "Office 2007 Blue",            ID_OPTIONS_STYLEBLUE2007
+            MENUITEM "Office 2007 Silver",          ID_OPTIONS_STYLESILVER2007
+            MENUITEM "Office 2007 Black",           ID_OPTIONS_STYLEBLACK2007
+            MENUITEM "Office 2007 Aqua",            ID_OPTIONS_STYLEAQUA2007
+            MENUITEM SEPARATOR
+            MENUITEM "Office 2010 Blue",            ID_OPTIONS_STYLEBLUE2010
+            MENUITEM "Office 2010 Silver",          ID_OPTIONS_STYLESILVER2010
+            MENUITEM "Office 2010 Black",           ID_OPTIONS_STYLEBLACK2010
+            MENUITEM SEPARATOR
+            MENUITEM "Windows 7",                   ID_OPTIONS_STYLESCENIC7
+            MENUITEM SEPARATOR
+            MENUITEM "系统样式(&S)",                    ID_OPTIONS_STYLESYSTEM
+        END
+        MENUITEM "加载皮肤",                        ID_OPTIONS_FRAMETHEME
+        POPUP "设置字体"
+        BEGIN
+            MENUITEM "系统字体",                        ID_OPTIONS_FONT_SYSTEM
+            MENUITEM SEPARATOR
+            MENUITEM "小字体(&N)",                     ID_OPTIONS_FONT_NORMAL
+            MENUITEM "中字体(&L)",                     ID_OPTIONS_FONT_LARGE
+            MENUITEM "大字体(&M)",                     ID_OPTIONS_FONT_EXTRALARGE
+            MENUITEM SEPARATOR
+            MENUITEM "自动调整图标大小",                    ID_OPTIONS_FONT_AUTORESIZEICONS
+        END
+    END
+END
+
+IDR_MINIMIZE MENU
+BEGIN
+    POPUP "MINIMIZE"
+    BEGIN
+        MENUITEM "开启消息提示",                      IDM_NEWSTIPS
+        MENUITEM "开启语音提示",                      IDM_VOICEPROMPT
+        MENUITEM SEPARATOR
+        MENUITEM "打开主面板",                       IDM_SHOW
+        MENUITEM "退出系统",                        IDM_EXIT
+    END
+END
+
+IDR_MENU_SYSTEM MENU
+BEGIN
+    POPUP "系统管理"
+    BEGIN
+        MENUITEM "刷新列表(&A)",                    IDM_REFRESHPSLIST
+        MENUITEM "复制数据(&B)",                    ID_SYSTEM_COPY
+        MENUITEM SEPARATOR
+        MENUITEM "删除文件(&C)",                    ID_SYSTEM_KILLANDDEL
+        MENUITEM "结束进程(&D)",                    ID_SYSTEM_KILLPROCESS
+        MENUITEM "冻结进程(&E)",                    ID_FREEZING
+        MENUITEM "解冻进程(&F)",                    ID_THAW
+        MENUITEM "文件属性(&W)",                    ID_FILEATTR
+        MENUITEM SEPARATOR
+        MENUITEM "百度查询该进程(&G)",                 ID_BAIDU
+        MENUITEM "上传世界杀毒网(&H)",                 ID_WORLD
+        MENUITEM SEPARATOR
+        MENUITEM "还原窗口(&R)",                    ID_SYSTEM_WINDOW_RETURN
+        MENUITEM "隐藏窗口(&H)",                    ID_SYSTEM_WINDOW_HIDE
+        MENUITEM "关闭窗口(&C)",                    ID_SYSTEM_WINDOW_CLOST
+        MENUITEM SEPARATOR
+        MENUITEM "窗口最大化(&A)",                   ID_SYSTEM_WINDOW_MAX
+        MENUITEM "窗口最小化(&I)",                   ID_SYSTEM_WINDOW_MIN
+        MENUITEM SEPARATOR
+        MENUITEM "卸载程序(&X)",                    ID_SYSTEM_UNINSTALL
+    END
+END
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "程序帮助(&H)"
+    BEGIN
+        MENUITEM "&系统设置",                       ID_SETTING
+        MENUITEM "&服务生成",                       ID_BUILD
+        MENUITEM "关于程序(&A)",                    ID_APP_ABOUT
+        MENUITEM "退出程序(&X)",                    ID_APP_EXIT
+        POPUP "视图显示(&V)"
+        BEGIN
+            MENUITEM "状态栏(&S)",                     ID_VIEW_STATUS_BAR
+            MENUITEM "工具栏(&T)",                     ID_VIEW_TOOLBAR
+        END
+    END
+END
+
+IDR_FILEMANAGER MENU
+BEGIN
+    POPUP "FileManger"
+    BEGIN
+        MENUITEM "刷新(&R)",                      IDM_REFRESH
+        MENUITEM "下载(&T)",                      IDM_TRANSFER_R
+        MENUITEM "上传(&K)",                      IDM_TRANSFER_S
+        MENUITEM "显示运行(&S)",                    IDM_REMOTE_OPEN_SHOW
+        MENUITEM "隐藏运行(&H)",                    IDM_REMOTE_OPEN_HIDE
+        MENUITEM "提权运行(&A)",                    IDM_USE_ADMIN
+        MENUITEM SEPARATOR
+        MENUITEM "压缩文件",                        IDM_COMPRESS
+        MENUITEM "解压文件",                        IDM_UNCOMPRESS
+        MENUITEM "删除(&D)",                      IDM_DELETE
+        MENUITEM "重命名(&R)",                     IDM_RENAME
+        MENUITEM "新建文件夹(&N)",                   IDM_NEWFOLDER
+        MENUITEM "属性",                          IDM_GET_FILEINFO
+    END
+END
+
+IDR_REGL_MENU MENU
+BEGIN
+    POPUP "reg_list"
+    BEGIN
+        MENUITEM "编辑",                          IDM_REGL_EDIT
+        MENUITEM "删除",                          IDM_REGL_DELKEY
+        POPUP "新建"
+        BEGIN
+            MENUITEM "String",                      IDM_REGL_STR
+            MENUITEM "DWORD",                       IDM_REGL_DWORD
+            MENUITEM "Expand String",               IDM_REGL_EXSTR
+        END
+    END
+END
+
+IDR_REGT_MENU MENU
+BEGIN
+    POPUP "reg_tree"
+    BEGIN
+        MENUITEM "删除",                          IDM_REGT_DEL
+        MENUITEM "新建",                          IDM_REGT_CREAT
+    END
+END
+
+IDR_LOCAL_VIEW MENU
+BEGIN
+    POPUP "Lview"
+    BEGIN
+        MENUITEM "大图标",                         IDM_LOCAL_BIGICON
+        MENUITEM "小图标",                         IDM_LOCAL_SMALLICON
+        MENUITEM "列表",                          IDM_LOCAL_LIST
+        MENUITEM "详细信息",                        IDM_LOCAL_REPORT
+    END
+END
+
+IDR_REMOTE_VIEW MENU
+BEGIN
+    POPUP "查看"
+    BEGIN
+        MENUITEM "大图标",                         IDM_REMOTE_BIGICON
+        MENUITEM "小图标",                         IDM_REMOTE_SMALLICON
+        MENUITEM "列表",                          IDM_REMOTE_LIST
+        MENUITEM "详细信息",                        IDM_REMOTE_REPORT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG 0, 0, 230, 157
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    PUSHBUTTON      "确定",IDOK,77,101,66,22,WS_GROUP
+END
+
+IDD_GENERATE DIALOG 0, 0, 344, 381
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "创建客户(严格控制数据准确性，请仔细配置生成否则不上线)"
+FONT 9, "宋体"
+BEGIN
+    PUSHBUTTON      "生成",IDC_BUILD,7,363,45,17
+    PUSHBUTTON      "取消",IDCANCEL,59,363,45,17
+    LTEXT           "上线地址：",IDC_STATIC,8,20,40,8
+    LTEXT           "上线分组：",IDC_STATIC,10,260,40,8
+    LTEXT           "上线版本：",IDC_STATIC,10,281,40,8
+    EDITTEXT        IDC_HOST,55,16,108,12,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_GROUP,50,258,76,12,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_VERSION,50,281,76,12,ES_CENTER | ES_AUTOHSCROLL
+    GROUPBOX        "服务参数",IDC_STATIC,7,39,268,77
+    EDITTEXT        IDC_SERVICE_NAME,55,56,92,12,ES_AUTOHSCROLL
+    LTEXT           "服务名称：",IDC_STATIC,9,59,41,8
+    CONTROL         "绿色启动",IDC_GREEN,"Button",BS_AUTORADIOBUTTON | WS_GROUP,211,57,48,10
+    CONTROL         "写入启动",IDC_WRITE,"Button",BS_AUTORADIOBUTTON,211,78,48,10
+    CONTROL         "服务启动",IDC_SERVICE,"Button",BS_AUTORADIOBUTTON,211,98,48,10
+    EDITTEXT        IDC_SERVICE_DISPLAY,55,76,144,12,ES_AUTOHSCROLL
+    LTEXT           "服务显示：",IDC_STATIC,9,79,41,8
+    EDITTEXT        IDC_SERVICE_DESCRIP,55,96,144,12,ES_AUTOHSCROLL
+    LTEXT           "服务描述：",IDC_STATIC,9,98,41,8
+    GROUPBOX        "安装参数",IDC_STATIC,7,124,268,62
+    EDITTEXT        IDC_FOLDERNAME,50,149,68,12,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROCESSNAME,189,149,68,12,ES_CENTER | ES_AUTOHSCROLL
+    GROUPBOX        "上线信息",IDC_STATIC,7,4,268,31
+    GROUPBOX        "上线参数",IDC_STATIC,7,245,268,51
+    LTEXT           "安装目录：",IDC_STATIC,10,152,40,8
+    GROUPBOX        "捆绑运行",IDC_STATIC,7,186,268,56
+    LTEXT           "文件地址：",IDC_STATIC,9,206,41,8
+    LTEXT           "安装名称：",IDC_STATIC,143,151,40,8
+    EDITTEXT        IDC_EDIT_KB,51,204,161,12,ES_AUTOHSCROLL | WS_DISABLED
+    PUSHBUTTON      "测试",IDC_KBTEST,221,204,30,14,WS_DISABLED
+    LTEXT           "网络文件捆绑,支持JPG或EXE等文件。（优先运行）",IDC_STATIC,9,224,181,8
+    CONTROL         "启用",IDC_KBCHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,213,224,32,11
+    LTEXT           "运行互斥：",IDC_STATIC,139,259,40,8
+    EDITTEXT        IDC_MUTEX,185,258,76,12,ES_CENTER | ES_AUTOHSCROLL
+    LTEXT           "配置时间：",IDC_STATIC,139,281,40,8
+    EDITTEXT        IDC_BUILDTIME,185,277,76,12,ES_CENTER | ES_AUTOHSCROLL
+    GROUPBOX        "日志信息",IDC_STATIC_LOG,16,121,259,101,NOT WS_VISIBLE | WS_DISABLED
+    EDITTEXT        IDC_LOG,258,136,7,12,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | NOT WS_VISIBLE | WS_DISABLED
+    CONTROL         "防删除/自动复活",IDC_ANTIDELETION,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,50,174,71,12
+    CONTROL         "运行自动删除",IDC_SELFDELETION,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,179,174,71,12
+    PUSHBUTTON      "测试连接",IDC_TEST_MASTER,216,15,45,14
+    PUSHBUTTON      "随机服务",IDC_RANDOM,155,55,45,14
+    GROUPBOX        "用户登录",IDC_STATIC,7,304,268,57
+    LTEXT           "用户帐号：",IDC_STATIC,10,319,40,8,WS_DISABLED
+    LTEXT           "用户密码：",IDC_STATIC,10,342,40,8,WS_DISABLED
+    EDITTEXT        IDC_BUILD_USERPASS,50,339,118,14,ES_CENTER | ES_PASSWORD | ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_BUILD_USERNAME,50,316,118,14,ES_CENTER | ES_AUTOHSCROLL | WS_DISABLED
+    PUSHBUTTON      "登录",IDC_BUILD_LOGIN,188,325,70,22,WS_DISABLED
+END
+
+IDD_SETTING DIALOG 0, 0, 339, 231
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "系统设置"
+FONT 9, "宋体"
+BEGIN
+    PUSHBUTTON      "保存",IDC_APPLY,192,198,57,21
+    PUSHBUTTON      "取消",IDCANCEL,267,198,57,21
+    LTEXT           "监听端口：",IDC_STATIC,11,21,40,8
+    LTEXT           "连接上限：",IDC_STATIC,10,60,40,8
+    LTEXT           "心跳间隔：",IDC_STATIC,10,40,40,8
+    EDITTEXT        IDC_LISTEN_PORT,53,17,54,13,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_CONNECT_MAX,53,57,54,13,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "无限制",IDC_CONNECT_AUTO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,119,59,35,10
+    EDITTEXT        IDC_HEARTBEAT_TIME,53,37,54,13,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "禁用闪烁提示",IDC_DISABLE_POPTIPS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,9,121,63,10
+    CONTROL         "禁用语音提示",IDC_DISABLE_SOUND,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,9,105,63,9
+    CONTROL         "国旗/位置",IDC_DAWED_1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,175,52,53,10
+    CONTROL         "杀毒软件",IDC_DAWED_14,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,253,138,48,10
+    CONTROL         "WAN-IP",IDC_DAWED_3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,175,86,53,10
+    CONTROL         "硬盘/可用",IDC_DAWED_9,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,253,53,54,9
+    CONTROL         "LAN-IP",IDC_DAWED_4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,175,104,53,10
+    CONTROL         "在线状态/延迟",IDC_DAWED_10,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,253,70,68,9
+    CONTROL         "计算机名/备注",IDC_DAWED_5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,175,121,65,10
+    CONTROL         "在线QQ号",IDC_DAWED_11,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,253,86,36,10
+    CONTROL         "操作系统",IDC_DAWED_6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,175,138,53,10
+    CONTROL         "网卡",IDC_DAWED_12,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,253,104,32,10
+    CONTROL         "处理器",IDC_DAWED_7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,175,153,43,10
+    CONTROL         "配置时间",IDC_DAWED_16,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,253,167,47,10
+    CONTROL         "上线版本",IDC_DAWED_15,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,253,153,48,10
+    CONTROL         "视频",IDC_DAWED_13,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,253,121,47,10
+    GROUPBOX        "上线设置",IDC_STATIC,4,4,158,78
+    GROUPBOX        "上线列表",IDC_STATIC,169,4,167,183
+    CONTROL         "网络",IDC_DAWED_2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,175,70,31,10
+    CONTROL         "内存/可用",IDC_DAWED_8,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,175,167,47,10
+    LTEXT           "________________________________________________________",IDC_STATIC,170,35,163,8,WS_DISABLED
+    CONTROL         "栏目网格",IDC_LINE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,175,22,52,14
+    GROUPBOX        "其他设置",IDC_STATIC,4,86,158,55
+    LTEXT           "主机双击打开：",IDC_STATIC,10,163,56,8
+    COMBOBOX        IDC_COMBO_OPERATE,69,161,68,126,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "窗体拉伸",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,253,22,49,11
+    CONTROL         "启用软件皮肤",IDC_CHECK_SKIN,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_DISABLED | WS_TABSTOP,92,103,64,11
+    LTEXT           "主机列表颜色：",IDC_STATIC,10,183,56,8
+    COMBOBOX        IDC_COMBO_COLOUR,69,180,68,126,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "其他功能",IDC_STATIC,4,146,157,58
+END
+
+IDD_DOWNLOAD DIALOG 0, 0, 238, 113
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "下载执行/更新"
+FONT 9, "宋体"
+BEGIN
+    PUSHBUTTON      "确定",IDOK,57,78,50,17
+    PUSHBUTTON      "取消",IDCANCEL,143,79,50,17
+    EDITTEXT        IDC_DOWNADDRESS,58,24,160,14,ES_AUTOHSCROLL
+    LTEXT           "下载地址：",IDC_STATIC,14,27,40,8
+    CONTROL         "下载执行",IDC_DOWNOPEN,"Button",BS_AUTORADIOBUTTON,57,51,58,13
+    CONTROL         "下载更新",IDC_DOWNUPDATE,"Button",BS_AUTORADIOBUTTON,140,52,58,13
+END
+
+IDD_OPENWEB DIALOG 0, 0, 236, 117
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "打开网页/隐藏"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,69,81,50,14
+    PUSHBUTTON      "取消",IDCANCEL,166,84,50,14
+    LTEXT           "网页地址：",IDC_STATIC,13,23,40,8
+    EDITTEXT        IDC_WEBADDRESS,63,19,156,15,ES_AUTOHSCROLL
+    CONTROL         "显示打开",IDC_DISPLAY,"Button",BS_AUTORADIOBUTTON,65,55,60,13
+    CONTROL         "隐藏打开",IDC_HIDE,"Button",BS_AUTORADIOBUTTON,158,55,60,13
+END
+
+IDD_CHANGE_GROUP DIALOG 0, 0, 154, 45
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "更改分组"
+FONT 9, "宋体"
+BEGIN
+    PUSHBUTTON      "确定",IDOK,21,24,50,14
+    PUSHBUTTON      "取消",IDCANCEL,81,24,50,14
+    COMBOBOX        IDC_COMBO_GROUP,54,7,93,155,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "分组名称：",IDC_STATIC,7,10,42,8
+END
+
+IDD_SCREENSPY DIALOG 0, 0, 495, 356
+STYLE DS_SETFONT | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "屏幕监控"
+FONT 9, "宋体"
+BEGIN
+END
+
+IDD_KEYBOARD DIALOG 0, 0, 321, 208
+STYLE DS_SETFONT | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "对话"
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_EDIT,0,0,321,207,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | ES_WANTRETURN | WS_VSCROLL
+END
+
+IDD_WEBCAM DIALOG 0, 0, 189, 166
+STYLE DS_SETFONT | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "对话"
+FONT 9, "宋体"
+BEGIN
+END
+
+IDD_AUDIO DIALOG 0, 0, 254, 99
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "对话"
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "",IDC_STATIC,7,7,239,85
+    LTEXT           "Listening.....",IDC_STATIC_LISTEN_SAVE,16,14,167,8
+    LTEXT           "VoiceAge Corporation g729a CODE",IDC_STATIC,15,28,129,8
+    CONTROL         "发送本地语音到远程",IDC_SEND_LOCALAUDIO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,75,84,10
+    LTEXT           "Receive  0 KBytes",1010,147,27,80,8
+    CONTROL         "保存录音",IDC_CHECK_REC,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,108,75,48,10
+    COMBOBOX        IDC_COMBO_INPUTDRIVE,167,50,75,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "",IDC_STATIC_DATACURVE,16,45,146,25,NOT WS_GROUP
+    COMBOBOX        IDC_COMBO_INPUTLINES,167,73,75,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_SHELL DIALOG 0, 0, 408, 235
+STYLE DS_SETFONT | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "对话"
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_EDIT,2,0,403,233,ES_MULTILINE | ES_AUTOVSCROLL | ES_WANTRETURN | WS_VSCROLL
+END
+
+IDD_SYSTEMINFO DIALOG 0, 0, 477, 353
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "对话"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "List1",IDC_LIST,"SysListView32",LVS_REPORT | WS_BORDER | WS_TABSTOP,7,7,463,281
+    GROUPBOX        "MEM使用率:",IDC_STATIC_CPU,136,296,110,49
+    CONTROL         "Progress1",IDC_PROGRESS_MEMORY,"msctls_progress32",PBS_SMOOTH | WS_BORDER,141,309,97,19
+    LTEXT           "0 MB / 0 MB",IDC_SYSINFO_USEMEMORY,143,333,85,8,NOT WS_GROUP
+    LTEXT           "0 %",IDC_SYSINFO_USECPU,16,333,49,8,NOT WS_GROUP
+    CONTROL         "Progress1",IDC_PROGRESS_CPU,"msctls_progress32",PBS_SMOOTH | WS_BORDER,12,309,97,19
+    GROUPBOX        "CPU使用率:",IDC_STATIC_MORY,7,296,110,49
+    GROUPBOX        "网络情况",IDC_STATIC,257,296,110,49
+    LTEXT           "上行带宽：",IDC_STATIC,262,311,40,9
+    LTEXT           "下行带宽：",IDC_STATIC,262,328,40,9
+    LTEXT           "0Kb/s",IDC_STATIC_UPLOAD,306,311,54,8
+    LTEXT           "0Kb/s",IDC_STATIC_DOWNLOAD,306,328,54,8
+END
+
+IDD_SYSTEM DIALOG 0, 0, 403, 243
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "对话"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "Tab1",IDC_TAB,"SysTabControl32",TCS_BUTTONS,7,7,389,16
+    CONTROL         "List1",IDC_LIST,"SysListView32",LVS_REPORT | WS_BORDER | WS_TABSTOP,7,29,389,203
+END
+
+IDD_SERVICE_INFO DIALOG 0, 0, 267, 271
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "对话"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,74,250,50,14
+    PUSHBUTTON      "取消",IDCANCEL,136,250,50,14
+    LTEXT           "服务名称:",IDC_STATIC,14,18,37,8
+    LTEXT           "显示名称:",IDC_STATIC,14,42,37,8
+    LTEXT           "描述:",IDC_STATIC,14,67,21,8
+    LTEXT           "可执行文件路径",IDC_STATIC,14,98,57,8
+    LTEXT           "启动类型:",IDC_STATIC,14,139,37,8
+    LTEXT           "服务状态:",IDC_STATIC,14,166,37,8
+    EDITTEXT        IDC_EDIT_SERNAME,57,15,192,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_SERDISPLAYNAME,57,40,192,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SERDESCRIPTION,57,65,192,25,ES_MULTILINE | ES_AUTOVSCROLL | WS_VSCROLL
+    EDITTEXT        IDC_EDIT_FILEPATH,13,113,247,14,ES_AUTOHSCROLL | ES_READONLY
+    COMBOBOX        IDC_COMBO_RUNWAY,55,138,205,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Static",IDC_STATIC_TEXT,55,166,52,8
+    PUSHBUTTON      "启动",IDC_BUTTON_START,13,207,50,14
+    PUSHBUTTON      "停止",IDC_BUTTON_STOP,76,207,50,14
+    PUSHBUTTON      "暂停",IDC_BUTTON_PAUSE,139,207,50,14
+    PUSHBUTTON      "继续",IDC_BUTTON_CONTINUE,202,207,50,14
+    PUSHBUTTON      "应用",IDC_BUTTON_USE,201,250,50,14,WS_DISABLED
+END
+
+IDD_SERVICE DIALOG 0, 0, 569, 388
+STYLE DS_SETFONT | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "对话"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "List1",IDC_LIST,"SysListView32",LVS_REPORT | WS_BORDER | WS_TABSTOP,0,0,214,43
+END
+
+IDD_REGEDIT_TEXT DIALOG 0, 0, 248, 91
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "编辑字符串"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,133,70,50,14
+    PUSHBUTTON      "取消",IDCANCEL,191,70,50,14
+    LTEXT           "数值名称(&N):",IDC_STATIC,7,7,49,8
+    EDITTEXT        IDC_EDIT_NAME,7,19,234,14,ES_AUTOHSCROLL
+    LTEXT           "数值数据(&V)",IDC_STATIC,7,39,45,8
+    EDITTEXT        IDC_EDIT_DATE,7,50,234,14,ES_AUTOHSCROLL
+END
+
+IDD_REGEDIT DIALOG 0, 0, 715, 401
+STYLE DS_SETFONT | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "对话"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "Tree1",IDC_TREE,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | WS_BORDER | WS_TABSTOP,0,0,147,386
+    CONTROL         "List1",IDC_LIST,"SysListView32",LVS_REPORT | WS_BORDER | WS_TABSTOP,149,0,565,386
+END
+
+IDD_TEXTCHAT DIALOG 0, 0, 344, 149
+STYLE DS_SETFONT | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "对话"
+FONT 9, "宋体"
+BEGIN
+    PUSHBUTTON      "发送",IDOK,286,97,57,52
+    EDITTEXT        IDC_EDIT_CHAT,0,0,343,97,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL
+    EDITTEXT        IDC_EDIT_NEWTEXT,0,98,284,51,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | WS_VSCROLL
+END
+
+IDD_QQINFO DIALOGEX 0, 0, 484, 323
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "好友信息"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    LISTBOX         IDC_LIST_USER,4,26,154,293,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Tree1",IDC_TREE_FRIEND,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | WS_BORDER | WS_TABSTOP,165,26,154,293
+    CONTROL         "Tree1",IDC_TREE_GROUP,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | WS_BORDER | WS_TABSTOP,326,26,154,293
+    CTEXT           "查看已登录QQ信息",IDC_STC_USER,4,4,154,17,SS_NOTIFY | SS_CENTERIMAGE | WS_DISABLED | NOT WS_GROUP | WS_TABSTOP,WS_EX_STATICEDGE
+    CTEXT           "查看已保存QQ信息",IDC_STC_FRIEND,165,4,154,17,SS_NOTIFY | SS_CENTERIMAGE | WS_DISABLED | NOT WS_GROUP | WS_TABSTOP,WS_EX_STATICEDGE
+    CTEXT           "保存已登录QQ信息",IDC_STC_GROUP,326,4,154,17,SS_NOTIFY | SS_CENTERIMAGE | WS_DISABLED | NOT WS_GROUP | WS_TABSTOP,WS_EX_STATICEDGE
+END
+
+IDD_MAP_DIALOG DIALOGEX 0, 0, 440, 307
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "远程定位"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    CONTROL         "Static",IDC_HTMLVIEW,"Static",SS_LEFTNOWORDWRAP | WS_TABSTOP,0,0,439,264
+    CTEXT           "1",IDC_STATIC_1,46,275,327,8
+    CTEXT           "1",IDC_STATIC_3,46,290,327,8
+    GROUPBOX        "定位信息",IDC_STATIC,0,266,440,36,BS_LEFT | WS_TABSTOP
+END
+
+IDD_MSGBOX DIALOG 0, 0, 228, 225
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "消息对话"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,10,22,16,8
+    CONTROL         "",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,63,22,16,8
+    CONTROL         "",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,116,22,16,8
+    CONTROL         "",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,171,22,16,8
+    CONTROL         "确定",IDC_RADIO12,"Button",BS_AUTORADIOBUTTON | WS_GROUP,6,64,32,10
+    CONTROL         "帮助",IDC_RADIO10,"Button",BS_AUTORADIOBUTTON,46,64,32,10
+    CONTROL         "是|否|取消",IDC_RADIO13,"Button",BS_AUTORADIOBUTTON,83,80,56,10
+    CONTROL         "是|否",IDC_RADIO7,"Button",BS_AUTORADIOBUTTON,83,64,32,10
+    CONTROL         "取消|重试|继续",IDC_RADIO11,"Button",BS_AUTORADIOBUTTON,6,80,72,10
+    CONTROL         "确定|取消",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON,148,64,52,10
+    CONTROL         "关于|重试|忽略",IDC_RADIO8,"Button",BS_AUTORADIOBUTTON,148,80,72,10
+    GROUPBOX        "图标",IDC_STATIC,3,4,223,40
+    ICON            "",IDC_STATIC_ICON1,29,14,20,20,SS_NOTIFY
+    ICON            "",IDC_STATIC_ICON2,82,15,20,20,SS_NOTIFY
+    ICON            "",IDC_STATIC_ICON3,135,15,20,20,SS_NOTIFY
+    ICON            "",IDC_STATIC_ICON4,190,15,20,20,SS_NOTIFY
+    GROUPBOX        "按钮",IDC_STATIC,3,50,223,48
+    GROUPBOX        "文本",IDC_STATIC,3,105,223,95
+    LTEXT           "标题:",IDC_STATIC,7,120,21,8
+    LTEXT           "内容:",IDC_STATIC,7,140,21,8
+    EDITTEXT        IDC_EDIT_TITLE,30,115,190,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_TEXT,30,135,190,60,ES_MULTILINE | ES_WANTRETURN | WS_VSCROLL
+    PUSHBUTTON      "预览",IDC_SHOW,93,205,50,15
+    PUSHBUTTON      "发送",IDOK,153,205,50,15
+END
+
+IDD_DIALOGBAR DIALOG 0, 0, 685, 43
+STYLE DS_SETFONT | WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    ICON            IDI_DAY_dabaoyuzhuantedabaoyu,IDC_DAY,368,12,20,20,SS_REALSIZEIMAGE
+    ICON            IDI_NIGHT_dabaoyu,IDC_NIGHT,407,12,20,20,SS_REALSIZEIMAGE
+    LTEXT           "未获取到天气",IDC_STATIC_WEATHER,451,13,78,8
+    LTEXT           "未获取到风速及大气温度",IDC_STATIC_TEMPERATURE,451,29,121,8
+    CTEXT           "未知城市",IDC_STATIC_CITY,576,8,86,16
+    LTEXT           "未获取当前日期及温度",IDC_STATIC_DATE,577,29,107,8
+END
+
+IDD_DIALOG_TOOL DIALOG 0, 0, 295, 267
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "实用工具"
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "图标修改",IDC_STATIC,7,7,288,65
+    LTEXT           "图标路径：",IDC_STATIC,14,26,40,8
+    LTEXT           "文件路径：",IDC_STATIC,14,47,40,8
+    EDITTEXT        IDC_ICON_PATH,55,24,87,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EXE_PATH,55,44,87,12,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "选择",IDC_CHOICEICO,151,24,34,13
+    PUSHBUTTON      "选择",IDC_CHOICEEXE,151,44,34,13
+    PUSHBUTTON      "修改",IDC_MODIFYICON,192,26,37,29
+    GROUPBOX        "图标提取",IDC_STATIC,7,79,288,82
+    LISTBOX         IDC_LIST_ICON,14,96,130,55,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    ICON            "",IDC_STATIC_ICON,160,107,21,21,SS_SUNKEN
+    PUSHBUTTON      "提取图标",IDC_EXTRACT_ICON,191,101,38,18
+    PUSHBUTTON      "保存图标",IDC_PRESERVATION_ICON,191,124,38,18
+    LTEXT           "图标文件",IDC_STATIC,154,136,32,8
+    GROUPBOX        "增加体积",IDC_STATIC,7,169,288,59
+    LTEXT           "文件路径：",IDC_STATIC,13,185,40,8
+    EDITTEXT        IDC_NCREASE_PATH,87,182,142,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "选择",IDC_CHOICE_EXEFILE,193,181,36,15
+    CONTROL         "Slider1",IDC_FILE_SIZE,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,55,206,84,14
+    EDITTEXT        IDC_FILESIZEKB,145,204,38,14,ES_AUTOHSCROLL
+    LTEXT           "/KB",IDC_STATIC,184,206,13,8
+    PUSHBUTTON      "增加",IDC_INCREASE,193,203,36,15
+    LTEXT           "文件大小：",IDC_STATIC,13,208,40,8
+END
+
+IDD_FILEATTR DIALOG 0, 0, 212, 175
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "文件属性"
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "访问时间：",IDC_STATIC,4,95,40,9
+    CTEXT           "未知",IDC_STATIC_ATIME,49,96,130,11
+    LTEXT           "文件大小：",IDC_STATIC,5,26,40,9
+    CTEXT           "未知",IDC_STATIC_SIZE,49,26,130,8
+    LTEXT           "创建时间：",IDC_STATIC,3,49,40,9
+    CTEXT           "未知",IDC_STATIC_CTIME,49,49,130,10
+    LTEXT           "修改时间：",IDC_STATIC,4,71,40,9
+    CTEXT           "未知",IDC_STATIC_MTIME,49,71,130,11
+    LTEXT           "文件属性：",IDC_STATIC,4,161,40,9
+    CONTROL         "只读",IDC_CHECK_READONLY,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,51,158,30,15
+    CONTROL         "隐藏",IDC_CHECK_HIDDEN,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,85,158,30,15
+    CONTROL         "存档",IDC_CHECK_ARCHIVE,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,119,158,30,15
+    CONTROL         "系统",IDC_CHECK_SYSTEM,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,153,158,30,15
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN | WS_DISABLED | WS_TABSTOP,0,112,211,1
+    LTEXT           "文件路径：",IDC_STATIC,4,119,40,9
+    LTEXT           "",IDC_STATIC_PATH,44,118,161,36,SS_SUNKEN | WS_DISABLED
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN | WS_DISABLED | WS_TABSTOP,0,44,211,1
+    LTEXT           "文件名称：",IDC_STATIC,5,7,40,9
+    CTEXT           "未知",IDC_STATIC_FILENAME,49,7,130,8
+END
+
+IDD_LOGIN DIALOG 0, 0, 281, 113
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "传奇辅助攻击加速器"
+FONT 9, "宋体"
+BEGIN
+    PUSHBUTTON      "传奇辅助攻击加速器",IDC_LOGIN,8,46,250,23
+    PUSHBUTTON      "> >",IDC_BTN_HIDE,246,97,35,16,NOT WS_VISIBLE | WS_DISABLED
+    CONTROL         "",IDC_GIF_LOGIN,"Static",SS_GRAYRECT | NOT WS_VISIBLE | WS_DISABLED,4,3,11,8
+    EDITTEXT        IDC_USERNAME,7,13,71,15,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_USERPASS,97,13,70,15,ES_CENTER | ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "",IDC_STATIC_TIPS,5,55,97,58,NOT WS_VISIBLE | WS_DISABLED
+    EDITTEXT        IDC_HOSTNAME,197,13,75,16,ES_AUTOHSCROLL
+    GROUPBOX        "",IDC_STATIC,1,3,85,31
+    GROUPBOX        "",IDC_STATIC,90,3,92,31
+    GROUPBOX        "",IDC_STATIC,185,3,95,31
+    GROUPBOX        "",IDC_STATIC,2,37,279,38
+END
+
+IDD_PROXY_MAP DIALOG 0, 0, 391, 237
+STYLE DS_SETFONT | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "对话"
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_EDIT,0,0,390,236,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | WS_VSCROLL
+END
+
+IDD_PROXY DIALOG 0, 0, 174, 151
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "开启或关闭远程主机的代理服务"
+FONT 9, "宋体"
+BEGIN
+    PUSHBUTTON      "开启",IDOK,7,130,50,14
+    PUSHBUTTON      "取消",IDCANCEL,117,130,50,14
+    LTEXT           "支持HTTP, S4, S5代理",IDC_STATIC,24,103,85,8
+    EDITTEXT        IDC_EDIT_PORT,92,14,48,14,ES_AUTOHSCROLL
+    LTEXT           "代理服务器端口",IDC_STATIC,24,17,57,8
+    LTEXT           "用户名",IDC_STATIC,24,62,25,8
+    LTEXT           "密  码",IDC_STATIC,24,79,25,8
+    EDITTEXT        IDC_EDIT_USER,65,58,77,14,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EDIT_PASS,65,77,77,14,ES_PASSWORD | ES_AUTOHSCROLL | WS_DISABLED
+    CONTROL         "需要验证",IDC_CHECK_VERIFY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,25,37,48,10
+    PUSHBUTTON      "关闭",IDNO,61,130,50,14
+END
+
+IDD_START DIALOG 0, 0, 209, 179
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "写入启动"
+FONT 9, "宋体"
+BEGIN
+    PUSHBUTTON      "确定",IDOK,28,129,50,14
+    PUSHBUTTON      "取消",IDCANCEL,121,129,50,14
+    LTEXT           "启动名称：",IDC_STATIC,13,35,40,8
+    EDITTEXT        IDC_STARTNAME,56,32,98,14,ES_AUTOHSCROLL
+    LTEXT           "安装增大：",IDC_STATIC,13,79,41,8
+    EDITTEXT        IDC_ENLARGE,55,77,47,13,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "MB （0为不增大）",IDC_STATIC,105,79,65,8
+    LTEXT           "文件属性：",IDC_STATIC,13,57,41,8
+    COMBOBOX        IDC_FILEATTRIBUTE,55,55,79,130,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_FILE DIALOGEX 0, 0, 405, 283
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "文件管理"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    CONTROL         "List1",IDC_LIST_REMOTE,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_AUTOARRANGE | LVS_EDITLABELS | WS_BORDER | WS_TABSTOP,0,33,404,235,WS_EX_ACCEPTFILES,HIDC_LIST_REMOTE
+    LTEXT           "远程：",IDC_STATIC_REMOTE,5,22,25,8
+    COMBOBOX        IDC_REMOTE_PATH,33,20,365,58,CBS_DROPDOWN | CBS_AUTOHSCROLL | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_TRANSFERMODE_DLG DIALOG 0, 0, 371, 75
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "确认文件替换"
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "",IDC_CHUANSHU,6,2,359,66
+    LTEXT           "Tips",IDC_TIPS,13,13,342,23
+    PUSHBUTTON      "覆盖",IDC_OVERWRITE,12,42,43,14
+    PUSHBUTTON      "续传",IDC_ADDITION,113,42,43,14
+    PUSHBUTTON      "跳过",IDC_JUMP,218,42,43,14
+    PUSHBUTTON      "全部覆盖",IDC_OVERWRITE_ALL,63,42,43,14
+    PUSHBUTTON      "全部续传",IDC_ADDITION_ALL,166,42,43,14
+    PUSHBUTTON      "全部跳过",IDC_JUMP_ALL,267,42,43,14
+    PUSHBUTTON      "取消",IDC_CANCEL,316,42,43,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "FileDescription", "Client Microsoft 基础类应用程序"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "Client"
+            VALUE "LegalCopyright", "版权所有 (C) 2018"
+            VALUE "OriginalFilename", "Client.EXE"
+            VALUE "ProductName", "Client 应用程序"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 223
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_GENERATE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 275
+        VERTGUIDE, 50
+        TOPMARGIN, 7
+        HORZGUIDE, 36
+        HORZGUIDE, 57
+        HORZGUIDE, 167
+        HORZGUIDE, 186
+    END
+
+    IDD_SETTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 332
+        VERTGUIDE, 234
+        VERTGUIDE, 312
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 224
+        HORZGUIDE, 36
+        HORZGUIDE, 65
+        HORZGUIDE, 82
+        HORZGUIDE, 99
+        HORZGUIDE, 117
+        HORZGUIDE, 135
+        HORZGUIDE, 152
+        HORZGUIDE, 166
+        HORZGUIDE, 180
+    END
+
+    IDD_DOWNLOAD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 231
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 106
+    END
+
+    IDD_OPENWEB, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 229
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 110
+    END
+
+    IDD_CHANGE_GROUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 147
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 38
+    END
+
+    IDD_SCREENSPY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 488
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 349
+    END
+
+    IDD_KEYBOARD, DIALOG
+    BEGIN
+        RIGHTMARGIN, 314
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 201
+    END
+
+    IDD_WEBCAM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 182
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+
+    IDD_AUDIO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 246
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 92
+    END
+
+    IDD_SHELL, DIALOG
+    BEGIN
+        RIGHTMARGIN, 405
+        BOTTOMMARGIN, 233
+    END
+
+    IDD_SYSTEMINFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 470
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 346
+    END
+
+    IDD_SYSTEM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 396
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 236
+    END
+
+    IDD_SERVICE_INFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 260
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 264
+    END
+
+    IDD_SERVICE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 562
+        TOPMARGIN, 7
+    END
+
+    IDD_REGEDIT_TEXT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 241
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 84
+    END
+
+    IDD_REGEDIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 708
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 394
+    END
+
+    IDD_TEXTCHAT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 337
+        VERTGUIDE, 286
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 142
+    END
+
+    IDD_QQINFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 480
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 319
+    END
+
+    IDD_MAP_DIALOG, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 305
+    END
+
+    IDD_MSGBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 221
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 218
+    END
+
+    IDD_DIALOGBAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 678
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 36
+    END
+
+    IDD_DIALOG_TOOL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 260
+    END
+
+    IDD_FILEATTR, DIALOG
+    BEGIN
+        RIGHTMARGIN, 211
+        BOTTOMMARGIN, 174
+    END
+
+    IDD_LOGIN, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 105
+    END
+
+    IDD_PROXY_MAP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 384
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 230
+    END
+
+    IDD_PROXY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 167
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 144
+    END
+
+    IDD_START, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 202
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 172
+        HORZGUIDE, 159
+    END
+
+    IDD_FILE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 404
+        BOTTOMMARGIN, 268
+    END
+
+    IDD_TRANSFERMODE_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 364
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 67
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_SEARCHBAR TOOLBAR 24, 24
+BEGIN
+    BUTTON      ID_SEARCH_TEXT
+    BUTTON      ID_SEARCH_SUBFOLDER
+    SEPARATOR
+    BUTTON      ID_SEARCH_START
+    BUTTON      ID_SEARCH_STOP
+    BUTTON      ID_SEARCH_RESULT
+END
+
+IDR_FileToolBar TOOLBAR 16, 16
+BEGIN
+    BUTTON      IDT_REMOTE_PREV
+    BUTTON      IDT_REMOTE_HOME
+    BUTTON      IDT_REMOTE_STOP
+    BUTTON      IDT_REMOTE_NEWFOLDER
+    BUTTON      IDT_REMOTE_DELETE
+    BUTTON      IDT_TRANSFER_S
+    BUTTON      IDT_TRANSFER_R
+    BUTTON      IDT_REMOTE_GENX
+    BUTTON      IDT_REMOTE_DESKTOP
+    BUTTON      IDT_REMOTE_VIEW
+END
+
+IDR_TOOLBAR_MAIN TOOLBAR 32, 32
+BEGIN
+    BUTTON      ID_SETTING
+    BUTTON      IDM_TOOLS
+    BUTTON      ID_BUILD
+    BUTTON      ID_APP_ABOUT
+    BUTTON      ID_APP_EXIT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_SEARCHBAR           BITMAP                  "res\\toolbar4.bmp"
+IDR_FileToolBar         BITMAP                  "res\\toolbar3.bmp"
+IDB_TOOLBAR_SEARCH      BITMAP                  "res\\SearchToolBar.bmp"
+IDB_FILETB_HOT          BITMAP                  "res\\FileToolBarHot.bmp"
+IDB_FILETB_DISABLE      BITMAP                  "res\\FileToolBarDisable.bmp"
+IDR_TOOLBAR_MAIN        BITMAP                  "res\\toolbar5.bmp"
+IDB_BITMAP_XTSZ         BITMAP                  "res\\ClientBmp\\系统设置.bmp"
+IDB_BITMAP_SYGN         BITMAP                  "res\\ClientBmp\\实用工具.bmp"
+IDB_BITMAP_CJKF         BITMAP                  "res\\ClientBmp\\服务生成.bmp"
+IDB_BITMAP_GYCX         BITMAP                  "res\\ClientBmp\\关于程序.bmp"
+IDB_BITMAP_TCCX         BITMAP                  "res\\ClientBmp\\退出程序.bmp"
+IDB_MENU                BITMAP                  "res\\ClientBmp\\1.bmp"
+IDB_MENU2               BITMAP                  "res\\ClientBmp\\2.bmp"
+IDB_MENU3               BITMAP                  "res\\ClientBmp\\3.bmp"
+IDB_MENU4               BITMAP                  "res\\ClientBmp\\4.bmp"
+IDB_MENU_SYSTEM         BITMAP                  "res\\ClientBmp\\SYSTEM.bmp"
+IDB_MENU5               BITMAP                  "res\\ClientBmp\\5.bmp"
+IDB_MENU6               BITMAP                  "res\\ClientBmp\\6.bmp"
+IDB_TOOLS2              BITMAP                  "res\\ClientBmp\\上线设置.bmp"
+IDB_MENU7               BITMAP                  "res\\ClientBmp\\7.bmp"
+IDB_MENU8               BITMAP                  "res\\ClientBmp\\8.bmp"
+IDB_MENU9               BITMAP                  "res\\ClientBmp\\9.bmp"
+IDB_MENU10              BITMAP                  "res\\ClientBmp\\10.bmp"
+IDB_BITMAP1             BITMAP                  "C:\\Users\\development\\Desktop\\folders.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_MUTI_DRAG           CURSOR                  "res\\2.cur"
+IDC_DRAG                CURSOR                  "res\\1.cur"
+IDC_DOT                 CURSOR                  "res\\dot.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// SKIN
+//
+
+IDR_SKIN                SKIN                    "res\\SkinH.she"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// GIF
+//
+
+IDR_GIF                 GIF                     "res\\aaaa.gif"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_START DLGINIT
+BEGIN
+    IDC_FILEATTRIBUTE, 0x403, 5, 0
+0xfdd5, 0xa3b3, "\000" 
+    IDC_FILEATTRIBUTE, 0x403, 5, 0
+0xfed2, 0xd8b2, "\000" 
+    IDC_FILEATTRIBUTE, 0x403, 5, 0
+0xb5cf, 0xb3cd, "\000" 
+    IDC_FILEATTRIBUTE, 0x403, 5, 0
+0xbbd6, 0xc1b6, "\000" 
+    IDC_FILEATTRIBUTE, 0x403, 10, 0
+0xfed2, 0xd8b2, 0xcf2b, 0xcdb5, 0x00b3, 
+    IDC_FILEATTRIBUTE, 0x403, 15, 0
+0xfed2, 0xd8b2, 0xcf2b, 0xcdb5, 0x2bb3, 0xbbd6, 0xc1b6, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// WAVE
+//
+
+IDR_WAVE3               WAVE                    "res\\Sound\\Setting.wav"
+IDR_WAVE2               WAVE                    "res\\Sound\\login.wav"
+IDR_WAVE1               WAVE                    "res\\WAV\\offline.wav"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// SKIN1
+//
+
+IDR_SKIN11              SKIN1                   "res\\SKIN1.she"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "Client\n\nClient\n\n\nClient.Document\nClient Document"
+    IDR_MENU_LIST           "\nProgram\n程序"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "Client"
+    AFX_IDS_IDLEMESSAGE     "就绪"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "显示程序信息，版本号和版权\n关于"
+    ID_APP_EXIT             "退出应用程序；提示保存文档\n退出"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TOOLBAR         "显示或隐藏工具栏\n显隐工具栏"
+    ID_VIEW_STATUS_BAR      "显示或隐藏状态栏\n显隐状态栏"
+    ID_OS                   "主机统计:NT:0  Win2000:0  WinXP:0  Win2003:0  Vista:0  Win2008:0  Win7:0  Win8:0  Win2012:0  Win10:0  Win2016:0  -> 合计: 0台"
+    ID_UPLOAD               "发送: 0.00 kb/s"
+    ID_DOWNLOAD             "接收: 0.00 kb/s"
+    ID_STAUTSPORT           "端口: 8090"
+END
+
+STRINGTABLE
+BEGIN
+    ID_SEARCH_TEXT          "搜索:"
+    ID_SEARCH_RESULT        "搜索结果"
+END
+
+STRINGTABLE
+BEGIN
+    ID_SEARCH_SUBFOLDER     "搜索子文件夹"
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\Client.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#include "l.chs\afxprint.rc"        // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

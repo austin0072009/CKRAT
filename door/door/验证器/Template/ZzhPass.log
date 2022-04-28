@@ -1,0 +1,31 @@
+﻿生成启动时间为 2022/4/18 20:05:08。
+     1>项目“C:\Users\development\Desktop\door\door\验证器\ZzhPass.vcxproj”在节点 2 上(rebuild 个目标)。
+     1>_PrepareForClean:
+         正在删除文件“Template\ZzhPass.lastbuildstate”。
+       InitializeBuildStatus:
+         正在对“Template\ZzhPass.unsuccessfulbuild”执行 Touch 任务。
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W1 /WX- /O2 /Oy- /D _MBCS /D _AFXDLL /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Template\\" /Fd"Template\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt IniFile.cpp StdAfx.cpp ZzhPass.cpp ZzhPassDlg.cpp
+         IniFile.cpp
+         _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+         StdAfx.cpp
+         _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+         ZzhPass.cpp
+         _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+         ZzhPassDlg.cpp
+         _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+         正在生成代码...
+       ResourceCompile:
+         c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D _AFXDLL /l"0x0409" /nologo /fo"Template\ZzhPass.res" ZzhPass.rc 
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\development\Desktop\door\door\Template\ZzhPass.exe" /NOLOGO /MANIFEST /ManifestFile:"Template\ZzhPass.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"C:\Users\development\Desktop\door\door\Template\ZzhPass.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\development\Desktop\door\door\Template\ZzhPass.lib" /MACHINE:X86 Template\ZzhPass.res
+         Template\IniFile.obj
+         Template\StdAfx.obj
+         Template\ZzhPass.obj
+         Template\ZzhPassDlg.obj
+     1>LINK : fatal error LNK1561: 必须定义入口点
+     1>已完成生成项目“C:\Users\development\Desktop\door\door\验证器\ZzhPass.vcxproj”(rebuild 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:03.22

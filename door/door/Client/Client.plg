@@ -1,0 +1,260 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Client - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Release/Client.res" /d "NDEBUG" "C:\Users\Administrator\Desktop\飘来\Client\Client.rc"" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPB7B.tmp" with contents
+[
+/nologo /MT /w /W0 /GX /Zi /Od /I "Include" /I "..\common" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fo"Release/" /Fd"Release/" /FD /Zm1000 /c 
+"C:\Users\Administrator\Desktop\飘来\common\Audio.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\AudioDlg.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\Include\BmpToAvi.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\Include\Buffer.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\ChangeGroup.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\Include\cJSON.c"
+"C:\Users\Administrator\Desktop\飘来\Client\Client.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\ClientDoc.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\ClientView.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\Include\Dib.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\Download.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\FileAttr.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\FileManagerDlg.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\FileTransferModeDlg.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\Generate.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\Include\HtmlCtrl.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\Include\Icons.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\Include\IniFile.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\Include\InputDlg.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\Include\IOCPServer.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\KeyBoardDlg.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\LFileName.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\Login.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\LogView.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\MainFrm.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\MapDlg.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\MsgBox.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\OpenProxy.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\Openweb.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\PcView.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\Include\PictureEx.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\ProxyMapDlg.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\QQInfoDlg.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\RegeditDlg.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\RegeditTextDlg.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\ScreenSpyDlg.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\ServiceDlg.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\ServiceInfoDlg.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\Setting.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\Include\SEU_QQwry.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\ShellDlg.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\Include\ShowWave.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\SortListCtrl.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\Include\SoundToWav.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\Start.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\SystemDlg.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\Systeminfo.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\TextChatDlg.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\Tools.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\Include\TrueColorToolBar.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\Weather.cpp"
+"C:\Users\Administrator\Desktop\飘来\Client\WebCamDlg.cpp"
+"C:\Users\Administrator\Desktop\飘来\common\xvidsdk\XvidDec.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPB7B.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPB7C.tmp" with contents
+[
+/nologo /MT /w /W0 /GX /Zi /Od /I "Include" /I "..\common" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/Client.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /Zm1000 /c 
+"C:\Users\Administrator\Desktop\飘来\Client\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPB7C.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPB7D.tmp" with contents
+[
+..\common\libxvidcore.lib ..\common\va_g729a.lib nafxcw.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/Client.pdb" /map:"Release/Client.map" /debug /machine:I386 /out:"../Bin/Client.exe" 
+".\Release\Audio.obj"
+".\Release\AudioDlg.obj"
+".\Release\BmpToAvi.obj"
+".\Release\Buffer.obj"
+".\Release\ChangeGroup.obj"
+".\Release\cJSON.obj"
+".\Release\Client.obj"
+".\Release\ClientDoc.obj"
+".\Release\ClientView.obj"
+".\Release\Dib.obj"
+".\Release\Download.obj"
+".\Release\FileAttr.obj"
+".\Release\FileManagerDlg.obj"
+".\Release\FileTransferModeDlg.obj"
+".\Release\Generate.obj"
+".\Release\HtmlCtrl.obj"
+".\Release\Icons.obj"
+".\Release\IniFile.obj"
+".\Release\InputDlg.obj"
+".\Release\IOCPServer.obj"
+".\Release\KeyBoardDlg.obj"
+".\Release\LFileName.obj"
+".\Release\Login.obj"
+".\Release\LogView.obj"
+".\Release\MainFrm.obj"
+".\Release\MapDlg.obj"
+".\Release\MsgBox.obj"
+".\Release\OpenProxy.obj"
+".\Release\Openweb.obj"
+".\Release\PcView.obj"
+".\Release\PictureEx.obj"
+".\Release\ProxyMapDlg.obj"
+".\Release\QQInfoDlg.obj"
+".\Release\RegeditDlg.obj"
+".\Release\RegeditTextDlg.obj"
+".\Release\ScreenSpyDlg.obj"
+".\Release\ServiceDlg.obj"
+".\Release\ServiceInfoDlg.obj"
+".\Release\Setting.obj"
+".\Release\SEU_QQwry.obj"
+".\Release\ShellDlg.obj"
+".\Release\ShowWave.obj"
+".\Release\SortListCtrl.obj"
+".\Release\SoundToWav.obj"
+".\Release\Start.obj"
+".\Release\StdAfx.obj"
+".\Release\SystemDlg.obj"
+".\Release\Systeminfo.obj"
+".\Release\TextChatDlg.obj"
+".\Release\Tools.obj"
+".\Release\TrueColorToolBar.obj"
+".\Release\Weather.obj"
+".\Release\WebCamDlg.obj"
+".\Release\XvidDec.obj"
+".\Release\Client.res"
+]
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPB7D.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+Compiling...
+Audio.cpp
+AudioDlg.cpp
+BmpToAvi.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+Buffer.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+ChangeGroup.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+Generating Code...
+Automatically linking with ToolkitPro1501vc60S.lib
+Compiling...
+cJSON.c
+Generating Code...
+Compiling...
+Client.cpp
+ClientDoc.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+ClientView.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+Dib.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+Download.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+FileAttr.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+FileManagerDlg.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+FileTransferModeDlg.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+Generate.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+HtmlCtrl.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+Icons.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+IniFile.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+InputDlg.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+IOCPServer.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+KeyBoardDlg.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+LFileName.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+Login.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+LogView.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+MainFrm.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+MapDlg.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+Generating Code...
+Automatically linking with ToolkitPro1501vc60S.lib
+Compiling...
+MsgBox.cpp
+OpenProxy.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+Openweb.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+PcView.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+PictureEx.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+ProxyMapDlg.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+QQInfoDlg.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+RegeditDlg.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+RegeditTextDlg.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+ScreenSpyDlg.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+ServiceDlg.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+ServiceInfoDlg.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+Setting.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+SEU_QQwry.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+ShellDlg.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+ShowWave.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+SortListCtrl.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+SoundToWav.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+Start.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+SystemDlg.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+Generating Code...
+Automatically linking with ToolkitPro1501vc60S.lib
+Compiling...
+Systeminfo.cpp
+TextChatDlg.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+Tools.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+TrueColorToolBar.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+Weather.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+WebCamDlg.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+XvidDec.cpp
+Automatically linking with ToolkitPro1501vc60S.lib
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+Client.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

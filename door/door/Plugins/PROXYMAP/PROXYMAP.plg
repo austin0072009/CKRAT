@@ -1,0 +1,53 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: PROXYMAP - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\pc\AppData\Local\Temp\RSPFA77.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /I ".." /I "..\..\common" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "PROXYMAP_EXPORTS" /Fp"Release/PROXYMAP.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Users\pc\Desktop\2020年双重加密改加密带DLL\2020年双重加密改加密带DLL\Plugins\Buffer.cpp"
+"C:\Users\pc\Desktop\2020年双重加密改加密带DLL\2020年双重加密改加密带DLL\Plugins\ClientSocket.cpp"
+"C:\Users\pc\Desktop\2020年双重加密改加密带DLL\2020年双重加密改加密带DLL\Plugins\Manager.cpp"
+"C:\Users\pc\Desktop\2020年双重加密改加密带DLL\2020年双重加密改加密带DLL\Plugins\PROXYMAP\ProxyManager.cpp"
+"C:\Users\pc\Desktop\2020年双重加密改加密带DLL\2020年双重加密改加密带DLL\Plugins\PROXYMAP\PROXYMAP.CPP"
+"C:\Users\pc\Desktop\2020年双重加密改加密带DLL\2020年双重加密改加密带DLL\Plugins\until.cpp"
+]
+Creating command line "cl.exe @C:\Users\pc\AppData\Local\Temp\RSPFA77.tmp" 
+Creating temporary file "C:\Users\pc\AppData\Local\Temp\RSPFA78.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /incremental:no /pdb:"Release/PROXYMAP.pdb" /machine:I386 /out:"..\..\Bin\Plugins\PROXYMAP.dll" /implib:"Release/PROXYMAP.lib" 
+".\Release\Buffer.obj"
+".\Release\ClientSocket.obj"
+".\Release\Manager.obj"
+".\Release\ProxyManager.obj"
+".\Release\PROXYMAP.OBJ"
+".\Release\until.obj"
+]
+Creating command line "link.exe @C:\Users\pc\AppData\Local\Temp\RSPFA78.tmp"
+<h3>Output Window</h3>
+Compiling...
+Buffer.cpp
+ClientSocket.cpp
+C:\Users\pc\Desktop\2020年双重加密改加密带DLL\2020年双重加密改加密带DLL\Plugins\ClientSocket.cpp(108) : warning C4305: '+=' : truncation from 'const unsigned __int64' to 'char'
+C:\Users\pc\Desktop\2020年双重加密改加密带DLL\2020年双重加密改加密带DLL\Plugins\ClientSocket.cpp(319) : warning C4305: '-=' : truncation from 'const unsigned __int64' to 'char'
+C:\Users\pc\Desktop\2020年双重加密改加密带DLL\2020年双重加密改加密带DLL\Plugins\ClientSocket.cpp(333) : warning C4018: '>=' : signed/unsigned mismatch
+C:\Users\pc\Desktop\2020年双重加密改加密带DLL\2020年双重加密改加密带DLL\Plugins\ClientSocket.cpp(367) : warning C4018: '==' : signed/unsigned mismatch
+Manager.cpp
+ProxyManager.cpp
+PROXYMAP.CPP
+until.cpp
+Linking...
+   Creating library Release/PROXYMAP.lib and object Release/PROXYMAP.exp
+LINK : warning LNK4089: all references to "USER32.dll" discarded by /OPT:REF
+
+
+
+<h3>Results</h3>
+PROXYMAP.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

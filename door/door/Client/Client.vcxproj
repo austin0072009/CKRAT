@@ -1,0 +1,760 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Users\development\Desktop\class;$(IncludePath)</IncludePath>
+    <ReferencePath>C:\Users\development\Desktop\class\Lib;$(ReferencePath)</ReferencePath>
+    <LibraryPath>C:\Users\development\Desktop\class\Lib;$(LibraryPath)</LibraryPath>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <AdditionalIncludeDirectories>Include;..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release\Client.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+      <AdditionalOptions> /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Release\Client.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\Client.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalDependencies>..\common\libxvidcore.lib;..\common\va_g729a.lib;nafxcw.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Debug\Client.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Debug\Client.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\Client.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>.\Debug\Client.exe</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\common\Audio.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="122205622.cpp" />
+    <ClCompile Include="122205622Doc.cpp" />
+    <ClCompile Include="122205622View.cpp" />
+    <ClCompile Include="AudioDlg.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Include\BmpToAvi.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Include\Buffer.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="ChangeGroup.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Include\cJSON.c">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Client.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="ClientDoc.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="ClientView.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Include\Dib.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Download.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="FileAttr.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="FileManagerDlg.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="FileTransferModeDlg.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Generate.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Include\HtmlCtrl.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Include\Icons.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Include\IniFile.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Include\InputDlg.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Include\IOCPServer.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="KeyBoardDlg.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="LFileName.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Login.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="LogView.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="MapDlg.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="MsgBox.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="MySuperGrid.cpp" />
+    <ClCompile Include="OpenProxy.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Openweb.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="PcView.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Include\PictureEx.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="ProxyMapDlg.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="QQInfoDlg.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="RegeditDlg.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="RegeditTextDlg.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="ScreenSpyDlg.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="ServiceDlg.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="ServiceInfoDlg.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Setting.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Include\SEU_QQwry.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="ShellDlg.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Include\ShowWave.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="SortListCtrl.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Include\SoundToWav.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Start.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="supergridctrl.cpp" />
+    <ClCompile Include="SystemDlg.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Systeminfo.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="TextChatDlg.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Tools.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Include\TrueColorToolBar.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Weather.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="WebCamDlg.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\common\xvidsdk\XvidDec.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Client.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\common\Audio.h" />
+    <ClInclude Include="122205622.h" />
+    <ClInclude Include="122205622Doc.h" />
+    <ClInclude Include="122205622View.h" />
+    <ClInclude Include="AudioDlg.h" />
+    <ClInclude Include="Include\BmpToAvi.h" />
+    <ClInclude Include="Include\Buffer.h" />
+    <ClInclude Include="ChangeGroup.h" />
+    <ClInclude Include="Include\cJSON.h" />
+    <ClInclude Include="Client.h" />
+    <ClInclude Include="ClientDoc.h" />
+    <ClInclude Include="ClientView.h" />
+    <ClInclude Include="Include\Dib.h" />
+    <ClInclude Include="Download.h" />
+    <ClInclude Include="FileAttr.h" />
+    <ClInclude Include="FileManagerDlg.h" />
+    <ClInclude Include="FileTransferModeDlg.h" />
+    <ClInclude Include="Generate.h" />
+    <ClInclude Include="Include\HtmlCtrl.h" />
+    <ClInclude Include="Include\Icons.h" />
+    <ClInclude Include="Include\IniFile.h" />
+    <ClInclude Include="Include\InputDlg.h" />
+    <ClInclude Include="Include\IOCPServer.h" />
+    <ClInclude Include="KeyBoardDlg.h" />
+    <ClInclude Include="LFileName.h" />
+    <ClInclude Include="Login.h" />
+    <ClInclude Include="LogView.h" />
+    <ClInclude Include="..\common\macros.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="MapDlg.h" />
+    <ClInclude Include="Include\Mapper.h" />
+    <ClInclude Include="MsgBox.h" />
+    <ClInclude Include="MySuperGrid.h" />
+    <ClInclude Include="OpenProxy.h" />
+    <ClInclude Include="Openweb.h" />
+    <ClInclude Include="PcView.h" />
+    <ClInclude Include="Include\PictureEx.h" />
+    <ClInclude Include="ProxyMapDlg.h" />
+    <ClInclude Include="QQInfoDlg.h" />
+    <ClInclude Include="RegeditDlg.h" />
+    <ClInclude Include="RegeditTextDlg.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="ScreenSpyDlg.h" />
+    <ClInclude Include="ServiceDlg.h" />
+    <ClInclude Include="ServiceInfoDlg.h" />
+    <ClInclude Include="Setting.h" />
+    <ClInclude Include="Include\SEU_QQwry.h" />
+    <ClInclude Include="ShellDlg.h" />
+    <ClInclude Include="Include\ShowWave.h" />
+    <ClInclude Include="SortListCtrl.h" />
+    <ClInclude Include="Include\SoundToWav.h" />
+    <ClInclude Include="Start.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="supergridctrl.h" />
+    <ClInclude Include="SystemDlg.h" />
+    <ClInclude Include="Systeminfo.h" />
+    <ClInclude Include="TextChatDlg.h" />
+    <ClInclude Include="Tools.h" />
+    <ClInclude Include="Include\TrueColorToolBar.h" />
+    <ClInclude Include="Weather.h" />
+    <ClInclude Include="WebCamDlg.h" />
+    <ClInclude Include="..\common\xvidsdk\XvidDec.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\ClientBmp\1.bmp" />
+    <CustomBuild Include="res\1.cur" />
+    <CustomBuild Include="res\RezIco\1.ico" />
+    <CustomBuild Include="res\ClientBmp\10.bmp" />
+    <CustomBuild Include="res\ClientBmp\2.bmp" />
+    <CustomBuild Include="res\2.cur" />
+    <CustomBuild Include="res\RezIco\201.ico" />
+    <CustomBuild Include="res\RezIco\202.ico" />
+    <CustomBuild Include="res\RezIco\203.ico" />
+    <CustomBuild Include="res\RezIco\204.ico" />
+    <CustomBuild Include="res\RezIco\205.ico" />
+    <CustomBuild Include="res\RezIco\206.ico" />
+    <CustomBuild Include="res\ClientBmp\3.bmp" />
+    <CustomBuild Include="res\ClientBmp\4.bmp" />
+    <CustomBuild Include="res\ClientBmp\5.bmp" />
+    <CustomBuild Include="res\ClientBmp\6.bmp" />
+    <CustomBuild Include="res\ClientBmp\7.bmp" />
+    <CustomBuild Include="res\ClientBmp\8.bmp" />
+    <CustomBuild Include="res\ClientBmp\9.bmp" />
+    <CustomBuild Include="res\aaaa.gif">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="res\百度天气接口图标\day\baoxue.ico" />
+    <CustomBuild Include="res\百度天气接口图标\night\baoxue.ico" />
+    <CustomBuild Include="res\百度天气接口图标\day\baoyu.ico" />
+    <CustomBuild Include="res\百度天气接口图标\night\baoyu.ico" />
+    <CustomBuild Include="res\百度天气接口图标\day\baoyuzhuandabaoyu.ico" />
+    <CustomBuild Include="res\百度天气接口图标\night\baoyuzhuandabaoyu.ico" />
+    <CustomBuild Include="res\ClientBmp\bitmap1.bmp" />
+    <CustomBuild Include="res\Client.ico" />
+    <CustomBuild Include="res\Client.rc2">
+      <FileType>RC</FileType>
+    </CustomBuild>
+    <CustomBuild Include="res\ClientDoc.ico" />
+    <CustomBuild Include="res\HOSTLISTICO\CPU.ico" />
+    <CustomBuild Include="res\百度天气接口图标\day\dabaoyu.ico" />
+    <CustomBuild Include="res\百度天气接口图标\night\dabaoyu.ico" />
+    <CustomBuild Include="res\百度天气接口图标\day\dabaoyuzhuantedabaoyu.ico" />
+    <CustomBuild Include="res\百度天气接口图标\night\dabaoyuzhuantedabaoyu.ico" />
+    <CustomBuild Include="res\百度天气接口图标\day\daxue.ico" />
+    <CustomBuild Include="res\百度天气接口图标\night\daxue.ico" />
+    <CustomBuild Include="res\百度天气接口图标\day\daxuezhuanbaoxue.ico" />
+    <CustomBuild Include="res\百度天气接口图标\night\daxuezhuanbaoxue.ico" />
+    <CustomBuild Include="res\百度天气接口图标\day\dayu.ico" />
+    <CustomBuild Include="res\百度天气接口图标\night\dayu.ico" />
+    <CustomBuild Include="res\百度天气接口图标\day\dayuzhuanbaoyu.ico" />
+    <CustomBuild Include="res\百度天气接口图标\night\dayuzhuanbaoyu.ico" />
+    <CustomBuild Include="res\百度天气接口图标\day\dongyu.ico" />
+    <CustomBuild Include="res\百度天气接口图标\night\dongyu.ico" />
+    <CustomBuild Include="res\dot.cur" />
+    <CustomBuild Include="res\百度天气接口图标\day\duoyun.ico" />
+    <CustomBuild Include="res\百度天气接口图标\night\duoyun.ico" />
+    <CustomBuild Include="res\iconew\FILE.ico" />
+    <CustomBuild Include="res\FileToolBarDisable.bmp" />
+    <CustomBuild Include="res\FileToolBarHot.bmp" />
+    <CustomBuild Include="res\百度天气接口图标\day\fuchen.ico" />
+    <CustomBuild Include="res\百度天气接口图标\night\fuchen.ico" />
+    <CustomBuild Include="res\GuoQiICO\ico00001.ico" />
+    <CustomBuild Include="res\GuoQiICO\icon209.ico" />
+    <CustomBuild Include="res\ImagIoc\Icon_C.ico" />
+    <CustomBuild Include="res\ImagIoc\Icon_D.ico" />
+    <CustomBuild Include="res\ImagIoc\Icon_E.ico" />
+    <CustomBuild Include="res\ImagIoc\Icon_F.ico" />
+    <CustomBuild Include="res\ImagIoc\Icon_G.ico" />
+    <CustomBuild Include="res\百度天气接口图标\day\leizhenyu.ico" />
+    <CustomBuild Include="res\百度天气接口图标\night\leizhenyu.ico" />
+    <CustomBuild Include="res\百度天气接口图标\day\leizhenyubanyoubingbao.ico" />
+    <CustomBuild Include="res\百度天气接口图标\night\leizhenyubanyoubingbao.ico" />
+    <CustomBuild Include="res\HOSTLISTICO\MAC.ico" />
+    <CustomBuild Include="res\百度天气接口图标\day\mai.ico" />
+    <CustomBuild Include="res\百度天气接口图标\night\mai.ico" />
+    <CustomBuild Include="res\百度天气接口图标\day\qiangshachenbao.ico" />
+    <CustomBuild Include="res\百度天气接口图标\night\qiangshachenbao.ico" />
+    <CustomBuild Include="res\百度天气接口图标\day\qing.ico" />
+    <CustomBuild Include="res\百度天气接口图标\night\qing.ico" />
+    <CustomBuild Include="res\HOSTLISTICO\QQ.ico" />
+    <CustomBuild Include="res\SearchToolBar.bmp" />
+    <CustomBuild Include="res\百度天气接口图标\day\shachenbao.ico" />
+    <CustomBuild Include="res\百度天气接口图标\night\shachenbao.ico" />
+    <CustomBuild Include="res\ClientBmp\SYSTEM.bmp" />
+    <CustomBuild Include="res\百度天气接口图标\day\tedabaoyu.ico" />
+    <CustomBuild Include="res\百度天气接口图标\night\tedabaoyu.ico" />
+    <CustomBuild Include="res\Toolbar.bmp" />
+    <CustomBuild Include="res\toolbar3.bmp" />
+    <CustomBuild Include="res\toolbar4.bmp" />
+    <CustomBuild Include="res\toolbar5.bmp" />
+    <CustomBuild Include="res\百度天气接口图标\day\wu.ico" />
+    <CustomBuild Include="res\百度天气接口图标\night\wu.ico" />
+    <CustomBuild Include="res\百度天气接口图标\day\xiaoxue.ico" />
+    <CustomBuild Include="res\百度天气接口图标\night\xiaoxue.ico" />
+    <CustomBuild Include="res\百度天气接口图标\day\xiaoxuezhuanzhongxue.ico" />
+    <CustomBuild Include="res\百度天气接口图标\night\xiaoxuezhuanzhongxue.ico" />
+    <CustomBuild Include="res\百度天气接口图标\day\xiaoyu.ico" />
+    <CustomBuild Include="res\百度天气接口图标\night\xiaoyu.ico" />
+    <CustomBuild Include="res\百度天气接口图标\day\xiaoyuzhuanzhongyu.ico" />
+    <CustomBuild Include="res\百度天气接口图标\night\xiaoyuzhuanzhongyu.ico" />
+    <CustomBuild Include="res\ClientBmp\xtsz.bmp" />
+    <CustomBuild Include="res\百度天气接口图标\day\yangsha.ico" />
+    <CustomBuild Include="res\百度天气接口图标\night\yangsha.ico" />
+    <CustomBuild Include="res\百度天气接口图标\day\yin.ico" />
+    <CustomBuild Include="res\百度天气接口图标\night\yin.ico" />
+    <CustomBuild Include="res\百度天气接口图标\day\yujiaxue.ico" />
+    <CustomBuild Include="res\百度天气接口图标\night\yujiaxue.ico" />
+    <CustomBuild Include="res\百度天气接口图标\night\zhenxue.ico" />
+    <CustomBuild Include="res\百度天气接口图标\day\zhenyu.ico" />
+    <CustomBuild Include="res\百度天气接口图标\night\zhenyu.ico" />
+    <CustomBuild Include="res\百度天气接口图标\day\zhongxue.ico" />
+    <CustomBuild Include="res\百度天气接口图标\night\zhongxue.ico" />
+    <CustomBuild Include="res\百度天气接口图标\day\zhongxuezhuandaxue.ico" />
+    <CustomBuild Include="res\百度天气接口图标\night\zhongxuezhuandaxue.ico" />
+    <CustomBuild Include="res\百度天气接口图标\day\zhongyu.ico" />
+    <CustomBuild Include="res\百度天气接口图标\night\zhongyu.ico" />
+    <CustomBuild Include="res\百度天气接口图标\day\zhongyuzhuandayu.ico" />
+    <CustomBuild Include="res\百度天气接口图标\night\zhongyuzhuandayu.ico" />
+    <CustomBuild Include="res\GuoQiICO\阿尔巴尼亚.ico" />
+    <CustomBuild Include="res\GuoQiICO\阿尔及利亚.ico" />
+    <CustomBuild Include="res\GuoQiICO\阿富汗.ico" />
+    <CustomBuild Include="res\GuoQiICO\阿根廷.ico" />
+    <CustomBuild Include="res\GuoQiICO\阿拉伯国家联盟.ico" />
+    <CustomBuild Include="res\GuoQiICO\阿联酋.ico" />
+    <CustomBuild Include="res\GuoQiICO\阿曼.ico" />
+    <CustomBuild Include="res\GuoQiICO\阿塞拜疆.ico" />
+    <CustomBuild Include="res\GuoQiICO\埃及.ico" />
+    <CustomBuild Include="res\GuoQiICO\埃塞俄比亚.ico" />
+    <CustomBuild Include="res\GuoQiICO\爱尔兰.ico" />
+    <CustomBuild Include="res\GuoQiICO\爱沙尼亚.ico" />
+    <CustomBuild Include="res\GuoQiICO\安道尔.ico" />
+    <CustomBuild Include="res\GuoQiICO\安哥拉.ico" />
+    <CustomBuild Include="res\GuoQiICO\安提瓜和巴布达.ico" />
+    <CustomBuild Include="res\GuoQiICO\奥地利.ico" />
+    <CustomBuild Include="res\GuoQiICO\澳大利亚.ico" />
+    <CustomBuild Include="res\GuoQiICO\澳门.ico" />
+    <CustomBuild Include="res\GuoQiICO\巴巴多斯.ico" />
+    <CustomBuild Include="res\GuoQiICO\巴布亚新几内亚.ico" />
+    <CustomBuild Include="res\GuoQiICO\巴哈马.ico" />
+    <CustomBuild Include="res\GuoQiICO\巴基斯坦.ico" />
+    <CustomBuild Include="res\GuoQiICO\巴拉圭.ico" />
+    <CustomBuild Include="res\GuoQiICO\巴勒斯坦.ico" />
+    <CustomBuild Include="res\GuoQiICO\巴林.ico" />
+    <CustomBuild Include="res\GuoQiICO\巴拿马.ico" />
+    <CustomBuild Include="res\GuoQiICO\巴西.ico" />
+    <CustomBuild Include="res\GuoQiICO\白俄罗斯.ico" />
+    <CustomBuild Include="res\GuoQiICO\保加利亚.ico" />
+    <CustomBuild Include="res\GuoQiICO\北大西洋公约组织.ico" />
+    <CustomBuild Include="res\GuoQiICO\贝宁.ico" />
+    <CustomBuild Include="res\GuoQiICO\比利时.ico" />
+    <CustomBuild Include="res\GuoQiICO\冰岛.ico" />
+    <CustomBuild Include="res\GuoQiICO\玻利维亚.ico" />
+    <CustomBuild Include="res\SystemIco\拨号密码.ico" />
+    <CustomBuild Include="res\GuoQiICO\波多黎各.ico" />
+    <CustomBuild Include="res\GuoQiICO\波兰.ico" />
+    <CustomBuild Include="res\GuoQiICO\波斯尼亚和黑塞哥维那.ico" />
+    <CustomBuild Include="res\GuoQiICO\博茨瓦纳.ico" />
+    <CustomBuild Include="res\GuoQiICO\不丹.ico" />
+    <CustomBuild Include="res\GuoQiICO\布基纳法索.ico" />
+    <CustomBuild Include="res\GuoQiICO\布隆迪.ico" />
+    <CustomBuild Include="res\HOSTLISTICO\操作系统.ico" />
+    <CustomBuild Include="res\GuoQiICO\朝鲜.ico" />
+    <CustomBuild Include="res\GuoQiICO\赤道几内亚.ico" />
+    <CustomBuild Include="res\SystemIco\窗口管理.ico" />
+    <CustomBuild Include="res\GuoQiICO\丹麦.ico" />
+    <CustomBuild Include="res\GuoQiICO\德国.ico" />
+    <CustomBuild Include="res\GuoQiICO\东帝汶.ico" />
+    <CustomBuild Include="res\GuoQiICO\东南亚国家协会.ico" />
+    <CustomBuild Include="res\GuoQiICO\独立国家国协.ico" />
+    <CustomBuild Include="res\ClientIco\端口.ico" />
+    <CustomBuild Include="res\GuoQiICO\多哥.ico" />
+    <CustomBuild Include="res\GuoQiICO\多米尼加.ico" />
+    <CustomBuild Include="res\GuoQiICO\多米尼克.ico" />
+    <CustomBuild Include="res\GuoQiICO\俄罗斯.ico" />
+    <CustomBuild Include="res\GuoQiICO\厄瓜多尔.ico" />
+    <CustomBuild Include="res\GuoQiICO\厄立特里亚.ico" />
+    <CustomBuild Include="res\ClientIco\发送.ico" />
+    <CustomBuild Include="res\GuoQiICO\法国.ico" />
+    <CustomBuild Include="res\GuoQiICO\菲律宾.ico" />
+    <CustomBuild Include="res\GuoQiICO\芬兰.ico" />
+    <CustomBuild Include="res\HOSTLISTICO\分辨率.ico" />
+    <CustomBuild Include="res\GuoQiICO\佛得角.ico" />
+    <CustomBuild Include="res\ClientIco\服务管理.ico" />
+    <CustomBuild Include="res\ClientBmp\服务生成.bmp" />
+    <CustomBuild Include="res\GuoQiICO\冈比亚.ico" />
+    <CustomBuild Include="res\GuoQiICO\刚果(金).ico" />
+    <CustomBuild Include="res\GuoQiICO\刚果.ico" />
+    <CustomBuild Include="res\GuoQiICO\哥伦比亚.ico" />
+    <CustomBuild Include="res\GuoQiICO\哥斯达黎加.ico" />
+    <CustomBuild Include="res\GuoQiICO\格林纳达.ico" />
+    <CustomBuild Include="res\GuoQiICO\格鲁吉亚.ico" />
+    <CustomBuild Include="res\LogIco\公告.ico" />
+    <CustomBuild Include="res\GuoQiICO\古巴.ico" />
+    <CustomBuild Include="res\ClientBmp\关于程序.bmp" />
+    <CustomBuild Include="res\GuoQiICO\圭亚那.ico" />
+    <CustomBuild Include="res\GuoQiICO\国协.ico" />
+    <CustomBuild Include="res\GuoQiICO\哈萨克斯坦.ico" />
+    <CustomBuild Include="res\GuoQiICO\海地.ico" />
+    <CustomBuild Include="res\GuoQiICO\韩国.ico" />
+    <CustomBuild Include="res\GuoQiICO\荷兰.ico" />
+    <CustomBuild Include="res\GuoQiICO\洪都拉斯.ico" />
+    <CustomBuild Include="res\GuoQiICO\基里巴斯.ico" />
+    <CustomBuild Include="res\GuoQiICO\吉布提.ico" />
+    <CustomBuild Include="res\GuoQiICO\吉尔吉斯斯坦.ico" />
+    <CustomBuild Include="res\GuoQiICO\几内亚.ico" />
+    <CustomBuild Include="res\GuoQiICO\几内亚比绍.ico" />
+    <CustomBuild Include="res\GuoQiICO\加勒比海共同体.ico" />
+    <CustomBuild Include="res\GuoQiICO\加拿大.ico" />
+    <CustomBuild Include="res\GuoQiICO\加纳.ico" />
+    <CustomBuild Include="res\GuoQiICO\加蓬.ico" />
+    <CustomBuild Include="res\GuoQiICO\柬埔寨.ico" />
+    <CustomBuild Include="res\ClientIco\键盘记录.ico" />
+    <CustomBuild Include="res\GuoQiICO\捷克.ico" />
+    <CustomBuild Include="res\GuoQiICO\津巴布韦.ico" />
+    <CustomBuild Include="res\GuoQiICO\喀麦隆.ico" />
+    <CustomBuild Include="res\GuoQiICO\卡塔尔.ico" />
+    <CustomBuild Include="res\GuoQiICO\科摩罗.ico" />
+    <CustomBuild Include="res\GuoQiICO\科特迪瓦.ico" />
+    <CustomBuild Include="res\GuoQiICO\科威特.ico" />
+    <CustomBuild Include="res\GuoQiICO\克罗地亚.ico" />
+    <CustomBuild Include="res\GuoQiICO\肯尼亚.ico" />
+    <CustomBuild Include="res\GuoQiICO\拉脱维亚.ico" />
+    <CustomBuild Include="res\GuoQiICO\莱索托.ico" />
+    <CustomBuild Include="res\GuoQiICO\老挝.ico" />
+    <CustomBuild Include="res\GuoQiICO\黎巴嫩.ico" />
+    <CustomBuild Include="res\GuoQiICO\利比果亚.ico" />
+    <CustomBuild Include="res\GuoQiICO\利比亚.ico" />
+    <CustomBuild Include="res\GuoQiICO\立陶宛.ico" />
+    <CustomBuild Include="res\GuoQiICO\联合国.ico" />
+    <CustomBuild Include="res\GuoQiICO\列支敦士登.ico" />
+    <CustomBuild Include="res\GuoQiICO\卢森堡.ico" />
+    <CustomBuild Include="res\GuoQiICO\卢旺达.ico" />
+    <CustomBuild Include="res\GuoQiICO\罗马尼亚.ico" />
+    <CustomBuild Include="res\GuoQiICO\马达加斯加.ico" />
+    <CustomBuild Include="res\GuoQiICO\马耳他.ico" />
+    <CustomBuild Include="res\GuoQiICO\马尔代夫.ico" />
+    <CustomBuild Include="res\GuoQiICO\马拉维.ico" />
+    <CustomBuild Include="res\GuoQiICO\马来西亚.ico" />
+    <CustomBuild Include="res\GuoQiICO\马里.ico" />
+    <CustomBuild Include="res\GuoQiICO\马其顿.ico" />
+    <CustomBuild Include="res\GuoQiICO\马绍尔群岛.ico" />
+    <CustomBuild Include="res\GuoQiICO\毛里求斯.ico" />
+    <CustomBuild Include="res\GuoQiICO\毛里塔尼亚.ico" />
+    <CustomBuild Include="res\GuoQiICO\美国.ico" />
+    <CustomBuild Include="res\GuoQiICO\美国国家组织.ico" />
+    <CustomBuild Include="res\GuoQiICO\蒙古.ico" />
+    <CustomBuild Include="res\GuoQiICO\孟加拉.ico" />
+    <CustomBuild Include="res\GuoQiICO\秘鲁.ico" />
+    <CustomBuild Include="res\GuoQiICO\密克罗尼西亚联邦.ico" />
+    <CustomBuild Include="res\GuoQiICO\缅甸.ico" />
+    <CustomBuild Include="res\GuoQiICO\摩尔多瓦.ico" />
+    <CustomBuild Include="res\GuoQiICO\摩洛哥.ico" />
+    <CustomBuild Include="res\GuoQiICO\摩纳哥.ico" />
+    <CustomBuild Include="res\GuoQiICO\莫桑比克.ico" />
+    <CustomBuild Include="res\GuoQiICO\墨西哥.ico" />
+    <CustomBuild Include="res\GuoQiICO\纳米比亚.ico" />
+    <CustomBuild Include="res\GuoQiICO\南非.ico" />
+    <CustomBuild Include="res\HOSTLISTICO\内存.ico" />
+    <CustomBuild Include="res\GuoQiICO\尼泊尔.ico" />
+    <CustomBuild Include="res\GuoQiICO\尼加拉瓜.ico" />
+    <CustomBuild Include="res\GuoQiICO\尼日尔.ico" />
+    <CustomBuild Include="res\GuoQiICO\尼日利亚.ico" />
+    <CustomBuild Include="res\GuoQiICO\挪威.ico" />
+    <CustomBuild Include="res\GuoQiICO\欧洲联盟.ico" />
+    <CustomBuild Include="res\GuoQiICO\帕劳.ico" />
+    <CustomBuild Include="res\ClientIco\屏幕控制.ico" />
+    <CustomBuild Include="res\GuoQiICO\葡萄牙.ico" />
+    <CustomBuild Include="res\GuoQiICO\日本.ico" />
+    <CustomBuild Include="res\SystemIco\软件信息.ico" />
+    <CustomBuild Include="res\GuoQiICO\瑞典.ico" />
+    <CustomBuild Include="res\GuoQiICO\瑞士.ico" />
+    <CustomBuild Include="res\GuoQiICO\萨尔瓦多.ico" />
+    <CustomBuild Include="res\GuoQiICO\塞尔维亚.ico" />
+    <CustomBuild Include="res\GuoQiICO\塞拉利昂.ico" />
+    <CustomBuild Include="res\GuoQiICO\塞内加尔.ico" />
+    <CustomBuild Include="res\GuoQiICO\塞浦路斯.ico" />
+    <CustomBuild Include="res\GuoQiICO\塞舌尔.ico" />
+    <CustomBuild Include="res\HOSTLISTICO\杀毒.ico" />
+    <CustomBuild Include="res\GuoQiICO\沙特阿拉伯.ico" />
+    <CustomBuild Include="res\LogIco\上线.ico" />
+    <CustomBuild Include="res\ClientBmp\上线设置.bmp" />
+    <CustomBuild Include="res\GuoQiICO\圣多美和普林西比.ico" />
+    <CustomBuild Include="res\GuoQiICO\圣基茨和尼维斯.ico" />
+    <CustomBuild Include="res\GuoQiICO\圣卢西亚.ico" />
+    <CustomBuild Include="res\GuoQiICO\圣马力诺.ico" />
+    <CustomBuild Include="res\GuoQiICO\圣文森特和格林纳丁斯.ico" />
+    <CustomBuild Include="res\ClientBmp\实用工具.bmp" />
+    <CustomBuild Include="res\ClientIco\视频查看.ico" />
+    <CustomBuild Include="res\GuoQiICO\斯里兰卡.ico" />
+    <CustomBuild Include="res\GuoQiICO\斯洛伐克.ico" />
+    <CustomBuild Include="res\GuoQiICO\斯洛文尼亚.ico" />
+    <CustomBuild Include="res\GuoQiICO\斯威士兰.ico" />
+    <CustomBuild Include="res\GuoQiICO\苏丹.ico" />
+    <CustomBuild Include="res\GuoQiICO\苏里南.ico" />
+    <CustomBuild Include="res\GuoQiICO\索马里.ico" />
+    <CustomBuild Include="res\GuoQiICO\所罗门群岛.ico" />
+    <CustomBuild Include="res\GuoQiICO\塔吉克斯坦.ico" />
+    <CustomBuild Include="res\GuoQiICO\台湾省.ico" />
+    <CustomBuild Include="res\GuoQiICO\泰国.ico" />
+    <CustomBuild Include="res\GuoQiICO\太平洋共同体.ico" />
+    <CustomBuild Include="res\GuoQiICO\坦桑尼亚.ico" />
+    <CustomBuild Include="res\GuoQiICO\汤加.ico" />
+    <CustomBuild Include="res\GuoQiICO\特立尼达和多巴哥.ico" />
+    <CustomBuild Include="res\GuoQiICO\突尼斯.ico" />
+    <CustomBuild Include="res\GuoQiICO\图瓦卢.ico" />
+    <CustomBuild Include="res\GuoQiICO\土耳其.ico" />
+    <CustomBuild Include="res\GuoQiICO\土库曼斯坦.ico" />
+    <CustomBuild Include="res\ClientBmp\退出程序.bmp" />
+    <CustomBuild Include="res\GuoQiICO\瓦努阿图.ico" />
+    <CustomBuild Include="res\GuoQiICO\危地马拉.ico" />
+    <CustomBuild Include="res\GuoQiICO\委内瑞拉.ico" />
+    <CustomBuild Include="res\ClientIco\文件管理.ico" />
+    <CustomBuild Include="res\GuoQiICO\文莱.ico" />
+    <CustomBuild Include="res\GuoQiICO\乌干达.ico" />
+    <CustomBuild Include="res\GuoQiICO\乌克兰.ico" />
+    <CustomBuild Include="res\GuoQiICO\乌拉圭.ico" />
+    <CustomBuild Include="res\GuoQiICO\乌兹别克斯坦.ico" />
+    <CustomBuild Include="res\GuoQiICO\无IP数据库.ico" />
+    <CustomBuild Include="res\GuoQiICO\西班牙.ico" />
+    <CustomBuild Include="res\GuoQiICO\西萨摩亚.ico" />
+    <CustomBuild Include="res\GuoQiICO\希腊.ico" />
+    <CustomBuild Include="res\ClientBmp\系统设置.bmp" />
+    <CustomBuild Include="res\LogIco\下线.ico" />
+    <CustomBuild Include="res\ClientIco\下载.ico" />
+    <CustomBuild Include="res\GuoQiICO\香港.ico" />
+    <CustomBuild Include="res\GuoQiICO\新加坡.ico" />
+    <CustomBuild Include="res\GuoQiICO\新西兰.ico" />
+    <CustomBuild Include="res\GuoQiICO\匈牙利.ico" />
+    <CustomBuild Include="res\GuoQiICO\叙利亚.ico" />
+    <CustomBuild Include="res\GuoQiICO\牙买加.ico" />
+    <CustomBuild Include="res\GuoQiICO\亚美尼亚.ico" />
+    <CustomBuild Include="res\GuoQiICO\也门.ico" />
+    <CustomBuild Include="res\GuoQiICO\伊拉克.ico" />
+    <CustomBuild Include="res\GuoQiICO\伊朗.ico" />
+    <CustomBuild Include="res\GuoQiICO\以色列.ico" />
+    <CustomBuild Include="res\GuoQiICO\意大利.ico" />
+    <CustomBuild Include="res\GuoQiICO\印度.ico" />
+    <CustomBuild Include="res\GuoQiICO\印度尼西亚.ico" />
+    <CustomBuild Include="res\GuoQiICO\英格兰.ico" />
+    <CustomBuild Include="res\GuoQiICO\英国.ico" />
+    <CustomBuild Include="res\SystemIco\硬件信息.ico" />
+    <CustomBuild Include="res\HOSTLISTICO\硬盘.ico" />
+    <CustomBuild Include="res\HOSTLISTICO\用户.ico" />
+    <CustomBuild Include="res\ClientIco\语音监听.ico" />
+    <CustomBuild Include="res\ClientIco\远程定位.ico" />
+    <CustomBuild Include="res\ClientIco\远程终端.ico" />
+    <CustomBuild Include="res\GuoQiICO\约旦.ico" />
+    <CustomBuild Include="res\GuoQiICO\越南.ico" />
+    <CustomBuild Include="res\HOSTLISTICO\运行时间.ico" />
+    <CustomBuild Include="res\ClientIco\在线主机.ico" />
+    <CustomBuild Include="res\GuoQiICO\赞比亚.ico" />
+    <CustomBuild Include="res\GuoQiICO\乍得.ico" />
+    <CustomBuild Include="res\GuoQiICO\智利.ico" />
+    <CustomBuild Include="res\GuoQiICO\中非.ico" />
+    <CustomBuild Include="res\GuoQiICO\中国.ico" />
+    <CustomBuild Include="res\LogIco\重复上线.ico" />
+    <CustomBuild Include="res\ClientIco\注册表.ico" />
+    <CustomBuild Include="res\GuoQiICO\瑙鲁.ico" />
+    <CustomBuild Include="res\GuoQiICO\梵蒂冈.ico" />
+    <CustomBuild Include="res\GuoQiICO\斐济.ico" />
+    <CustomBuild Include="res\Sound\login.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="res\WAV\offline.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="res\QQWry.Dat">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="ReadMe.txt" />
+    <CustomBuild Include="res\Sound\Setting.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="res\SKIN1.she">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="res\SkinH.she">
+      <FileType>Document</FileType>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="res\xpstyle.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\folders.bmp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

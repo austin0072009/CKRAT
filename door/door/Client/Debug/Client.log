@@ -1,0 +1,16 @@
+﻿生成启动时间为 2022/4/18 20:01:16。
+     1>项目“C:\Users\development\Desktop\door\door\Client\Client.vcxproj”在节点 2 上(rebuild 个目标)。
+     1>_PrepareForClean:
+         正在删除文件“.\Debug\Client.lastbuildstate”。
+       InitializeBuildStatus:
+         正在对“.\Debug\Client.unsuccessfulbuild”执行 Touch 任务。
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp".\Debug\Client.pch" /Fo".\Debug\\" /Fd".\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt StdAfx.cpp
+         StdAfx.cpp
+         _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+     1>c:\users\development\desktop\door\door\client\stdafx.h(23): fatal error C1083: 无法打开包括文件:“XTToolkitPro.h”: No such file or directory
+     1>已完成生成项目“C:\Users\development\Desktop\door\door\Client\Client.vcxproj”(rebuild 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:01.09
