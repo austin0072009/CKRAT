@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include "Client.h"
 #include "LogView.h"
+#include "MainFrm.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -36,6 +37,7 @@ IMPLEMENT_DYNCREATE(CLogView, CListView)
 CLogView::CLogView()
 {
 	g_pLogView = this;
+
 }
 
 CLogView::~CLogView()
@@ -147,6 +149,7 @@ BOOL CLogView::PreCreateWindow(CREATESTRUCT& cs)
 {
 	// TODO: Add your specialized code here and/or call the base class
 	cs.style |=  LVS_REPORT;
+	cs.style   &=~WS_BORDER;
 	return CListView::PreCreateWindow(cs);
 }
 

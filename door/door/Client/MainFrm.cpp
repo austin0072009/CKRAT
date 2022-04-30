@@ -10,6 +10,7 @@
 #include "Setting.h"
 #include "LogView.h"
 #include "Tools.h"
+#include "StaticView.h"
 
 //////主功能
 #include "FileManagerDlg.h"
@@ -268,11 +269,11 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 		return -1;
 	}
 
-	m_wndStatusBar.SetPaneInfo(0, m_wndStatusBar.GetItemID(0), SBPS_STRETCH, NULL);//fasong kuang
-	m_wndStatusBar.SetPaneInfo(1, m_wndStatusBar.GetItemID(1), SBPS_NORMAL, 121);//jieshou
+	m_wndStatusBar.SetPaneInfo(0, m_wndStatusBar.GetItemID(0), SBPS_STRETCH, NULL);
+	m_wndStatusBar.SetPaneInfo(1, m_wndStatusBar.GetItemID(1), SBPS_NORMAL, 121);
 	m_wndStatusBar.SetPaneInfo(2, m_wndStatusBar.GetItemID(2), SBPS_NORMAL, 121);
 	m_wndStatusBar.SetPaneInfo(3, m_wndStatusBar.GetItemID(3), SBPS_NORMAL, 100);
-	RepositionBars(AFX_IDW_CONTROLBAR_FIRST, AFX_IDW_CONTROLBAR_LAST, 0); //显示状态栏
+	//RepositionBars(AFX_IDW_CONTROLBAR_FIRST, AFX_IDW_CONTROLBAR_LAST, 0); //显示状态栏
 
 /*
 		xtpThemeOffice2000,     // Office 2000 theme.
@@ -290,14 +291,20 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	
 	// 设置 主框架风格
  	CXTPPaintManager::SetTheme(xtpThemeVisualStudio2010);
+	
+	
+
 
 	//日志信息
 	m_paneManager.InstallDockingPanes(this);
 	m_paneManager.SetTheme(xtpPaneThemeVisualStudio2005); // 设置主题
 	CXTPDockingPane* pwndPaneLog = CreatePane(235, 160, RUNTIME_CLASS(CLogView), _T("日志信息"), xtpPaneDockBottom);
 
+	
+
 	pwndPaneLog->Select();
 	pwndPaneLog->SetOptions(xtpPaneNoCaption);
+	
 
 	m_hDrawIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
     m_NotifyIcon.cbSize = sizeof(NOTIFYICONDATA); 
@@ -310,6 +317,28 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	m_NotifyIcon.uID = IDR_MAINFRAME;
 	Shell_NotifyIcon(NIM_ADD, &m_NotifyIcon);
 	MinTray=NULL;  //桌面显示状态
+
+
+	//CXTPDockingPane* pwndPaneStatic = m_paneManager.CreatePane(0, CRect(0, 0,100, 200), xtpPaneDockRight, pwndPaneLog);
+	//
+	//
+	//
+	//CXTPFrameWnd* pFrame = new CXTPFrameWnd;
+	//
+	//CCreateContext context;
+	//context.m_pNewViewClass = RUNTIME_CLASS(CLogView);
+	//context.m_pCurrentDoc = GetActiveView()->GetDocument();
+	//
+	//pFrame->Create(NULL, NULL, WS_CHILD|WS_VISIBLE|WS_CLIPCHILDREN|WS_CLIPSIBLINGS, CRect(0, 0, 0, 0), this, NULL, 0);
+	//pFrame->ModifyStyleEx(WS_EX_CLIENTEDGE, 0);
+	
+	//m_mapPanes.SetAt(0, pFrame);
+	//统计信息框
+	CXTPDockingPane* pwndPaneStatic = CreatePane(100, 200,RUNTIME_CLASS(CStaticView) , _T("主机统计"), xtpPaneDockRight,pwndPaneLog);
+	pwndPaneStatic->Select();
+	pwndPaneStatic->SetOptions(xtpPaneNoCloseable | xtpPaneNoHideable | xtpPaneNoFloatable | xtpPaneNoDockable | xtpPaneNoCaption);
+	pwndPaneStatic->SetMaxTrackSize(CSize(300,200));
+	pwndPaneStatic->SetMinTrackSize(CSize(300,200));
 
 	SetTimer(0, 1000, NULL);  //开启定时器 1
 
@@ -641,8 +670,11 @@ BOOL CMainFrame::PreCreateWindow(CREATESTRUCT& cs)
 
 	cs.cx = 1495;
 	cs.cy = 766;
-	cs.style &= ~FWS_ADDTOTITLE;
-	//cs.style  &=~(WS_MAXIMIZEBOX|WS_THICKFRAME|FWS_ADDTOTITLE);   //去掉最大化窗口
+	//cs.style &= ~FWS_ADDTOTITLE;
+	cs.style  &=~(WS_MAXIMIZEBOX|WS_THICKFRAME|FWS_ADDTOTITLE);   //去掉最大化窗口
+	//cs.style &= ~WS_THICKFRAME;//禁止拖动 窗口修改窗口大小
+	//cs.style &= ~WS_BORDER; /* 去除视图凹陷效果 */
+
 
 	CString TextName;
 	CString str;
@@ -1205,7 +1237,7 @@ void CMainFrame::ShowOSCount()
 		nOSCount[9],
 		nOSCount[10],
 		nOSCount[11]);
-	m_wndStatusBar.SetPaneText(0, str);
+	//m_wndStatusBar.SetPaneText(0, str);
 }
 
 

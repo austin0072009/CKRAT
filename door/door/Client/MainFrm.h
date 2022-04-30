@@ -93,6 +93,8 @@ protected:  // control bar embedded members
 	CXTPTrayIcon m_TrayIcon;
 	CXTPDockingPaneManager  m_paneManager;
 	CXTPDockingPane* CreatePane(int x, int y, CRuntimeClass* pNewViewClass, CString strFormat, XTPDockingPaneDirection direction, CXTPDockingPane* pNeighbour = NULL);
+	//CXTPDockingPane* CreateSmallPane(int x1, int y1,int x2, int y2,  CRuntimeClass* pNewViewClass, CString strFormat, XTPDockingPaneDirection direction, CXTPDockingPane* pNeighbour = NULL);
+
 // Generated message map functions
 protected:
 	//{{AFX_MSG(CMainFrame)

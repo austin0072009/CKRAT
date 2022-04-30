@@ -478,7 +478,7 @@ void CRegeditDlg::GetRegTree(NM_TREEVIEW* pNMTreeView)
     m_list.DeleteAllItems();
 	
 	CString FullPath=GetFullPath(SelectNode);
-    m_wndStatusBar.SetPaneText(0,FullPath);
+    //m_wndStatusBar.SetPaneText(0,FullPath);
 	
 	// 删除节点下的数据
 	while(m_tree.GetChildItem(item.hItem)!=NULL)

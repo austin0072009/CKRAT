@@ -35,6 +35,8 @@ public:
 // Implementation
 protected:
 	CXTHeaderCtrl   m_heades;
+	CXTPDockingPaneManager  m_paneManager;
+
 	virtual ~CLogView();
 #ifdef _DEBUG
 	virtual void AssertValid() const;

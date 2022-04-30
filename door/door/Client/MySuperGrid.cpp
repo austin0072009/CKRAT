@@ -1022,8 +1022,8 @@ all other ExStyles are not supported...buhhh and you call your self a windows-de
 	lvColumn.mask = LVCF_FMT | LVCF_WIDTH | LVCF_TEXT | LVCF_SUBITEM;
 	lvColumn.fmt = LVCFMT_CENTER;
 	//	lvColumn.cx = 200;
-	if (!((CWindsApp *)AfxGetApp())->m_bIsQQwryExist)
-		g_Heart_Num--;
+	/*if (!((CWindsApp *)AfxGetApp())->m_bIsQQwryExist)
+		g_Heart_Num--;*/
 	for(int x = 0; x < g_Heart_Num; x++)
     {
 		//make the secondary columns smaller

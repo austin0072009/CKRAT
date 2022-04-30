@@ -64,6 +64,7 @@ CWindsApp theApp;
 
 BOOL CWindsApp::InitInstance()
 {
+	AfxOleInit();
 	AfxEnableControlContainer();
 
 	// Standard initialization

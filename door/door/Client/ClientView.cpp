@@ -109,6 +109,8 @@ int CClientView::OnCreate(LPCREATESTRUCT lpCreateStruct)
 		return -1;
 	
 	// TODO: Add your specialized creation code here
+
+	
 	m_wndTabControl.Create(WS_CHILD|WS_VISIBLE|WS_CLIPCHILDREN|WS_CLIPSIBLINGS, CRect(0, 0, 0, 0), this, IDC_TABCONTROL);
 	m_wndTabControl.GetPaintManager()->SetAppearance(xtpTabAppearanceFlat);//xtpTabAppearanceVisualStudio2005
 	
