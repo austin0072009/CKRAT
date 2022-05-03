@@ -62,6 +62,7 @@ CIOCPServer * m_iocpServer = NULL;
 extern CClientView* g_pTabView; 
 extern CMySuperGrid* g_SuperGrid;
 extern CLogView* g_pLogView;
+extern CStaticView* g_pStaticView;
 /////////////////////////////////////////////////////////////////////////////
 LPBYTE lpFilePacket = NULL;
 LPBYTE lpScreenPacket = NULL;
@@ -127,7 +128,7 @@ BEGIN_MESSAGE_MAP(CMainFrame, CXTPFrameWnd)
 	ON_COMMAND(XTP_ID_CUSTOMIZE, OnCustomize)
 	ON_MESSAGE(XTPWM_DOCKINGPANE_NOTIFY, OnDockingPaneNotify)
 	ON_MESSAGE(WM_REMOVEFROMLIST, OnRemoveFromList)
-	ON_COMMAND_RANGE(ID_OPTIONS_STYLESCENIC7, ID_OPTIONS_STYLEWHITE, OnOptionsStyle)
+	//ON_COMMAND_RANGE(ID_OPTIONS_STYLESCENIC7, ID_OPTIONS_STYLEWHITE, OnOptionsStyle)
 	ON_UPDATE_COMMAND_UI_RANGE(ID_OPTIONS_STYLESCENIC7, ID_OPTIONS_STYLEWHITE, OnUpdateOptionsStyle)
 	ON_UPDATE_COMMAND_UI_RANGE(ID_OPTIONS_FONT_SYSTEM, ID_OPTIONS_FONT_EXTRALARGE, OnUpdateOptionsFont)
 	ON_COMMAND_RANGE(ID_OPTIONS_FONT_SYSTEM, ID_OPTIONS_FONT_EXTRALARGE, OnOptionsFont)
@@ -220,8 +221,45 @@ CMainFrame::~CMainFrame()
 {
 }
 
+
+//common function
+
+void CMainFrame::SetIpInfo(){
+		CString TextName;
+	CString str;
+	WSADATA wsaDataqq;
+	WSAStartup(MAKEWORD(1,1),&wsaDataqq);//标题边显示ip
+	PHOSTENT hostinfo;
+	char name[512] = {0};
+	if(gethostname (name,sizeof(name)) != 0 || (hostinfo = gethostbyname(name)) == NULL)
+		AfxMessageBox("查找本机IP失败！");
+	
+	if (hostinfo != NULL)
+	{ 
+		for ( int i=0; ; i++ )
+		{ 
+			str += inet_ntoa(*(IN_ADDR*)hostinfo->h_addr_list[i]);
+			if ( hostinfo->h_addr_list[i] + hostinfo->h_length >= hostinfo->h_name )
+				break;
+			str += "  ";
+		}
+	}
+    WSACleanup();
+	TextName.Format("%s", str);//改标题
+	m_wndStatusBar.SetPaneText(0,TextName);
+	
+}
+
+
+
+
+
 int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 {
+
+	SkinH_Attach();
+
+
 	if (CXTPFrameWnd::OnCreate(lpCreateStruct) == -1)
 		return -1;
 
@@ -233,22 +271,55 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 		return -1;
 	
 	// 获取 command bars 目标 指针
-	CXTPCommandBars* pCommandBars = GetCommandBars();
-	if(pCommandBars == NULL)
-	{
-		TRACE0("Failed to create command bars object.\n");
-		return -1;      // fail to create
-	}
+	//CXTPCommandBars* pCommandBars = GetCommandBars();
+	//if(pCommandBars == NULL)
+	//{
+	//	TRACE0("Failed to create command bars object.\n");
+	//	return -1;      // fail to create
+	//}
+	//CXTPToolBar* pCommandBar = (CXTPToolBar*)pCommandBars->Add(_T("主工具栏"), xtpBarTop);
+	//if (!pCommandBar ||
+	//	!pCommandBar->LoadToolBar(IDR_TOOLBAR3))
+	//{
+	//	TRACE0("Failed to create toolbar\n");
+	//	return -1;
+	//}
+	//CImageList m_imagelist;
+	//m_imagelist.Create(24,24,ILC_COLOR24|ILC_MASK,0,0);
+ //   CBitmap bmp;
+	//bmp.LoadBitmap(IDB_TOOLBAR);
+	//m_imagelist.Add(&bmp,RGB(255,255,255));
+	//CXTPCommandBarsOptions* pOptions = pCommandBars->GetCommandBarsOptions();
+	//pOptions->bShowExpandButtonAlways = FALSE;
+	//pOptions->bShowTextBelowIcons = TRUE;
+	//pOptions->bLargeIcons = FALSE;
+	//pCommandBar->ModifyBarStyle(CBRS_GRIPPER,0);
+	//pCommandBar->EnableDocking(xtpFlagStretched);
+	//pCommandBar->GetImageManager()->SetIcons(IDR_TOOLBAR3,m_imagelist);
+	//RedrawWindow(0, 0, RDW_INVALIDATE|RDW_UPDATENOW|RDW_ERASE|RDW_ALLCHILDREN);   
+	//GetCommandBars()->GetPaintManager()->RefreshMetrics(); 
+	
+	
+		
+	
 
 
-//	SetMenu(NULL);//去除菜单
+	//SetMenu(NULL);//去除菜单
 
 	//////////////////////////////////////////////////////////////////////////////////////
-// 	if (!m_wndDlgBar.Create(this, IDD_DIALOGBAR, WS_VISIBLE|WS_CHILD|CBRS_SIZE_DYNAMIC|CBRS_ALIGN_TOP, IDD_DIALOGBAR)) 
-// 	{ 
-// 		TRACE0( "Failed to create dialogbar "); 
-// 		return -1; 
-// 	}
+ 	//if (!m_wndDlgBar.Create(this, IDD_DIALOGBAR, WS_VISIBLE|WS_CHILD|CBRS_SIZE_DYNAMIC|CBRS_ALIGN_TOP, IDD_DIALOGBAR)) 
+ 	//{ 
+ 	//	TRACE0( "Failed to create dialogbar "); 
+ 	//	return -1; 
+ 	//}
+
+	//添加图标菜单
+
+		if (!m_wndDlgBar.Create(this, IDD_DIALOGBAR, WS_VISIBLE|WS_CHILD|CBRS_SIZE_DYNAMIC|CBRS_ALIGN_TOP, IDD_DIALOGBAR)) 
+ 	{ 
+ 		TRACE0( "Failed to create dialogbar "); 
+ 		return -1; 
+ 	}
 
 	//添加状态栏
 
@@ -263,17 +334,40 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 		return -1;      // fail to create
 	}
 
-		if (!CreateRibbonBar())
+	//if (!m_wndToolBar.CreateEx(this, TBSTYLE_FLAT, WS_CHILD |
+	//	WS_VISIBLE | CBRS_TOP | CBRS_GRIPPER | CBRS_TOOLTIPS |
+	//	CBRS_FLYBY | CBRS_SIZE_DYNAMIC) ||
+	//	!m_wndToolBar.LoadToolBar(IDR_TOOLBAR3))
+	//{
+	//
+	//}
+	//m_wndToolBar.ShowWindow(SW_SHOW);
+	//RepositionBars(AFX_IDW_CONTROLBAR_FIRST,AFX_IDW_CONTROLBAR_LAST, 0);
+
+
+
+	
+//	if (!m_wndRibbonBar.Create(this) ||
+//        !m_wndRibbonBar.LoadFromResource(IDR_RIBBON1) )
+//{
+//    TRACE0("未能创建Ribbon栏\n");
+//    return -1;      // 未能创建
+//}
+
+	/*	if (!CreateRibbonBar())
 	{
 		TRACE0("Failed to create ribbon\n");
 		return -1;
-	}
+	}*/
 
 	m_wndStatusBar.SetPaneInfo(0, m_wndStatusBar.GetItemID(0), SBPS_STRETCH, NULL);
 	m_wndStatusBar.SetPaneInfo(1, m_wndStatusBar.GetItemID(1), SBPS_NORMAL, 121);
 	m_wndStatusBar.SetPaneInfo(2, m_wndStatusBar.GetItemID(2), SBPS_NORMAL, 121);
 	m_wndStatusBar.SetPaneInfo(3, m_wndStatusBar.GetItemID(3), SBPS_NORMAL, 100);
-	//RepositionBars(AFX_IDW_CONTROLBAR_FIRST, AFX_IDW_CONTROLBAR_LAST, 0); //显示状态栏
+	RepositionBars(AFX_IDW_CONTROLBAR_FIRST, AFX_IDW_CONTROLBAR_LAST, 0); //显示状态栏
+
+	//在状态栏显示本机Ip
+	SetIpInfo();
 
 /*
 		xtpThemeOffice2000,     // Office 2000 theme.
@@ -290,18 +384,24 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 
 	
 	// 设置 主框架风格
- 	CXTPPaintManager::SetTheme(xtpThemeVisualStudio2010);
+ 	//CXTPPaintManager::SetTheme(xtpThemeVisualStudio2010);
 	
 	
 
 
-	//日志信息
+
+	
 	m_paneManager.InstallDockingPanes(this);
-	m_paneManager.SetTheme(xtpPaneThemeVisualStudio2005); // 设置主题
+	//m_paneManager.SetTheme(xtpPaneThemeVisualStudio2005); // 设置主题
+//主机在线信息
+
+	/*CXTPDockingPane* pwndPanePc = CreatePane(235,800,RUNTIME_CLASS(CPcView), _T("日志信息"), xtpPaneDockTop);
+	pwndPanePc->Select();
+	pwndPanePc->SetOptions(xtpPaneNoCaption);*/
+
+//日志信息
 	CXTPDockingPane* pwndPaneLog = CreatePane(235, 160, RUNTIME_CLASS(CLogView), _T("日志信息"), xtpPaneDockBottom);
-
 	
-
 	pwndPaneLog->Select();
 	pwndPaneLog->SetOptions(xtpPaneNoCaption);
 	
@@ -317,6 +417,7 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	m_NotifyIcon.uID = IDR_MAINFRAME;
 	Shell_NotifyIcon(NIM_ADD, &m_NotifyIcon);
 	MinTray=NULL;  //桌面显示状态
+
 
 
 	//CXTPDockingPane* pwndPaneStatic = m_paneManager.CreatePane(0, CRect(0, 0,100, 200), xtpPaneDockRight, pwndPaneLog);
@@ -342,31 +443,33 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 
 	SetTimer(0, 1000, NULL);  //开启定时器 1
 
-		pCommandBars->GetPaintManager()->m_bAutoResizeIcons = TRUE;
-	
-	pCommandBars->GetCommandBarsOptions()->bToolBarAccelTips = TRUE;
-	
-	pCommandBars->GetShortcutManager()->SetAccelerators(IDR_MAINFRAME);
+	//pCommandBars->GetPaintManager()->m_bAutoResizeIcons = TRUE;
+	//
+	//pCommandBars->GetCommandBarsOptions()->bToolBarAccelTips = TRUE;
+	//
+	//pCommandBars->GetShortcutManager()->SetAccelerators(IDR_MAINFRAME);
 
 
-		OSVERSIONINFO osvi;
-	osvi.dwOSVersionInfoSize = sizeof(OSVERSIONINFO);
-	GetVersionEx(&osvi);
-	bool bIsWindows2K3orLater = ( (osvi.dwMajorVersion == 6) && (osvi.dwMinorVersion == 1) );
-		if (bIsWindows2K3orLater)
-	{
-		OnOptionsStyle(32870);
-	}
-	else
-	{
-		OnOptionsStyle(32875);
-	}
+	//	OSVERSIONINFO osvi;
+	//osvi.dwOSVersionInfoSize = sizeof(OSVERSIONINFO);
+	//GetVersionEx(&osvi);
+	//bool bIsWindows2K3orLater = ( (osvi.dwMajorVersion == 6) && (osvi.dwMinorVersion == 1) );
+	//	if (bIsWindows2K3orLater)
+	//{
+	//	OnOptionsStyle(32870);
+	//}
+	//else
+	//{
+	//	OnOptionsStyle(32875);
+	//}
 		
-	LoadCommandBars(_T("CommandBars"));
+	//LoadCommandBars(_T("CommandBars"));
 
 	/*CreateMessageBar(" ");*/
 
 	LoadIcons();  //菜单图片显示
+
+
 
 	// 文件管理
 	nFilePacketLength = (FILEMyFileSize + 1)*sizeof(char)+1;
@@ -540,10 +643,16 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	return 0;
 }
 
+
+
 void CMainFrame::LoadIcons()   //右键菜单显示图标
 {
 
 	CXTPCommandBars* pCommandBars = GetCommandBars();
+
+
+
+
 
 	UINT uiGroupFind[] = {IDM_IBBSOR_A,IDM_IBBSOR_B,IDM_IBBSOR_C,IDM_IBBSOR_D,IDM_IBBSOR_E};
 
@@ -566,17 +675,19 @@ void CMainFrame::LoadIcons()   //右键菜单显示图标
 
 
 
-	XTPPaintManager()->SetTheme(xtpThemeRibbon);
-	CXTPToolTipContext* pToolTipContext = GetCommandBars()->GetToolTipContext();
-	pToolTipContext->SetStyle(xtpToolTipOffice2007);
-	pToolTipContext->ShowTitleAndDescription();
-	pToolTipContext->SetMargin(CRect(4, 4, 4, 4));
-	pToolTipContext->SetMaxTipWidth(180);
+	//XTPPaintManager()->SetTheme(xtpThemeRibbon);
+	//CXTPToolTipContext* pToolTipContext = GetCommandBars()->GetToolTipContext();
+	//pToolTipContext->SetStyle(xtpToolTipOffice2007);
+	//pToolTipContext->ShowTitleAndDescription();
+	//pToolTipContext->SetMargin(CRect(4, 4, 4, 4));
+	//pToolTipContext->SetMaxTipWidth(300);
 // 	UINT uiGroupFind5[] = {IDM_IBBSOR_A,IDM_IBBSOR_B,IDM_IBBSOR_C,IDM_MAP,IDM_IBBSOR_D,IDM_IBBSOR_E,0};
 // 
 // 	UINT uiGroupFind6[] = {0,IDM_EVENT_DELETE,IDM_ALL_DELETE,IDM_EVENT_SAVE,IDM_EVENT_COPY,};  //日志管理
 // 
 // 	UINT uiGroupFind7[] = {IDM_DOWNEXEC,IDM_UPDATE_SERVER};  //下载功能IDM_START
+
+
 
 	pCommandBars->GetImageManager()->SetIcons(IDB_MENU, uiGroupFind, _countof(uiGroupFind), CSize(16, 16));
  	pCommandBars->GetImageManager()->SetIcons(IDB_MENU2, uiGroupFind2, _countof(uiGroupFind2), CSize(16, 16));
@@ -668,38 +779,61 @@ BOOL CMainFrame::PreCreateWindow(CREATESTRUCT& cs)
 	CXTPDrawHelpers::RegisterWndClass(AfxGetInstanceHandle(), cs.lpszClass, 
 		CS_DBLCLKS, AfxGetApp()->LoadIcon(IDR_MAINFRAME));
 
-	cs.cx = 1495;
-	cs.cy = 766;
-	//cs.style &= ~FWS_ADDTOTITLE;
-	cs.style  &=~(WS_MAXIMIZEBOX|WS_THICKFRAME|FWS_ADDTOTITLE);   //去掉最大化窗口
+	//cs.cx = 1495;
+	//cs.cy = 766;
+
+	/*cs.cx = 1005;
+	cs.cy =  580;*/
+	//cs.style &= ~FWS_ADDTOTITLE;WS_MAXIMIZEBOX|
+	cs.style  &=~(WS_THICKFRAME|FWS_ADDTOTITLE);   //去掉最大化窗口
 	//cs.style &= ~WS_THICKFRAME;//禁止拖动 窗口修改窗口大小
 	//cs.style &= ~WS_BORDER; /* 去除视图凹陷效果 */
 
 
-	CString TextName;
-	CString str;
-	WSADATA wsaDataqq;
-	WSAStartup(MAKEWORD(1,1),&wsaDataqq);//标题边显示ip
-	PHOSTENT hostinfo;
-	char name[512] = {0};
-	if(gethostname (name,sizeof(name)) != 0 || (hostinfo = gethostbyname(name)) == NULL)
-		return false;
-	
-	if (hostinfo != NULL)
-	{ 
-		for ( int i=0; ; i++ )
-		{ 
-			str += inet_ntoa(*(IN_ADDR*)hostinfo->h_addr_list[i]);
-			if ( hostinfo->h_addr_list[i] + hostinfo->h_length >= hostinfo->h_name )
-				break;
-			str += "  ";
-		}
-	}
-    WSACleanup();
-	TextName.Format("%s", str);//改标题
-	
-	strName = "";
-	cs.lpszName =TextName;
+	//CString TextName;
+	//CString str;
+	//WSADATA wsaDataqq;
+	//WSAStartup(MAKEWORD(1,1),&wsaDataqq);//标题边显示ip
+	//PHOSTENT hostinfo;
+	//char name[512] = {0};
+	//if(gethostname (name,sizeof(name)) != 0 || (hostinfo = gethostbyname(name)) == NULL)
+	//	return false;
+	//
+	//if (hostinfo != NULL)
+	//{ 
+	//	for ( int i=0; ; i++ )
+	//	{ 
+	//		str += inet_ntoa(*(IN_ADDR*)hostinfo->h_addr_list[i]);
+	//		if ( hostinfo->h_addr_list[i] + hostinfo->h_length >= hostinfo->h_name )
+	//			break;
+	//		str += "  ";
+	//	}
+	//}
+ //   WSACleanup();
+	//TextName.Format("%s", str);//改标题
+	//
+	//strName = "";
+	//cs.lpszName =TextName;
+
+	CString strTitle,str,str1,str2;
+// 	WSADATA wsaDataqq;
+// 	WSAStartup(MAKEWORD(1,1),&wsaDataqq);
+// 	char name[512] = {0};
+// 	gethostname (name,sizeof(name));
+// 	str=((CGh0stApp *)AfxGetApp())->m_IniFile.GetString("Name", "Dns1", "");
+//     str1=((CGh0stApp *)AfxGetApp())->m_IniFile.GetString("UPDATE", "Date", "");
+//	str=MyDecode((char *)str.GetBuffer(0),66);
+ // OutputDebugString(str);
+
+// 	str2.Format(_T("[当前登录用户:%s] [到期时间:%s]"),str,MyDecode((char *)str1.GetBuffer(0),66));
+ // WSACleanup();
+//     strTitle.Format(("大灰狼远程管理软件 V9.5 [黄金免杀版]"),strTitle);
+    strTitle.Format(_T("CkHack RAT V1.0 [Test]"));
+
+
+
+	cs.lpszName = strTitle+str2;    //改名称
+
 
 	return TRUE;
 }
@@ -749,6 +883,7 @@ void CMainFrame::StartIocp(int nPort, int nMaxConnections)
 		pStatus->GetStatusBarCtrl().SetIcon(3,icon3);
 		
 	}
+
 
 	
 
@@ -969,28 +1104,28 @@ void CMainFrame::ProcessReceive(ClientContext *pContext)
 void CMainFrame::OnCustomize()
 {
 	// get a pointer to the command bars object.
-	CXTPCommandBars* pCommandBars = GetCommandBars();
-	if (pCommandBars == NULL)
-		return;
-	
-	// instanciate the customize dialog
-	CXTPCustomizeSheet dlg(pCommandBars);
-	
-	// add the options page to the customize dialog.
-	CXTPCustomizeOptionsPage pageOptions(&dlg);
-	dlg.AddPage(&pageOptions);
-	
-	// add the commands page to the customize dialog.
-	CXTPCustomizeCommandsPage* pPageCommands = dlg.GetCommandsPage();
-	pPageCommands->AddCategories(IDR_MAINFRAME);
-	
-	// initialize the commands page page.
-	pPageCommands->InsertAllCommandsCategory();
-	pPageCommands->InsertBuiltInMenus(IDR_MAINFRAME);
-	pPageCommands->InsertNewMenuCategory();
-	
-	// display the customize dialog.
-	dlg.DoModal();
+	//CXTPCommandBars* pCommandBars = GetCommandBars();
+	//if (pCommandBars == NULL)
+	//	return;
+	//
+	//// instanciate the customize dialog
+	//CXTPCustomizeSheet dlg(pCommandBars);
+	//
+	//// add the options page to the customize dialog.
+	//CXTPCustomizeOptionsPage pageOptions(&dlg);
+	//dlg.AddPage(&pageOptions);
+	//
+	//// add the commands page to the customize dialog.
+	//CXTPCustomizeCommandsPage* pPageCommands = dlg.GetCommandsPage();
+	//pPageCommands->AddCategories(IDR_MAINFRAME);
+	//
+	//// initialize the commands page page.
+	//pPageCommands->InsertAllCommandsCategory();
+	//pPageCommands->InsertBuiltInMenus(IDR_MAINFRAME);
+	//pPageCommands->InsertNewMenuCategory();
+	//
+	//// display the customize dialog.
+	//dlg.DoModal();
 }
 
 void CMainFrame::OnSysCommand(UINT nID, LPARAM lParam)
@@ -1079,7 +1214,7 @@ LRESULT CMainFrame::OnRemoveFromList(WPARAM wParam, LPARAM lParam)
 
 	CPcView* pView = NULL;
 	CString strOSCount,strLogText;
-	int nTabs = g_pTabView->m_wndTabControl.GetItemCount();
+	//int nTabs = g_pTabView->m_wndTabControl.GetItemCount();
 	bool bIsOk = false;
 
 //	for (int n = 0; n < nTabs; n++ )
@@ -1202,12 +1337,12 @@ void CMainFrame::ShowConnectionsNumber()
 	CString str,strTemp;
 	int a = 0;
 	CPcView* pView = NULL;
-	int count = g_pTabView->m_wndTabControl.GetItemCount();
-	for (int i = 0; i < count; i++)
-	{	
-		pView = DYNAMIC_DOWNCAST(CPcView, CWnd::FromHandle(g_pTabView->m_wndTabControl.GetItem(i)->GetHandle()));
-		//a += pView->m_pListCtrl->GetItemCount();
-	}
+	//int count = g_pTabView->m_wndTabControl.GetItemCount();
+	//for (int i = 0; i < count; i++)
+	//{	
+	//	pView = DYNAMIC_DOWNCAST(CPcView, CWnd::FromHandle(g_pTabView->m_wndTabControl.GetItem(i)->GetHandle()));
+	//	//a += pView->m_pListCtrl->GetItemCount();
+	//}
 	str.Format(_T("合计: %d台"), a);
 
 	Host=a;
@@ -1223,6 +1358,10 @@ void CMainFrame::ShowConnectionsNumber()
 
 void CMainFrame::ShowOSCount()
 {
+	CString StaticTitle[] = {"=> 合计:   %d   台"};
+	CString StaticOld[] = {"Vista      :   %d   台 ","Win   NT:   %d   台","Win2000:   %d   台", "Win2003:   %d   台","Win2008:   %d   台"
+	, "Win2012:   %d   台", "Win2016:   %d   台" };
+	CString StaticNew[] = {"WinXP:   %d   台","Win  7:   %d   台","Win  8:   %d   台", "Win10:   %d   台" };
 	CString str;
 	str.Format(_T("主机统计:NT:%d  Win2000:%d  WinXP:%d  Win2003:%d  Vista:%d  Win2008:%d  Win7:%d  Win8:%d  Win2012:%d  Win10:%d  Win2016:%d  -> 合计: %d台"),  
 		nOSCount[0],
@@ -1237,13 +1376,50 @@ void CMainFrame::ShowOSCount()
 		nOSCount[9],
 		nOSCount[10],
 		nOSCount[11]);
+	//#TODO update Static Information
+	//g_pStaticView->SetLogItem();
 	//m_wndStatusBar.SetPaneText(0, str);
+
+	//for(int i =0 ; i < 7 ; i++){
+	//stf.Format(StaticOld[i],nOSCount[)
+	//g_pStaticView->SetLogItem(str,i,0)
+
+	//} 妈的 懒得啰嗦了直接暴力法
+	
+	str.Format("Vista      :   %d   台",nOSCount[4]);
+	g_pStaticView->SetLogItem(str,0,0);
+	str.Format("Win   NT:   %d   台",nOSCount[0]);
+	g_pStaticView->SetLogItem(str,1,0);
+	str.Format("Win2000:   %d   台",nOSCount[1]);
+	g_pStaticView->SetLogItem(str,2,0);
+	str.Format("Win2003:   %d   台",nOSCount[3]);
+	g_pStaticView->SetLogItem(str,3,0);
+	str.Format("Win2008:   %d   台",nOSCount[5]);
+	g_pStaticView->SetLogItem(str,4,0);
+	str.Format("Win2012:   %d   台",nOSCount[8]);
+	g_pStaticView->SetLogItem(str,5,0);
+	str.Format("Win2016:   %d   台",nOSCount[10]);
+	g_pStaticView->SetLogItem(str,6,0);
+
+
+	str.Format("WinXP:   %d   台",nOSCount[2]);
+	g_pStaticView->SetLogItem(str,0,1);
+	str.Format("Win  7:   %d   台",nOSCount[6]);
+	g_pStaticView->SetLogItem(str,1,1);
+	str.Format("Win  8:   %d   台",nOSCount[7]);
+	g_pStaticView->SetLogItem(str,2,1);
+	str.Format("Win10:   %d   台",nOSCount[9]);
+	g_pStaticView->SetLogItem(str,3,1);
+
+	str.Format("=> 合计:   %d   台",nOSCount[11]);
+	g_pStaticView->SetLogItem(str,6,1);
+
+
 }
 
 
 CXTPDockingPane* CMainFrame::CreatePane(int x, int y, CRuntimeClass* pNewViewClass, CString strFormat, XTPDockingPaneDirection direction, CXTPDockingPane* pNeighbour)
 {
-	//做个标记
 	int nID = ++m_nCount;
 	
 	CXTPDockingPane* pwndPane = m_paneManager.CreatePane(nID, CRect(0, 0,x, y), direction, pNeighbour);
@@ -1257,7 +1433,7 @@ CXTPDockingPane* CMainFrame::CreatePane(int x, int y, CRuntimeClass* pNewViewCla
 	
 	CCreateContext context;
 	context.m_pNewViewClass = pNewViewClass;
-	context.m_pCurrentDoc = GetActiveView()->GetDocument();
+	//context.m_pCurrentDoc = GetActiveView()->GetDocument();
 	
 	pFrame->Create(NULL, NULL, WS_CHILD|WS_VISIBLE|WS_CLIPCHILDREN|WS_CLIPSIBLINGS, CRect(0, 0, 0, 0), this, NULL, 0, &context);
 	pFrame->ModifyStyleEx(WS_EX_CLIENTEDGE, 0);
@@ -1506,7 +1682,7 @@ BOOL CMainFrame::CreateRibbonBar()
 	SetMenu(NULL);
 	
 	
-	CXTPRibbonBar* pRibbonBar = (CXTPRibbonBar*)pCommandBars->Add(_T("欢迎使用本远程管理系统"), xtpBarTop, RUNTIME_CLASS(CXTPRibbonBar));
+	/*CXTPRibbonBar* pRibbonBar = (CXTPRibbonBar*)pCommandBars->Add(_T("欢迎使用本远程管理系统"), xtpBarTop, RUNTIME_CLASS(CXTPRibbonBar));
 	if (!pRibbonBar)
 	{
 		return FALSE;
@@ -1515,7 +1691,7 @@ BOOL CMainFrame::CreateRibbonBar()
 	CXTPControlPopup* pControlFile = (CXTPControlPopup*)pRibbonBar->AddSystemButton(IDR_MENU_LIST);
 	pControlFile->SetCommandBar(menu.GetSubMenu(0));
 	pControlFile->GetCommandBar()->SetIconSize(CSize(16, 16));
-	pRibbonBar->EnableDocking(0);
+	pRibbonBar->EnableDocking(0);*/
 //	pControlFile->SetIconId(IDR_MAINFRAME);
 
 /*	CXTPRibbonTab* pTabHome = pRibbonBar->AddTab(_T("功能"));
@@ -1537,7 +1713,7 @@ BOOL CMainFrame::CreateRibbonBar()
 	pGroupFile2->Add(xtpControlButton, ID_APP_ABOUT);
 	pGroupFile2->Add(xtpControlButton, ID_APP_EXIT);//退出程序*/
 
-	CXTPControlPopup* pControlOptions = (CXTPControlPopup*)pRibbonBar->GetControls()->Add(xtpControlPopup, -1);
+	/*CXTPControlPopup* pControlOptions = (CXTPControlPopup*)pRibbonBar->GetControls()->Add(xtpControlPopup, -1);
 	pControlOptions->SetFlags(xtpFlagRightAlign);
     CMenu mnuOptions;
 	mnuOptions.LoadMenu(IDR_MENU_OPTIONS);
@@ -1545,14 +1721,14 @@ BOOL CMainFrame::CreateRibbonBar()
 	pControlOptions->SetCaption(_T("风格切换"));
 	pRibbonBar->GetQuickAccessControls()->RemoveAll();
 	pRibbonBar->GetQuickAccessControls()->CreateOriginalControls();
-	pRibbonBar->EnableFrameTheme();
+	pRibbonBar->EnableFrameTheme();*/
 	return TRUE;
 }
 
 
 void CMainFrame::OnOptionsStyle(UINT nStyle)
 {
-	GetCommandBars()->SetTheme(xtpThemeRibbon);
+	//GetCommandBars()->SetTheme(xtpThemeRibbon);
 	
 	HMODULE hModule = AfxGetInstanceHandle();
 	
@@ -1607,13 +1783,13 @@ void CMainFrame::OnOptionsStyle(UINT nStyle)
 		((CXTPOffice2007Theme*)GetCommandBars()->GetPaintManager())->SetImageHandle(hModule, lpszIniFile);
 	}
 	
-	m_paneManager.SetTheme(xtpPaneThemeOffice2007Word);
-	m_paneManager.GetPaintManager()->RefreshMetrics();
-	m_paneManager.RedrawPanes();
+	//m_paneManager.SetTheme(xtpPaneThemeOffice2007Word);
+//	m_paneManager.GetPaintManager()->RefreshMetrics();
+//	m_paneManager.RedrawPanes();
 	
-	CXTPRibbonBar* pRibbonBar = (CXTPRibbonBar*)GetCommandBars()->GetMenuBar();
+	//CXTPRibbonBar* pRibbonBar = (CXTPRibbonBar*)GetCommandBars()->GetMenuBar();
 	
-	if (nStyle >= ID_OPTIONS_STYLESCENIC7 && nStyle <= ID_OPTIONS_STYLEBLACK2010)
+	/*if (nStyle >= ID_OPTIONS_STYLESCENIC7 && nStyle <= ID_OPTIONS_STYLEBLACK2010)
 	{
 		pRibbonBar->GetSystemButton()->SetStyle(xtpButtonCaption);
 
@@ -1621,7 +1797,7 @@ void CMainFrame::OnOptionsStyle(UINT nStyle)
 	else
 	{
 		pRibbonBar->GetSystemButton()->SetStyle(xtpButtonAutomatic);
-	}
+	}*/
 	
 	
 	GetCommandBars()->GetImageManager()->RefreshAll();
@@ -1704,7 +1880,7 @@ void CMainFrame::OnUpdateFrameTheme(CCmdUI* pCmdUI)
 void CMainFrame::OnOptionsSystem()
 {
 	
-	GetCommandBars()->SetTheme(xtpThemeOfficeXP);
+	//GetCommandBars()->SetTheme(xtpThemeOfficeXP);
 	GetCommandBars()->GetPaintManager()->GetIconsInfo()->bUseFadedIcons = FALSE;
 	GetCommandBars()->GetPaintManager()->GetIconsInfo()->bIconsWithShadow = FALSE;
 	GetCommandBars()->GetPaintManager()->GetIconsInfo()->bUseDisabledIcons = TRUE;
@@ -1721,7 +1897,7 @@ void CMainFrame::OnOptionsSystem()
 	
 	
 	
-	m_paneManager.SetTheme(xtpPaneThemeVisualStudio2003);
+	//m_paneManager.SetTheme(xtpPaneThemeVisualStudio2003);
 	m_paneManager.GetPaintManager()->RefreshMetrics();
 	m_paneManager.RedrawPanes();
 	

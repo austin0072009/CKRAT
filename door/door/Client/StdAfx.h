@@ -33,6 +33,7 @@
 #include <mmsystem.h>
 #pragma comment(lib,"winmm.lib")
 #include "SkinH.h"
+#include <afxcview.h>
 #pragma comment(lib, "SkinH.lib")
 
 enum 

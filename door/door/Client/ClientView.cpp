@@ -8,6 +8,7 @@
 #include "ClientView.h"
 #include "PcView.h"
 #include "InputDlg.h"
+#include "LogView.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -111,15 +112,18 @@ int CClientView::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	// TODO: Add your specialized creation code here
 
 	
-	m_wndTabControl.Create(WS_CHILD|WS_VISIBLE|WS_CLIPCHILDREN|WS_CLIPSIBLINGS, CRect(0, 0, 0, 0), this, IDC_TABCONTROL);
-	m_wndTabControl.GetPaintManager()->SetAppearance(xtpTabAppearanceFlat);//xtpTabAppearanceVisualStudio2005
-	
-	m_wndTabControl.GetPaintManager()->SetColor(xtpTabColorVisualStudio2005);	//标签颜色
-	m_wndTabControl.GetPaintManager()->m_bHotTracking = TRUE;
+	//m_wndTabControl.Create(WS_CHILD|WS_VISIBLE|WS_CLIPCHILDREN|WS_CLIPSIBLINGS, CRect(0, 0, 0, 0), this, IDC_TABCONTROL);
+	//m_wndTabControl.GetPaintManager()->SetAppearance(xtpTabAppearanceFlat);//xtpTabAppearanceVisualStudio2005
+	//
+	//m_wndTabControl.GetPaintManager()->SetColor(xtpTabColorVisualStudio2005);	//标签颜色
+	//m_wndTabControl.GetPaintManager()->m_bHotTracking = TRUE;
 
-	m_wndTabControl.GetPaintManager()->SetPosition(xtpTabPositionBottom); //标签位置
-	AddGroup(_T("在线主机(0)"));	//标签名称
-	m_wndTabControl.SetCurSel(0);
+	//m_wndTabControl.GetPaintManager()->SetPosition(xtpTabPositionBottom); //标签位置
+	//AddGroup(_T("在线主机(0)"));	//标签名称
+	//m_wndTabControl.SetCurSel(0);
+
+	//AddGroup(_T("在线主机视图"));
+
 	return 0;
 }
 
@@ -157,19 +161,29 @@ BOOL CClientView::AddView(CRuntimeClass* pViewClass, LPCTSTR lpszTitle)
 	DWORD dwStyle = AFX_WS_DEFAULT_VIEW;
 	dwStyle &= ~WS_BORDER;
 	
-	int nTab = m_wndTabControl.GetItemCount();
+	//int nTab = m_wndTabControl.GetItemCount();
 	
+
 	// Create with the right size (wrong position)
 	CRect rect(0,0,0,0);
-	if (!pWnd->Create(NULL, NULL, dwStyle,
-		rect, &m_wndTabControl, (AFX_IDW_PANE_FIRST + nTab), &contextT))
+	//if (!pWnd->Create(NULL, NULL, dwStyle,
+	//	rect, &m_wndTabControl, (AFX_IDW_PANE_FIRST + nTab), &contextT))
+	//{
+	//	TRACE0( "Warning: couldn't create client tab for view.\n" );
+	//	// pWnd will be cleaned up by PostNcDestroy
+	//	return NULL;
+	//}
+
+		if (!pWnd->Create(NULL, NULL, dwStyle,
+		rect, this, (AFX_IDW_PANE_FIRST), &contextT))
 	{
 		TRACE0( "Warning: couldn't create client tab for view.\n" );
 		// pWnd will be cleaned up by PostNcDestroy
 		return NULL;
 	}
-	m_wndTabControl.InsertItem(nTab, lpszTitle, pWnd->GetSafeHwnd());
-	
+
+
+	//m_wndTabControl.InsertItem(nTab, lpszTitle, pWnd->GetSafeHwnd());
 	pWnd->SetOwner(this);
 
 	return TRUE;
@@ -187,11 +201,11 @@ void CClientView::OnSelectedChanged(NMHDR* pNMHDR, LRESULT* pResult)
 	
 	UpdateDocTitle();
 	
-	CFrameWnd* pFrame = GetParentFrame();
-	CView* pView = DYNAMIC_DOWNCAST(CView, CWnd::FromHandle(m_wndTabControl.GetSelectedItem()->GetHandle()));
-	ASSERT_KINDOF(CView, pView);
+	//CFrameWnd* pFrame = GetParentFrame();
+	//CView* pView = DYNAMIC_DOWNCAST(CView, CWnd::FromHandle(m_wndTabControl.GetSelectedItem()->GetHandle()));
+	//ASSERT_KINDOF(CView, pView);
 	
-	pFrame->SetActiveView(pView);
+	//pFrame->SetActiveView(pView);
 }
 
 LRESULT CClientView::OnAddFindGroup(WPARAM wParam, LPARAM lParam)
@@ -202,83 +216,83 @@ LRESULT CClientView::OnAddFindGroup(WPARAM wParam, LPARAM lParam)
 	{
 		return -1;
 	}
-	try
-	{	
-		// 不合法的数据包
-		if (pContext->m_DeCompressionBuffer.GetBufferLen() != sizeof(LOGININFO))
-		{
-			OutputDebugString("数据包不和法");//看看安装类型
-//			return -1;
-		}
-		LOGININFO*	LoginInfo = (LOGININFO*)pContext->m_DeCompressionBuffer.GetBuffer();
-
-		BOOL bFind=false;
-		CString strGroupName, strTemp;
+//	try
+//	{	
+//		// 不合法的数据包
+//		if (pContext->m_DeCompressionBuffer.GetBufferLen() != sizeof(LOGININFO))
+//		{
+//			OutputDebugString("数据包不和法");//看看安装类型
+////			return -1;
+//		}
+//		LOGININFO*	LoginInfo = (LOGININFO*)pContext->m_DeCompressionBuffer.GetBuffer();
+//
+//		BOOL bFind=false;
+//		CString strGroupName, strTemp;
 		
-		int nTabs = m_wndTabControl.GetItemCount();
-		for ( int i = 0; i < nTabs; i++)
-		{
-			strTemp = m_wndTabControl.GetItem(i)->GetCaption();
-			int n = strTemp.ReverseFind('(');
-			if( n > 0 )
-			{
-				strGroupName = strTemp.Left(n);
-			}
-			else
-			{
-				strGroupName = strTemp;
-			}
-			
-			if ( strlen(LoginInfo->UpGroup) == NULL )
-			{
-				lstrcpy( LoginInfo->UpGroup, "在线主机" );//默认分组
-			}
-			
-			if (strGroupName == LoginInfo->UpGroup)
-			{	
-				bFind = true;
-				CPcView* pView = DYNAMIC_DOWNCAST(CPcView, CWnd::FromHandle(m_wndTabControl.GetItem(i)->GetHandle()));
-				pView->PostMessage( WM_ADDTOLIST, 0, (LPARAM)pContext );
-				break;
-			}
-		}
-		if (!bFind)
-		{	
-			strGroupName.Format( "%s(1)", LoginInfo->UpGroup );
-			AddGroup( strGroupName );
-			CPcView* pView = DYNAMIC_DOWNCAST(CPcView, CWnd::FromHandle(m_wndTabControl.GetItem(nTabs)->GetHandle()));
-			pView->OnInitialUpdate();
-			pView->PostMessage(WM_ADDTOLIST, 0, (LPARAM)pContext );
-		}
-	}
-	catch (...){}
+	//	int nTabs = m_wndTabControl.GetItemCount();
+	//	for ( int i = 0; i < nTabs; i++)
+	//	{
+	//		strTemp = m_wndTabControl.GetItem(i)->GetCaption();
+	//		int n = strTemp.ReverseFind('(');
+	//		if( n > 0 )
+	//		{
+	//			strGroupName = strTemp.Left(n);
+	//		}
+	//		else
+	//		{
+	//			strGroupName = strTemp;
+	//		}
+	//		
+	//		if ( strlen(LoginInfo->UpGroup) == NULL )
+	//		{
+	//			lstrcpy( LoginInfo->UpGroup, "在线主机" );//默认分组
+	//		}
+	//		
+	//		if (strGroupName == LoginInfo->UpGroup)
+	//		{	
+	//			bFind = true;
+	//			CPcView* pView = DYNAMIC_DOWNCAST(CPcView, CWnd::FromHandle(m_wndTabControl.GetItem(i)->GetHandle()));
+	//			pView->PostMessage( WM_ADDTOLIST, 0, (LPARAM)pContext );
+	//			break;
+	//		}
+	//	}
+	//	if (!bFind)
+	//	{	
+	//		strGroupName.Format( "%s(1)", LoginInfo->UpGroup );
+	//		AddGroup( strGroupName );
+	//		CPcView* pView = DYNAMIC_DOWNCAST(CPcView, CWnd::FromHandle(m_wndTabControl.GetItem(nTabs)->GetHandle()));
+	//		pView->OnInitialUpdate();
+	//		pView->PostMessage(WM_ADDTOLIST, 0, (LPARAM)pContext );
+	//	}
+	//}
+	//catch (...){}
 	
 	return 0;
 }
 
 BOOL CClientView::UpDateNumber()
 {	
-	CString strGroupName, strTemp;
-	int nTabs = m_wndTabControl.GetItemCount();
-	
-	for ( int i = 0; i < nTabs; i++ )
-	{	
-		strTemp = m_wndTabControl.GetItem(i)->GetCaption();
-		int n = strTemp.ReverseFind('(');
-		if ( n > 0 )
-		{
-			strGroupName = strTemp.Left(n);
-		}
-		else
-		{
-			strGroupName = strTemp;
-		}
+	//CString strGroupName, strTemp;
+	//int nTabs = m_wndTabControl.GetItemCount();
+	//
+	//for ( int i = 0; i < nTabs; i++ )
+	//{	
+	//	strTemp = m_wndTabControl.GetItem(i)->GetCaption();
+	//	int n = strTemp.ReverseFind('(');
+	//	if ( n > 0 )
+	//	{
+	//		strGroupName = strTemp.Left(n);
+	//	}
+	//	else
+	//	{
+	//		strGroupName = strTemp;
+	//	}
 		
 		//CPcView* pView = DYNAMIC_DOWNCAST(CPcView, CWnd::FromHandle(m_wndTabControl.GetItem(i)->GetHandle()));
 		
 		/*strTemp.Format( "%s(%d)", strGroupName, pView->m_pListCtrl->GetItemCount() );
 		m_wndTabControl.GetItem(i)->SetCaption(strTemp);*/
-	}
+	//}
 	return TRUE;
 }
 
@@ -289,73 +303,73 @@ BOOL CClientView::OnEraseBkgnd(CDC* pDC)
 //	return CView::OnEraseBkgnd(pDC);
 }
 
-void CClientView::OnContextMenu(CWnd* pWnd, CPoint point) 
-{
-	// TODO: Add your message handler code here
-	CMenu	popup;
-	popup.LoadMenu(IDR_TAB);
-	CMenu*	pM = popup.GetSubMenu(0);
-	CRect rc;
-	CPoint	p;
-	GetCursorPos(&p);
-	GetWindowRect(&rc);
-	point.x = point.x - rc.left;
-	point.y = point.y - rc.top;
-	
-	int nItem = m_wndTabControl.GetItemCount();
-	for (int i = 0; i < nItem; i++)
-	{	
-		if (m_wndTabControl.GetItem(i)->GetRect().PtInRect(point))
-		{	
-			pRightItem = m_wndTabControl.GetItem(i);
-			CXTPCommandBars::TrackPopupMenu(pM, 0, p.x, p.y,this);
-			break;
-		}
-	}
-}
+//void CClientView::OnContextMenu(CWnd* pWnd, CPoint point) 
+//{
+//	// TODO: Add your message handler code here
+//	CMenu	popup;
+//	popup.LoadMenu(IDR_TAB);
+//	CMenu*	pM = popup.GetSubMenu(0);
+//	CRect rc;
+//	CPoint	p;
+//	GetCursorPos(&p);
+//	GetWindowRect(&rc);
+//	point.x = point.x - rc.left;
+//	point.y = point.y - rc.top;
+//	
+//	int nItem = m_wndTabControl.GetItemCount();
+//	for (int i = 0; i < nItem; i++)
+//	{	
+//		if (m_wndTabControl.GetItem(i)->GetRect().PtInRect(point))
+//		{	
+//			pRightItem = m_wndTabControl.GetItem(i);
+//			CXTPCommandBars::TrackPopupMenu(pM, 0, p.x, p.y,this);
+//			break;
+//		}
+//	}
+//}
 
 void CClientView::OnSize(UINT nType, int cx, int cy) 
 {
 	CView::OnSize(nType, cx, cy);
 	
 	// TODO: Add your message handler code here
-	if (m_wndTabControl.GetSafeHwnd())
-	{
-		m_wndTabControl.MoveWindow(0, 0, cx , cy);
-	}
+	//if (m_wndTabControl.GetSafeHwnd())
+	//{
+	//	m_wndTabControl.MoveWindow(0, 0, cx , cy);
+	//}
 
 }
 
 void CClientView::OnMenuitemGroupAdd() 
 {
 	// TODO: Add your command handler code here
-	CInputDialog dlg;
-	CString strGroup, strGroupName, strTemp;
-	dlg.Init(_T("添加新分组"), _T("请输入新分组的名称："),this);
-	if (dlg.DoModal() != IDOK || dlg.m_str.GetLength()== 0)
-		return;
-	int nTabs = g_pTabView->m_wndTabControl.GetItemCount();
-	int i=0;
-	for ( i = 0; i < nTabs; i++ )
-	{
-		strTemp = g_pTabView->m_wndTabControl.GetItem(i)->GetCaption();
-		int n = strTemp.ReverseFind('(');
-		if ( n > 0 )
-		{
-			strGroupName = strTemp.Left(n);
-		}
-		else
-		{
-			strGroupName = strTemp;
-		}
-		if (dlg.m_str == strGroupName)
-		{
-			AfxMessageBox(_T("已存在该分组"));
-			return;
-		}
-	}
-	strGroup.Format(_T("%s(0)"), dlg.m_str);
-	AddGroup(strGroup);
+	//CInputDialog dlg;
+	//CString strGroup, strGroupName, strTemp;
+	//dlg.Init(_T("添加新分组"), _T("请输入新分组的名称："),this);
+	//if (dlg.DoModal() != IDOK || dlg.m_str.GetLength()== 0)
+	//	return;
+	//int nTabs = g_pTabView->m_wndTabControl.GetItemCount();
+	//int i=0;
+	//for ( i = 0; i < nTabs; i++ )
+	//{
+	//	strTemp = g_pTabView->m_wndTabControl.GetItem(i)->GetCaption();
+	//	int n = strTemp.ReverseFind('(');
+	//	if ( n > 0 )
+	//	{
+	//		strGroupName = strTemp.Left(n);
+	//	}
+	//	else
+	//	{
+	//		strGroupName = strTemp;
+	//	}
+	//	if (dlg.m_str == strGroupName)
+	//	{
+	//		AfxMessageBox(_T("已存在该分组"));
+	//		return;
+	//	}
+	//}
+	//strGroup.Format(_T("%s(0)"), dlg.m_str);
+	//AddGroup(strGroup);
 	//CPcView* pView = DYNAMIC_DOWNCAST(CPcView, CWnd::FromHandle(m_wndTabControl.GetItem(nTabs)->GetHandle()));
 	//pView->OnInitialUpdate();
 }
@@ -394,7 +408,7 @@ void CClientView::OnMenuitemGroupDel()
 void CClientView::OnMenuitemChange() 
 {
 	// TODO: Add your command handler code here
-	CInputDialog dlg;
+	/*CInputDialog dlg;
 	dlg.Init(_T("修改分组"), _T("请输入分组的新名称："),this);
 	if (dlg.DoModal() != IDOK || dlg.m_str.GetLength()== 0)
 		return;
@@ -424,7 +438,7 @@ void CClientView::OnMenuitemChange()
 	{
 		AfxMessageBox(_T("默认分组名不允许占用"));
 		return;
-	}
+	}*/
 
 	//CPcView* pView = DYNAMIC_DOWNCAST(CPcView, CWnd::FromHandle(pRightItem->GetHandle()));
 	

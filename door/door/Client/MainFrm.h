@@ -8,7 +8,10 @@
 #if _MSC_VER > 1000
 #pragma once
 #endif // _MSC_VER > 1000
-#include "Weather.h"
+
+#include "MyToolBar.h"
+#include "afxribbonbar.h"
+#include "afxframewndex.h"
 
 class CMainFrame : public CXTPFrameWnd
 {
@@ -54,6 +57,12 @@ protected: // create from serialization only
 	BOOL m_bShowWorkspace;
 	
 	CString m_csStylesPath;
+	CBitmap bitmap;
+
+private:
+	CImageList m_ImageList;
+	
+
 // Operations
 public:
 	CMap<UINT,UINT, CWnd* , CWnd*> m_mapPanes;
@@ -62,6 +71,7 @@ public:
 	int nOSCount [12];
 	void ShowConnectionsNumber();
 	void ShowOSCount();
+	void SetIpInfo();
 	void StartIocp(int nPort, int nMaxConnections);
 	static void CALLBACK NotifyProc(ClientContext* pContext, UINT nCode);
 	static void ProcessReceiveComplete(ClientContext *pContext);
@@ -70,8 +80,8 @@ public:
 	BOOL CreateMessageBar(char* lpszMessage);
 // Operations
 public:
-	CWeather  m_wndDlgBar;
-
+	//CWeather  m_wndDlgBar;
+	MyToolBar m_wndDlgBar;
 	int m_nUpCount;
 // Overrides
 	// ClassWizard generated virtual function overrides

@@ -242,7 +242,7 @@ void CServiceDlg::ShowServiceList()
 // œ‘ æœ˚œ¢
 LRESULT CServiceDlg::OnShowMessage(WPARAM wParam, LPARAM lParam)
 {
-    m_wndStatusBar.SetPaneText(0, strMsgShow); 
+    //m_wndStatusBar.SetPaneText(0, strMsgShow); 
 	return true;
 }
 

@@ -546,7 +546,7 @@ END
 
 IDR_MAINFRAME MENU
 BEGIN
-    POPUP "程序帮助(&H)"
+    POPUP "菜单(&H)"
     BEGIN
         MENUITEM "&系统设置",                       ID_SETTING
         MENUITEM "&服务生成",                       ID_BUILD
@@ -641,10 +641,10 @@ BEGIN
     PUSHBUTTON      "确定",IDOK,77,101,66,22,WS_GROUP
 END
 
-IDD_GENERATE DIALOG 0, 0, 344, 381
+IDD_GENERATE DIALOGEX 0, 0, 344, 381
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "创建客户(严格控制数据准确性，请仔细配置生成否则不上线)"
-FONT 9, "宋体"
+FONT 9, "宋体", 0, 0, 0x0
 BEGIN
     PUSHBUTTON      "生成",IDC_BUILD,7,363,45,17
     PUSHBUTTON      "取消",IDCANCEL,59,363,45,17
@@ -688,17 +688,17 @@ BEGIN
     PUSHBUTTON      "测试连接",IDC_TEST_MASTER,216,15,45,14
     PUSHBUTTON      "随机服务",IDC_RANDOM,155,55,45,14
     GROUPBOX        "用户登录",IDC_STATIC,7,304,268,57
-    LTEXT           "用户帐号：",IDC_STATIC,10,319,40,8,WS_DISABLED
-    LTEXT           "用户密码：",IDC_STATIC,10,342,40,8,WS_DISABLED
-    EDITTEXT        IDC_BUILD_USERPASS,50,339,118,14,ES_CENTER | ES_PASSWORD | ES_AUTOHSCROLL | WS_DISABLED
-    EDITTEXT        IDC_BUILD_USERNAME,50,316,118,14,ES_CENTER | ES_AUTOHSCROLL | WS_DISABLED
-    PUSHBUTTON      "登录",IDC_BUILD_LOGIN,188,325,70,22,WS_DISABLED
+    LTEXT           "用户帐号：",IDC_STATIC,10,319,40,8
+    LTEXT           "用户密码：",IDC_STATIC,10,342,40,8
+    EDITTEXT        IDC_BUILD_USERPASS,50,339,118,14,ES_CENTER | ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_BUILD_USERNAME,50,316,118,14,ES_CENTER | ES_AUTOHSCROLL
+    PUSHBUTTON      "登录",IDC_BUILD_LOGIN,188,325,70,22
 END
 
-IDD_SETTING DIALOG 0, 0, 339, 231
+IDD_SETTING DIALOGEX 0, 0, 350, 239
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "系统设置"
-FONT 9, "宋体"
+FONT 9, "宋体", 0, 0, 0x0
 BEGIN
     PUSHBUTTON      "保存",IDC_APPLY,192,198,57,21
     PUSHBUTTON      "取消",IDCANCEL,267,198,57,21
@@ -729,13 +729,13 @@ BEGIN
     GROUPBOX        "上线列表",IDC_STATIC,169,4,167,183
     CONTROL         "网络",IDC_DAWED_2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,175,70,31,10
     CONTROL         "内存/可用",IDC_DAWED_8,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,175,167,47,10
-    LTEXT           "________________________________________________________",IDC_STATIC,170,35,163,8,WS_DISABLED
+    LTEXT           "________________________________________________________",IDC_STATIC,180,35,163,8,WS_DISABLED
     CONTROL         "栏目网格",IDC_LINE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,175,22,52,14
-    GROUPBOX        "其他设置",IDC_STATIC,4,86,158,55
+    GROUPBOX        "其他设置",IDC_STATIC,4,90,158,55
     LTEXT           "主机双击打开：",IDC_STATIC,10,163,56,8
     COMBOBOX        IDC_COMBO_OPERATE,69,161,68,126,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
     CONTROL         "窗体拉伸",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,253,22,49,11
-    CONTROL         "启用软件皮肤",IDC_CHECK_SKIN,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_DISABLED | WS_TABSTOP,92,103,64,11
+    CONTROL         "启用软件皮肤",IDC_CHECK_SKIN,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,92,103,64,11
     LTEXT           "主机列表颜色：",IDC_STATIC,10,183,56,8
     COMBOBOX        IDC_COMBO_COLOUR,69,180,68,126,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
     GROUPBOX        "其他功能",IDC_STATIC,4,146,157,58
@@ -975,16 +975,10 @@ BEGIN
     PUSHBUTTON      "发送",IDOK,153,205,50,15
 END
 
-IDD_DIALOGBAR DIALOG 0, 0, 685, 43
+IDD_DIALOGBAR DIALOGEX 0, 0, 685, 43
 STYLE DS_SETFONT | WS_CHILD
-FONT 9, "宋体"
+FONT 9, "宋体", 0, 0, 0x0
 BEGIN
-    ICON            IDI_DAY_dabaoyuzhuantedabaoyu,IDC_DAY,368,12,20,20,SS_REALSIZEIMAGE
-    ICON            IDI_NIGHT_dabaoyu,IDC_NIGHT,407,12,20,20,SS_REALSIZEIMAGE
-    LTEXT           "未获取到天气",IDC_STATIC_WEATHER,451,13,78,8
-    LTEXT           "未获取到风速及大气温度",IDC_STATIC_TEMPERATURE,451,29,121,8
-    CTEXT           "未知城市",IDC_STATIC_CITY,576,8,86,16
-    LTEXT           "未获取当前日期及温度",IDC_STATIC_DATE,577,29,107,8
 END
 
 IDD_DIALOG_TOOL DIALOG 0, 0, 295, 267
@@ -1129,6 +1123,12 @@ BEGIN
     PUSHBUTTON      "取消",IDC_CANCEL,316,42,43,14
 END
 
+IDD_TOOLBAR DIALOGEX 0, 0, 585, 40
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -1199,11 +1199,11 @@ BEGIN
     IDD_SETTING, DIALOG
     BEGIN
         LEFTMARGIN, 7
-        RIGHTMARGIN, 332
+        RIGHTMARGIN, 343
         VERTGUIDE, 234
         VERTGUIDE, 312
         TOPMARGIN, 7
-        BOTTOMMARGIN, 224
+        BOTTOMMARGIN, 232
         HORZGUIDE, 36
         HORZGUIDE, 65
         HORZGUIDE, 82
@@ -1417,6 +1417,14 @@ BEGIN
         TOPMARGIN, 7
         BOTTOMMARGIN, 67
     END
+
+    IDD_TOOLBAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 578
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 33
+    END
 END
 #endif    // APSTUDIO_INVOKED
 
@@ -1436,7 +1444,7 @@ BEGIN
     BUTTON      ID_SEARCH_RESULT
 END
 
-IDR_FileToolBar TOOLBAR 16, 16
+IDR_TOOLBAR3 TOOLBAR 32, 32
 BEGIN
     BUTTON      IDT_REMOTE_PREV
     BUTTON      IDT_REMOTE_HOME
@@ -1453,6 +1461,19 @@ END
 IDR_TOOLBAR_MAIN TOOLBAR 32, 32
 BEGIN
     BUTTON      ID_SETTING
+    SEPARATOR
+    BUTTON      IDM_TOOLS
+    SEPARATOR
+    BUTTON      ID_BUILD
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+    SEPARATOR
+    BUTTON      ID_APP_EXIT
+END
+
+IDR_TOOLBAR1 TOOLBAR 60, 32
+BEGIN
+    BUTTON      ID_SETTING
     BUTTON      IDM_TOOLS
     BUTTON      ID_BUILD
     BUTTON      ID_APP_ABOUT
@@ -1465,8 +1486,8 @@ END
 // Bitmap
 //
 
-IDR_SEARCHBAR           BITMAP                  "res\\toolbar4.bmp"
-IDR_FileToolBar         BITMAP                  "res\\toolbar3.bmp"
+IDR_SEARCHBAR           BITMAP                  "C:\\Users\\andi\\Documents\\GitHub\\CKRAT\\door\\door\\Client\\res\\toolbar4.bmp"
+IDR_TOOLBAR3            BITMAP                  "C:\\Users\\andi\\Documents\\GitHub\\CKRAT\\door\\door\\Client\\res\\toolbar3.bmp"
 IDB_TOOLBAR_SEARCH      BITMAP                  "res\\SearchToolBar.bmp"
 IDB_FILETB_HOT          BITMAP                  "res\\FileToolBarHot.bmp"
 IDB_FILETB_DISABLE      BITMAP                  "res\\FileToolBarDisable.bmp"
@@ -1486,9 +1507,27 @@ IDB_MENU6               BITMAP                  "res\\ClientBmp\\6.bmp"
 IDB_TOOLS2              BITMAP                  "res\\ClientBmp\\上线设置.bmp"
 IDB_MENU7               BITMAP                  "res\\ClientBmp\\7.bmp"
 IDB_MENU8               BITMAP                  "res\\ClientBmp\\8.bmp"
-IDB_MENU9               BITMAP                  "res\\ClientBmp\\9.bmp"
+IDB_SCREENSPY           BITMAP                  "res\\ClientBmp\\9.bmp"
 IDB_MENU10              BITMAP                  "res\\ClientBmp\\10.bmp"
 IDB_BITMAP1             BITMAP                  "res\\ClientBmp\\folders.bmp"
+IDB_BITMAP2             BITMAP                  "C:\\Users\\andi\\Documents\\GitHub\\CKRAT\\door\\door\\Client\\res\\toolbar1.bmp"
+IDB_BITMAP3             BITMAP                  "C:\\Users\\andi\\Documents\\GitHub\\CKRAT\\door\\door\\Client\\res\\toolbar2.bmp"
+IDB_BITMAP4             BITMAP                  "C:\\Users\\andi\\Documents\\GitHub\\CKRAT\\door\\door\\Client\\res\\toolbar1.bmp"
+IDB_BITMAP5             BITMAP                  "C:\\Users\\andi\\Documents\\GitHub\\CKRAT\\door\\door\\Client\\res\\toolbar3.bmp"
+IDB_BITMAP6             BITMAP                  "res\\toolbar4.bmp"
+IDB_BITMAP7             BITMAP                  "res\\toolbar1.bmp"
+IDB_TOOLBAR             BITMAP                  "res\\Bitmap_3.bmp"
+IDR_TOOLBAR1            BITMAP                  "res\\clientbmp\\toolbar1.bmp"
+IDB_FILEMANAGER         BITMAP                  "res\\iconew\\menu1.bmp"
+IDB_BITMAP9             BITMAP                  "res\\iconew\\menu2.bmp"
+IDB_KEYBOARD            BITMAP                  "res\\iconew\\menu3.bmp"
+IDB_BITMAP11            BITMAP                  "res\\iconew\\menu4.bmp"
+IDB_BITMAP12            BITMAP                  "res\\iconew\\menu5.bmp"
+IDB_SHELL               BITMAP                  "res\\iconew\\menu6.bmp"
+IDB_SYSTEMINFO          BITMAP                  "res\\iconew\\menu7.bmp"
+IDB_SYSTEM              BITMAP                  "res\\iconew\\menu8.bmp"
+IDB_SERVICEMANAGER      BITMAP                  "res\\iconew\\menu9.bmp"
+IDB_REGEDIT             BITMAP                  "res\\iconew\\menu10.bmp"
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -1554,6 +1593,14 @@ IDR_SKIN11              SKIN1                   "res\\SKIN1.she"
 
 /////////////////////////////////////////////////////////////////////////////
 //
+// Ribbon
+//
+
+IDR_RIBBON1             RT_RIBBON_XML           "res\\guoqiico\\ribbon1.mfcribbon-ms"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
 // String Table
 //
 
@@ -1579,7 +1626,7 @@ STRINGTABLE
 BEGIN
     ID_VIEW_TOOLBAR         "显示或隐藏工具栏\n显隐工具栏"
     ID_VIEW_STATUS_BAR      "显示或隐藏状态栏\n显隐状态栏"
-    ID_OS                   "主机统计:NT:0  Win2000:0  WinXP:0  Win2003:0  Vista:0  Win2008:0  Win7:0  Win8:0  Win2012:0  Win10:0  Win2016:0  -> 合计: 0台"
+    ID_OS                   "NULL"
     ID_UPLOAD               "发送: 0.00 kb/s"
     ID_DOWNLOAD             "接收: 0.00 kb/s"
     ID_STAUTSPORT           "端口: 8090"

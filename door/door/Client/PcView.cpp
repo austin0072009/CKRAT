@@ -185,31 +185,98 @@ void CPcView::OnSize(UINT nType, int cx, int cy)
 void CPcView::OnContextMenu(CWnd* pWnd, CPoint point) 
 {
 	// TODO: Add your message handler code here
-	CMenu	popup;
-	popup.LoadMenu(IDR_MENU_LIST);
-	CMenu*	pM = popup.GetSubMenu(0);
-	CPoint	p;
-	GetCursorPos(&p);
-	int	count = pM->GetMenuItemCount();
 
-	if (m_List.GetItemCount()  == 0 )//GetSelectedCount()
+
+	//方案1 还是存在一点闪烁
+	//	CMenu	popup;
+	//popup.LoadMenu(IDR_MENU_LIST);
+	//CMenu*	pM = popup.GetSubMenu(0);
+	//CRect rc;
+	//CPoint	p;
+	//GetCursorPos(&p);
+	//GetWindowRect(&rc);
+	//point.x = point.x - rc.left;
+	//point.y = point.y - rc.top;
+	//
+
+	//CXTPCommandBars::TrackPopupMenu(pM, 0, p.x, p.y,this);
+
+
+
+	//CMenu	popup;
+	//popup.LoadMenu(IDR_MENU_LIST);
+	//CMenu*	pM = popup.GetSubMenu(0);
+
+	//CRect rc;
+	//CPoint	p;
+	//GetCursorPos(&p);
+	//GetWindowRect(&rc);
+	//point.x = point.x - rc.left;
+	//point.y = point.y - rc.top;
+
+
+	//int	count = pM->GetMenuItemCount();
+
+	//if (m_List.GetItemCount()  == 0 )//GetSelectedCount()
+	//{
+	//	for (int i = 0; i < count - 2; i++)
+	//	{
+	//		pM->EnableMenuItem(i, MF_BYPOSITION | MF_DISABLED | MF_GRAYED);
+	//	}
+	//	pM->EnableMenuItem(count/* - 1*/, MF_BYPOSITION | MF_DISABLED | MF_GRAYED);
+
+	//}
+	// //全选
+	// //	if (m_List.GetItemCount() > 0)
+	// //		pM->EnableMenuItem(count, MF_BYPOSITION | MF_ENABLED | MF_GRAYED);
+	// //	else
+	// //		pM->EnableMenuItem(count - 2, MF_BYPOSITION | MF_DISABLED | MF_GRAYED);
+
+	//	//pM->TrackPopupMenu(TPM_LEFTALIGN, p.x, p.y, this);// TODO: Add your message handler code here
+	//CXTPCommandBars::TrackPopupMenu(pM, TPM_RIGHTBUTTON,
+	//	p.x, p.y, AfxGetMainWnd(), 0, 0, ((CXTPFrameWnd*)AfxGetMainWnd())->GetCommandBars());
+
+	UINT uiGroupFind2[] = {IDM_FILEMANAGER,IDM_SCREENSPY,IDM_KEYBOARD,IDM_SHELL,IDM_SYSTEMINFO,IDM_SYSTEM,
+		IDM_SERVICEMANAGER,IDM_REGEDIT
+	};
+
+	UINT uiBitGroup[] = {IDB_FILEMANAGER,IDB_SCREENSPY,IDB_KEYBOARD,IDB_SHELL,IDB_SYSTEMINFO,IDB_SYSTEM,
+		IDB_SERVICEMANAGER,IDB_REGEDIT};
+	// 原生 方案，没有实现图标显示
+	if(point.x == -1 && point.y == -1)
 	{
-		for (int i = 0; i < count - 2; i++)
-		{
-			pM->EnableMenuItem(i, MF_BYPOSITION | MF_DISABLED | MF_GRAYED);
-		}
-		pM->EnableMenuItem(count/* - 1*/, MF_BYPOSITION | MF_DISABLED | MF_GRAYED);
+		CRect rect;
+		GetClientRect(rect);
+		ClientToScreen(rect);
+		point = rect.TopLeft();
+		point.Offset(5,5);
 
 	}
-	// 全选
-	 //	if (m_List.GetItemCount() > 0)
-	 //		pM->EnableMenuItem(count, MF_BYPOSITION | MF_ENABLED | MF_GRAYED);
-	 //	else
-	 //		pM->EnableMenuItem(count - 2, MF_BYPOSITION | MF_DISABLED | MF_GRAYED);
 
-		//pM->TrackPopupMenu(TPM_LEFTALIGN, p.x, p.y, this);// TODO: Add your message handler code here
-	CXTPCommandBars::TrackPopupMenu(pM, TPM_RIGHTBUTTON,
-		p.x, p.y, AfxGetMainWnd(), 0, 0, ((CXTPFrameWnd*)AfxGetMainWnd())->GetCommandBars());
+	CMenu menu;
+	VERIFY(menu.LoadMenuA(IDR_MENU_LIST));
+
+	CMenu * pPopup = menu.GetSubMenu(0);
+	ASSERT(pPopup != NULL);
+	CWnd* pWndPopupOwner = this;
+	while (pWndPopupOwner->GetStyle() & WS_CHILD)
+		pWndPopupOwner = pWndPopupOwner->GetParent();
+
+
+
+	
+
+	for(int i = 0 ; i < 10; i++){
+	my_Bit.LoadBitmapA(uiBitGroup[i]);
+	pPopup->SetMenuItemBitmaps(uiGroupFind2[i],MF_BYCOMMAND,&my_Bit,&my_Bit);
+	}
+
+
+
+	pPopup->TrackPopupMenu(TPM_LEFTALIGN | TPM_RIGHTBUTTON , point.x, point.y,pWndPopupOwner);
+
+	//CXTPCommandBars::TrackPopupMenu(pPopup,0, point.x, point.y,this);
+
 }
 struct MSGBOX
 {

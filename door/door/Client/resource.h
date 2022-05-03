@@ -97,18 +97,40 @@
 #define IDB_TOOLBAR_SEARCH              197
 #define IDB_MENU8                       198
 #define IDB_MENU9                       199
+#define IDB_SCREENSPY                   199
 #define IDB_MENU10                      200
 #define IDB_BITMAP1                     201
+#define IDR_RIBBON1                     203
+#define IDB_BITMAP2                     204
+#define IDB_BITMAP3                     205
 #define IDD_SERVICE                     210
 #define IDR_REGT_MENU                   211
 #define IDR_MENU_SERVICE                213
+#define IDB_BITMAP4                     213
 #define IDD_SERVICE_INFO                217
 #define IDD_REGEDIT                     218
+#define IDB_BITMAP5                     218
+#define IDB_BITMAP6                     219
+#define IDB_BITMAP7                     220
+#define IDB_TOOLBAR                     224
+#define IDR_TOOLBAR1                    225
 #define IDR_MENU_REGEDIT_TREE           227
+#define IDD_TOOLBAR                     228
+#define IDB_FILEMANAGER                 228
+#define IDB_BITMAP9                     229
 #define IDD_REGEDIT_TEXT                230
+#define IDB_KEYBOARD                    230
+#define IDB_BITMAP11                    231
+#define IDB_BITMAP12                    232
+#define IDB_SHELL                       233
 #define IDD_MSGBOX                      234
+#define IDB_SYSTEMINFO                  234
 #define IDR_TOOLBAR_MAIN                235
+#define IDB_SYSTEM                      236
+#define IDB_SERVICEMANAGER              237
 #define IDD_TEXTCHAT                    238
+#define IDB_BITMAP17                    238
+#define IDB_REGEDIT                     238
 #define IDD_PROXY_MAP                   245
 #define IDI_ICON1                       254
 #define IDI_ICON2                       255
@@ -581,6 +603,7 @@
 #define IDC_HTMLVIEW                    1165
 #define IDM_TRANSFERK                   1172
 #define IDR_FileToolBar                 1173
+#define IDR_TOOLBAR3                    1173
 #define IDB_FILETB_HOT                  1174
 #define IDB_FILETB_DISABLE              1175
 #define IDT_REMOTE_GENX                 1176
@@ -661,6 +684,10 @@
 #define IDM_PROXY                       32809
 #define IDM_START                       32810
 #define IDM_REFRESH                     32811
+#define ID_BUTTON2                      32811
+#define ID_BUTTON4                      32813
+#define ID_BUTTON1                      32814
+#define ID_BUTTON3                      32815
 #define IDM_SHOW                        32830
 #define ID_CHANGE                       32831
 #define IDM_EXIT                        32831
@@ -742,9 +769,9 @@
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_3D_CONTROLS                     1
-#define _APS_NEXT_RESOURCE_VALUE        202
-#define _APS_NEXT_COMMAND_VALUE         32811
-#define _APS_NEXT_CONTROL_VALUE         1049
+#define _APS_NEXT_RESOURCE_VALUE        239
+#define _APS_NEXT_COMMAND_VALUE         32818
+#define _APS_NEXT_CONTROL_VALUE         1051
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

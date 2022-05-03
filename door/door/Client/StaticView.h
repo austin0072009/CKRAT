@@ -12,6 +12,9 @@ protected:
 	virtual ~CStaticView();
 
 public:
+	void SetLogItem(LPCTSTR Text,int pos1, int pos2);
+
+
 #ifdef _DEBUG
 	virtual void AssertValid() const;
 #ifndef _WIN32_WCE
@@ -20,6 +23,8 @@ public:
 #endif
 
 protected:
+	afx_msg void OnSize(UINT nType, int cx, int cy);
+
 	DECLARE_MESSAGE_MAP()
 public:
 	virtual void OnInitialUpdate();

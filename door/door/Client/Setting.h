@@ -76,6 +76,8 @@ protected:
 	DECLARE_MESSAGE_MAP()
 private:
 // 	HICON m_hIcon;
+public:
+	afx_msg void OnBnClickedMfcbutton1();
 };
 
 //{{AFX_INSERT_LOCATION}}

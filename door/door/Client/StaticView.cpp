@@ -19,12 +19,14 @@ COLUMNSTRUCT g_Static_Data[] =
 	//{"事件记录",	    650	}
 };
 
-CString StaticTitle[] = {"合计:0   台"};
-CString StaticOld[] = {"Vista      :0   台 ","Win   NT:0   台","Win2000:0   台", "Win2003:0   台","Win2008:0   台", "Win2012:0   台", "Win2016:0   台" };
-CString StaticNew[] = {"WinXP:0   台","Win  7:0   台","Win  8:0   台", "Win10:0   台" };
+CString StaticTitle[] = {"=> 合计:   0   台"};
+CString StaticOld[] = {"Vista      :   0   台 ","Win   NT:   0   台","Win2000:   0   台", "Win2003:   0   台","Win2008:   0   台"
+	, "Win2012:   0   台", "Win2016:   0   台" };
+CString StaticNew[] = {"WinXP:   0   台","Win  7:   0   台","Win  8:   0   台", "Win10:   0   台" };
 int g_Static_Width = 0;
 int	g_Static_Count = (sizeof(g_Static_Data) / 8);
 BOOL gStaticUpdate = FALSE;
+
 
 
 CStaticView * g_pStaticView;
@@ -110,22 +112,28 @@ void CStaticView::OnInitialUpdate()
 // 9     m_list.SetItemText(nCount, 1, strText);
 //10 }
 
-   //#TODO 还要写一个函数来更新数据
 
 	
 	
 
   
    
-	for(int i = 0 ; i < 6 ; i++)
+	for(int i = 0 ; i < 7 ; i++)
 	listCtrl.InsertItem(i,StaticOld[i],0);
 	
 	for(int i = 0 ; i < 4 ; i++)
 	listCtrl.SetItemText(i,1,StaticNew[i]);
 
 	//Insert Blank
-	listCtrl.InsertItem(10,"",0);
-	listCtrl.InsertItem(11,StaticTitle[0],0);
+	//listCtrl.InsertItem(10,"",0);
+	listCtrl.SetItemText(6,1,StaticTitle[0]);
+
+
+//#TODO OnSize Funtion have bug
+	//CRect rect ;
+	//this->GetWindowRect( rect );
+	//ScreenToClient( rect ) ;
+	//this->OnSize(SIZE_RESTORED,rect.Width(),rect.Height());
 }
 
 
@@ -142,4 +150,61 @@ BOOL CStaticView::PreCreateWindow(CREATESTRUCT& cs)
 	cs.style |=  LVS_REPORT;
 	cs.style   &=~WS_BORDER;
 	return CListView::PreCreateWindow(cs);
+}
+
+void CStaticView::OnSize(UINT nType, int cx, int cy) 
+{
+	CStaticView::OnSize(nType, cx, cy);
+/*
+	if(gLogUpdate)
+	{
+		m_pLogList->LockWindowUpdate();
+		double dcx=(double)(cx-5)/g_Log_Width; 
+		if (m_pLogList != NULL)
+		{
+			for(int i=0;i<g_Log_Count;i++){           //遍历每一个列
+				double dd=g_Log_Data[i].nWidth;          //得到当前列的宽度
+				dd = dd*dcx;
+				m_pLogList->SetColumnWidth(i,(int)dd);       //设置当前的宽度
+			}	
+		}
+		m_pLogList->UnlockWindowUpdate();
+	}
+	*/
+
+	if(gStaticUpdate)
+	{
+		double dcx=cx-5;     //对话框的总宽度  g_Column_cx
+		if (m_pStaticList != NULL)
+		{
+			for(int i=0;i<g_Static_Count;i++){                   //遍历每一个列
+				double dd=g_Static_Data[i].nWidth;               //得到当前列的宽度
+				dd/=g_Static_Width;                              //看一看当前宽度占总长度的几分之几
+				dd*=dcx;                                         //用原来的长度乘以所占的几分之几得到当前的宽度
+				m_pStaticList->SetColumnWidth(i,(int)dd);          //设置当前的宽度
+			}
+
+		}
+	}
+
+}
+
+void CStaticView::SetLogItem(LPCTSTR Text,int pos1, int pos2)
+{
+
+// 	font.CreatePointFont(90, _T("隶书"));//创建字体
+// 	m_pLogList->SetFont(&font,TRUE);//设置
+
+	//char m_Text[512] = {0};
+	//CTime time = CTime::GetCurrentTime();		//构造CTime对象 
+
+	//CString strTime = time.Format(" %Y-%m-%d %H:%M:%S");
+	//m_pStaticList->InsertItem(0, strTime, Flag);//int InsertItem( int nItem, LPCTSTR lpszItem, int nImage );
+	//m_pStaticList->SetItemText(0, 1, Text);  //BOOL SetItemText( int nItem, int nSubItem, LPTSTR lpszText );
+//	m_pLogList->SetTextColor(RGB(0,0,0)); // 蓝色显示
+
+	CListCtrl& listCtrl = GetListCtrl();
+	listCtrl.SetItemText(pos1,pos2,Text);
+
+
 }

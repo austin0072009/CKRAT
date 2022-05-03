@@ -18,7 +18,7 @@ protected:
 
 	// Attributes
 public:
-
+	CBitmap my_Bit;
 	// Operations
 public:
 

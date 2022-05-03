@@ -8,6 +8,7 @@
 #include "ClientDoc.h"
 #include "ClientView.h"
 #include "decode.h"//Ω‚√‹Õ∑
+#include "PcView.h"
 
 #include "Login.h"
 CLogin Login;
@@ -158,7 +159,7 @@ BOOL CClientApp::InitInstance()
 		IDR_MAINFRAME,
 		RUNTIME_CLASS(CClientDoc),
 		RUNTIME_CLASS(CMainFrame),       // main SDI frame window
-		RUNTIME_CLASS(CClientView));
+		RUNTIME_CLASS(CPcView));
 	AddDocTemplate(pDocTemplate);
 
 // 	char Path[200]={0};

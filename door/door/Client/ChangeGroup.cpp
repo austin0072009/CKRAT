@@ -48,7 +48,7 @@ BOOL CChangeGroup::OnInitDialog()
 	CDialog::OnInitDialog();
 	
 	// TODO: Add extra initialization here
-	CString strGroupName, strTemp;
+	/*CString strGroupName, strTemp;
 	int nTabs = g_pTabView->m_wndTabControl.GetItemCount();
 	for ( int i = 0; i < nTabs; i++ )
 	{
@@ -64,7 +64,7 @@ BOOL CChangeGroup::OnInitDialog()
 		}
 		m_combo_group.AddString(strGroupName);
 	}
-	m_combo_group.SetCurSel(0);
+	m_combo_group.SetCurSel(0);*/
 	return TRUE;  // return TRUE unless you set the focus to a control
 	              // EXCEPTION: OCX Property Pages should return FALSE
 }
@@ -88,7 +88,7 @@ BOOL CChangeGroup::PreTranslateMessage(MSG* pMsg)
 void CChangeGroup::OnOK() 
 {
 	// TODO: Add extra validation here
-	((CEdit*)GetDlgItem(IDC_COMBO_GROUP))->GetWindowText(strGroup);
+	/*((CEdit*)GetDlgItem(IDC_COMBO_GROUP))->GetWindowText(strGroup);
 	if (strGroup == "" )
 	{
 		AfxMessageBox("输入不能为空!");
@@ -111,5 +111,5 @@ void CChangeGroup::OnOK()
 		AfxMessageBox("分组没有改变!");
 		return;
 	}
-	CDialog::OnOK();
+	CDialog::OnOK();*/
 }

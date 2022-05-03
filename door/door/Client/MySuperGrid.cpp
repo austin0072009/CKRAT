@@ -16,7 +16,7 @@
 
 #include "ServiceDlg.h"
 #include "LogView.h"
-
+#include "resource.h"
 
 
 #ifdef _DEBUG
@@ -205,6 +205,8 @@ void CMySuperGrid::ChangeGroup(CString strGroupName)
 	}
 }
 
+
+// #TODO: 新加入的主机名字所属的分组名字 要对上服务端的上线名字
 LRESULT CMySuperGrid::OnAddToList(WPARAM wParam, LPARAM lParam)
 {
 	ClientContext	*pContext = (ClientContext *)lParam;
@@ -1031,7 +1033,7 @@ all other ExStyles are not supported...buhhh and you call your self a windows-de
 		lvColumn.cx = g_Heart_Data[x].nWidth;
 		InsertColumn(x, &lvColumn);
     }
-	//	CXTPPaintManager::SetTheme(xtpThemeOffice2003);	
+		//CXTPPaintManager::SetTheme(xtpThemeVisualStudio2010);	
 }
 
 

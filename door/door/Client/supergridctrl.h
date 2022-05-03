@@ -17,6 +17,7 @@ public:
 	CItemInfo():m_bCheck(0),m_iImage((const int)-1),m_lParam(NULL),m_clf((COLORREF)-1){};
 	void SetItemText(const CString& strItem){ m_strItemName = strItem; }
 	void SetItemText(const CString& strItem, COLORREF clf) { m_strItemName = strItem; m_clf = clf;}
+	//void AddSubItemIcon(const 
 	void AddSubItemText(const CString& strSubItem){ m_SubItems.Add(strSubItem); }
 	void AddSubItemText(const CString& strSubItem, COLORREF clf)
 	{

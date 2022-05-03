@@ -26,7 +26,7 @@ public:
 
 // Operations
 public:
-	CXTPTabControl m_wndTabControl;
+	//CXTPTabControl m_wndTabControl;
 // Overrides
 	// ClassWizard generated virtual function overrides
 	//{{AFX_VIRTUAL(CClientView)
@@ -53,7 +53,7 @@ protected:
 	//{{AFX_MSG(CClientView)
 	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 	afx_msg BOOL OnEraseBkgnd(CDC* pDC);
-	afx_msg void OnContextMenu(CWnd* pWnd, CPoint point);
+	//afx_msg void OnContextMenu(CWnd* pWnd, CPoint point);
 	afx_msg void OnSize(UINT nType, int cx, int cy);
 	afx_msg void OnMenuitemGroupAdd();
 	afx_msg void OnMenuitemGroupDel();
