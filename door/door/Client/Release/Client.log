@@ -1,16 +1,229 @@
-﻿生成启动时间为 2022/4/28 20:45:46。
+﻿生成启动时间为 2022/5/3 20:44:24。
      1>项目“C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Client.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在创建“.\Release\Client.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
          所有输出均为最新。
-         所有输出均为最新。
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IInclude /I..\common /Zi /nologo /W0 /WX- /Od /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm- /EHsc /MT /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release\\" /Fd".\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Client.cpp  /Zm1000   /Zm1000 
+         Client.cpp
+         _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+         Automatically linking with ToolkitPro1501vc100S.lib
          所有输出均为最新。
          所有输出均为最新。
        ResourceCompile:
-         所有输出均为最新。
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D NDEBUG /D _VC80_UPGRADE=0x0600 /l"0x0804" /nologo /fo".\Release\Client.res" Client.rc 
        Link:
-         所有输出均为最新。
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Release\Client.exe" /INCREMENTAL:NO /NOLOGO ..\common\libxvidcore.lib ..\common\va_g729a.lib nafxcw.lib /MANIFEST:NO /DEBUG /PDB:"C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\Client.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Release\Client.lib" /MACHINE:X86 .\Release\Client.res
+         .\Release\Audio.obj
+         .\Release\122205622.obj
+         .\Release\122205622Doc.obj
+         .\Release\122205622View.obj
+         .\Release\AudioDlg.obj
+         .\Release\BmpToAvi.obj
+         .\Release\Buffer.obj
+         .\Release\ChangeGroup.obj
+         .\Release\cJSON.obj
+         .\Release\Client.obj
+         .\Release\ClientDoc.obj
+         .\Release\ClientView.obj
+         .\Release\Dib.obj
+         .\Release\Download.obj
+         .\Release\FileAttr.obj
+         .\Release\FileManagerDlg.obj
+         .\Release\FileTransferModeDlg.obj
+         .\Release\Generate.obj
+         .\Release\HtmlCtrl.obj
+         .\Release\Icons.obj
+         .\Release\IniFile.obj
+         .\Release\InputDlg.obj
+         .\Release\IOCPServer.obj
+         .\Release\KeyBoardDlg.obj
+         .\Release\LFileName.obj
+         .\Release\Login.obj
+         .\Release\LogView.obj
+         .\Release\MainFrm.obj
+         .\Release\MapDlg.obj
+         .\Release\MsgBox.obj
+         .\Release\MySuperGrid.obj
+         .\Release\MyToolBar.obj
+         .\Release\OpenProxy.obj
+         .\Release\Openweb.obj
+         .\Release\PcView.obj
+         .\Release\PictureEx.obj
+         .\Release\ProxyMapDlg.obj
+         .\Release\QQInfoDlg.obj
+         .\Release\RegeditDlg.obj
+         .\Release\RegeditTextDlg.obj
+         .\Release\ScreenSpyDlg.obj
+         .\Release\ServiceDlg.obj
+         .\Release\ServiceInfoDlg.obj
+         .\Release\Setting.obj
+         .\Release\SEU_QQwry.obj
+         .\Release\ShellDlg.obj
+         .\Release\ShowWave.obj
+         .\Release\SortListCtrl.obj
+         .\Release\SoundToWav.obj
+         .\Release\Start.obj
+         .\Release\StaticView.obj
+         .\Release\StdAfx.obj
+         .\Release\supergridctrl.obj
+         .\Release\SystemDlg.obj
+         .\Release\Systeminfo.obj
+         .\Release\TextChatDlg.obj
+         .\Release\Tools.obj
+         .\Release\TrueColorToolBar.obj
+         .\Release\WebCamDlg.obj
+         .\Release\XvidDec.obj
+     1>ToolkitPro1501vc100S.lib(XTPCommandBar.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPCommandBarAnimation.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPCommandBars.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPControl.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPControlButton.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPControlComboBox.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPControlCustom.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPControlEdit.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPControlExt.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPControlGallery.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPControlPopup.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPControlProgress.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPControls.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPCustomizeCommandsPage.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPCustomizeSheet.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPCustomizeToolbarsPage.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPCustomizeTools.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPDefaultTheme.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPDialogBar.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPDockBar.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPDockContext.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPDockState.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPFrameWnd.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPImageEditor.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPKeyboardManager.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPMenuBar.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPMessageBar.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPMouseManager.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPNativeXPTheme.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPOffice2003Theme.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPOffice2007FrameHook.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPOffice2007Theme.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPOfficeTheme.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPPaintManager.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPPopupBar.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPReBar.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPScrollBase.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPShortcutManager.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPStatusBar.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPTabClientWnd.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPToolBar.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPColorManager.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPDrawHelpers.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPHookManager.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPImageManager.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPMarkupRender.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPNotifyConnection.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPPropExchange.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPResourceImage.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPResourceManager.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPRichRender.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPSystemHelpers.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPToolTipContext.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPWinThemeWrapper.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPComboBox.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPPropertyPage.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPPropertyPageNavigator.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPPropertySheet.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPHeaderCtrl.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPHeaderCtrlTheme.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPListBase.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPListCtrlView.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPSortClass.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPListBox.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPResize.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPResizeGroupBox.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPResizePoint.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPResizeRect.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPTrayIcon.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPControlTheme.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPFunctions.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPGlobal.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPRegistryManager.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPUtil.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPDockingPane.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPDockingPaneAutoHidePanel.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPDockingPaneBase.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPDockingPaneBaseContainer.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPDockingPaneContext.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPDockingPaneKeyboardHook.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPDockingPaneLayout.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPDockingPaneManager.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPDockingPaneMiniWnd.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPDockingPanePaintManager.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPDockingPaneSidePanel.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPDockingPaneSplitterContainer.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPDockingPaneTabbedContainer.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPGraphicBitmapPng.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(adler32.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(compress.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(crc32.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(deflate.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(inffast.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(inflate.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(inftrees.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(trees.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(uncompr.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(zutil.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(png.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(pngerror.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(pngget.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(pngmem.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(pngread.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(pngrio.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(pngrtran.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(pngrutil.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(pngset.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(pngtrans.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPMarkupBorder.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPMarkupBuilder.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPMarkupButton.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPMarkupCanvas.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPMarkupContext.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPMarkupControl.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPMarkupDecorator.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPMarkupDeviceContext.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPMarkupDrawingContext.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPMarkupFrameworkElement.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPMarkupGrid.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPMarkupImage.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPMarkupInline.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPMarkupInputElement.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPMarkupKeyboardNavigation.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPMarkupObject.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPMarkupPage.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPMarkupPanel.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPMarkupParser.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPMarkupResourceDictionary.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPMarkupScrollViewer.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPMarkupShape.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPMarkupStackPanel.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPMarkupTextBlock.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPMarkupUIElement.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPRibbonBackstageView.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPRibbonBar.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPRibbonControlTab.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPRibbonGroup.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPRibbonGroups.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPRibbonPaintManager.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPRibbonPopups.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPRibbonQuickAccessControls.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPRibbonSystemButton.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPRibbonSystemTheme.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPRibbonTab.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPRibbonTheme.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPTabControl.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPTabManager.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPTabPaintManager.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPTabPaintManagerAppearance.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+     1>ToolkitPro1501vc100S.lib(XTPTabPaintManagerColors.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
          Client.vcxproj -> C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\.\Release\Client.exe
        FinalizeBuildStatus:
          正在删除文件“.\Release\Client.unsuccessfulbuild”。
@@ -19,4 +232,4 @@
 
 生成成功。
 
-已用时间 00:00:00.25
+已用时间 00:00:10.23

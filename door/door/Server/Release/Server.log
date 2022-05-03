@@ -1,34 +1,17 @@
-﻿生成启动时间为 2022/4/28 19:41:56。
+﻿生成启动时间为 2022/5/3 19:41:20。
      1>项目“C:\Users\andi\Documents\GitHub\CKRAT\door\door\Server\Server.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在创建“.\Release\Server.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\common /Icommon /Zi /nologo /W0 /WX- /O2 /Ob1 /Oy- /D WIN32 /D NDEBUG /D _DLL /D _VC80_UPGRADE=0x0600 /D _WINDLL /D _MBCS /D _AFXDLL /GF /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp".\Release\Server.pch" /Fo".\Release\\" /Fd".\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt StdAfx.cpp
-         StdAfx.cpp
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\common /Icommon /Zi /nologo /W0 /WX- /O2 /Ob1 /Oy- /D WIN32 /D NDEBUG /D _DLL /D _VC80_UPGRADE=0x0600 /D _WINDLL /D _MBCS /D _AFXDLL /GF /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release\\" /Fd".\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt common\Buffer.cpp ClientSocket.cpp common\KernelManager.cpp common\Manager.cpp common\MemoryModule.cpp Server.cpp common\until.cpp
-         Buffer.cpp
-         ClientSocket.cpp
-         KernelManager.cpp
-         Manager.cpp
-         MemoryModule.cpp
-         Server.cpp
-         until.cpp
-         正在生成代码...
+         所有输出均为最新。
+         所有输出均为最新。
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(990,5): warning MSB8012: TargetPath(C:\Users\andi\Documents\GitHub\CKRAT\door\door\Server\.\Release\Server.dll) 与 Linker 的 OutputFile 属性值(C:\Users\andi\Documents\GitHub\CKRAT\door\door\ServerDat\DllMain.dll)不匹配。这可能导致项目生成不正确。若要更正此问题，请确保 $(OutDir)、$(TargetName) 和 $(TargetExt) 属性值与 %(Link.OutputFile) 中指定的值匹配。
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(992,5): warning MSB8012: TargetName(Server) 与 Linker 的 OutputFile 属性值(DllMain)不匹配。这可能导致项目生成不正确。若要更正此问题，请确保 $(OutDir)、$(TargetName) 和 $(TargetExt) 属性值与 %(Link.OutputFile) 中指定的值匹配。
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"../ServerDat/DllMain.dll" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:".\Release\Server.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"C:\Users\andi\Documents\GitHub\CKRAT\door\door\Server\Release\Server.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Release\DllMain.lib" /MACHINE:X86 /DLL .\Release\Buffer.obj
-         .\Release\ClientSocket.obj
-         .\Release\KernelManager.obj
-         .\Release\Manager.obj
-         .\Release\MemoryModule.obj
-         .\Release\Server.obj
-         .\Release\StdAfx.obj
-         .\Release\until.obj
-            正在创建库 .\Release\DllMain.lib 和对象 .\Release\DllMain.exp
+         所有输出均为最新。
          Server.vcxproj -> C:\Users\andi\Documents\GitHub\CKRAT\door\door\Server\.\Release\Server.dll
        Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"../ServerDat/DllMain.dll;#2" /manifest .\Release\Server.dll.intermediate.manifest "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
+         所有输出均为最新。
        FinalizeBuildStatus:
          正在删除文件“.\Release\Server.unsuccessfulbuild”。
          正在对“.\Release\Server.lastbuildstate”执行 Touch 任务。
@@ -36,4 +19,4 @@
 
 生成成功。
 
-已用时间 00:00:06.19
+已用时间 00:00:00.07

@@ -94,6 +94,8 @@ protected:
 	afx_msg void OnUninstall();
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
+public:
+//	afx_msg void OnRButtonDown(UINT nFlags, CPoint point);
 };
 
 /////////////////////////////////////////////////////////////////////////////

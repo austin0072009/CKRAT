@@ -9,6 +9,9 @@
 #pragma once
 #endif // _MSC_VER > 1000
 
+
+
+// #TODO 设定文档很关键
 class CIniFile  
 {
 public:

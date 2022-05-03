@@ -77,7 +77,6 @@
 #define IDD_AUDIO                       176
 #define IDR_MENU_SYSTEM                 176
 #define IDB_MENU_SYSTEM                 177
-#define IDD_LOGIN                       178
 #define IDR_SKIN                        178
 #define IDR_GIF                         179
 #define IDR_SKIN11                      181
@@ -129,8 +128,8 @@
 #define IDB_SYSTEM                      236
 #define IDB_SERVICEMANAGER              237
 #define IDD_TEXTCHAT                    238
-#define IDB_BITMAP17                    238
 #define IDB_REGEDIT                     238
+#define IDD_LOGIN                       239
 #define IDD_PROXY_MAP                   245
 #define IDI_ICON1                       254
 #define IDI_ICON2                       255
@@ -518,20 +517,17 @@
 #define IDC_EDIT_PORT                   1039
 #define IDC_CONNECT_AUTO                1040
 #define IDC_RANDOM                      1041
-#define IDC_USERNAME                    1042
 #define IDC_BUILD_USERPASS              1042
-#define IDC_USERPASS                    1043
 #define IDC_BUILD_USERNAME              1043
-#define IDC_STATIC_TIPS                 1044
 #define IDC_BUILD_LOGIN                 1044
-#define IDC_BTN_HIDE                    1045
 #define IDC_CHECK_SKIN                  1045
-#define IDC_LOGIN                       1046
-#define IDC_HOSTNAME                    1047
 #define IDC_STATIC_VERSION              1048
-#define IDC_GIF_LOGIN                   1049
 #define IDC_DISABLE_POPTIPS             1053
+#define IDC_OK                          1053
+#define IDC_MFCBUTTON2                  1054
+#define IDC_EDIT1                       1055
 #define IDC_DAWED_1                     1056
+#define IDC_EDIT2                       1056
 #define IDC_DAWED_3                     1058
 #define IDC_FILE_SIZE                   1058
 #define IDC_DAWED_4                     1059
@@ -769,9 +765,9 @@
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_3D_CONTROLS                     1
-#define _APS_NEXT_RESOURCE_VALUE        239
+#define _APS_NEXT_RESOURCE_VALUE        241
 #define _APS_NEXT_COMMAND_VALUE         32818
-#define _APS_NEXT_CONTROL_VALUE         1051
+#define _APS_NEXT_CONTROL_VALUE         1056
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

@@ -201,9 +201,7 @@
     <ClCompile Include="LFileName.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
     </ClCompile>
-    <ClCompile Include="Login.cpp">
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
-    </ClCompile>
+    <ClCompile Include="Login.cpp" />
     <ClCompile Include="LogView.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
     </ClCompile>
@@ -217,6 +215,7 @@
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
     </ClCompile>
     <ClCompile Include="MySuperGrid.cpp" />
+    <ClCompile Include="MyToolBar.cpp" />
     <ClCompile Include="OpenProxy.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
     </ClCompile>
@@ -271,6 +270,7 @@
     <ClCompile Include="Start.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
     </ClCompile>
+    <ClCompile Include="StaticView.cpp" />
     <ClCompile Include="StdAfx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdafx.h</PrecompiledHeaderFile>
@@ -292,9 +292,6 @@
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
     </ClCompile>
     <ClCompile Include="Include\TrueColorToolBar.cpp">
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
-    </ClCompile>
-    <ClCompile Include="Weather.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
     </ClCompile>
     <ClCompile Include="WebCamDlg.cpp">
@@ -341,6 +338,7 @@
     <ClInclude Include="Include\Mapper.h" />
     <ClInclude Include="MsgBox.h" />
     <ClInclude Include="MySuperGrid.h" />
+    <ClInclude Include="MyToolBar.h" />
     <ClInclude Include="OpenProxy.h" />
     <ClInclude Include="Openweb.h" />
     <ClInclude Include="PcView.h" />
@@ -360,6 +358,7 @@
     <ClInclude Include="SortListCtrl.h" />
     <ClInclude Include="Include\SoundToWav.h" />
     <ClInclude Include="Start.h" />
+    <ClInclude Include="StaticView.h" />
     <ClInclude Include="StdAfx.h" />
     <ClInclude Include="supergridctrl.h" />
     <ClInclude Include="SystemDlg.h" />
@@ -367,7 +366,6 @@
     <ClInclude Include="TextChatDlg.h" />
     <ClInclude Include="Tools.h" />
     <ClInclude Include="Include\TrueColorToolBar.h" />
-    <ClInclude Include="Weather.h" />
     <ClInclude Include="WebCamDlg.h" />
     <ClInclude Include="..\common\xvidsdk\XvidDec.h" />
   </ItemGroup>
@@ -753,8 +751,29 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\folders.bmp" />
+    <None Include="res\Bitmap_3.bmp" />
+    <None Include="res\ClientBmp\folders.bmp" />
+    <None Include="res\clientbmp\toolbar1.bmp" />
+    <None Include="res\guoqiico\ribbon1.mfcribbon-ms" />
+    <None Include="res\iconew\menu1.bmp" />
+    <None Include="res\iconew\menu10.bmp" />
+    <None Include="res\iconew\menu2.bmp" />
+    <None Include="res\iconew\menu3.bmp" />
+    <None Include="res\iconew\menu4.bmp" />
+    <None Include="res\iconew\menu5.bmp" />
+    <None Include="res\iconew\menu6.bmp" />
+    <None Include="res\iconew\menu7.bmp" />
+    <None Include="res\iconew\menu8.bmp" />
+    <None Include="res\iconew\menu9.bmp" />
+    <None Include="res\toolbar1.bmp" />
+    <None Include="res\toolbar2.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="Client.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

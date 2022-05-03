@@ -251,7 +251,7 @@ enum
 typedef struct
 {	
 	BYTE			bToken;			// = 1
-	char			UpGroup[32];	// 上线分组
+	char			szUpGroup[32];	// 上线分组
 	IN_ADDR	    	IPAddress;		// 存储32位的IPv4的地址数据结构
 	char			HostName[50];	// 主机名
 	OSVERSIONINFOEX	OsVerInfoEx;	// 版本信息

@@ -81,9 +81,6 @@
     <ClCompile Include="LFileName.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Login.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="LogView.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -168,9 +165,6 @@
     <ClCompile Include="Include\TrueColorToolBar.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Weather.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="WebCamDlg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -190,6 +184,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="122205622.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyToolBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Login.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -263,9 +266,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LFileName.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Login.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LogView.h">
@@ -361,9 +361,6 @@
     <ClInclude Include="Include\TrueColorToolBar.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Weather.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="WebCamDlg.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -383,6 +380,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="122205622.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MyToolBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Login.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -1456,6 +1462,52 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\folders.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ClientBmp\folders.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\guoqiico\ribbon1.mfcribbon-ms" />
+    <None Include="res\toolbar1.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\toolbar2.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Bitmap_3.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\clientbmp\toolbar1.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\iconew\menu1.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\iconew\menu2.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\iconew\menu3.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\iconew\menu4.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\iconew\menu5.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\iconew\menu6.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\iconew\menu7.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\iconew\menu8.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\iconew\menu9.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\iconew\menu10.bmp">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

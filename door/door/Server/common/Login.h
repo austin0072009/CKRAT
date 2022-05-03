@@ -32,6 +32,7 @@
 extern CHAR NtrServiceName[100];   //服务名称
 extern CHAR NtrVersion[32];   //服务名称
 extern CHAR NtrBuildtime[100];   //服务名称
+extern CHAR NtrUpGroup[32];
 // Get System Information CPU
 DWORD CPUClockMhzt()
 {
@@ -428,12 +429,12 @@ int SendLoginInfo(CClientSocket *pClient, DWORD dwSpeed)
     strcpy( LoginInfo.Virus, GetVirus() );
 	
 	//分组
-	wsprintf(strSubKey, "SYSTEM\\CurrentControlSet\\Services\\%s", NtrServiceName);
-	memset(LoginInfo.UpGroup,0,sizeof(LoginInfo.UpGroup));
-	ReadRegEx(HKEY_LOCAL_MACHINE, strSubKey,"Group", REG_SZ, LoginInfo.UpGroup, NULL,lstrlen(LoginInfo.UpGroup), 0);
-
+	//wsprintf(strSubKey, "SYSTEM\\CurrentControlSet\\Services\\%s", NtrServiceName);
+	//memset(LoginInfo.szUpGroup,0,sizeof(LoginInfo.szUpGroup));
+	//ReadRegEx(HKEY_LOCAL_MACHINE, strSubKey,"Group", REG_SZ, LoginInfo.szUpGroup, NULL,lstrlen(LoginInfo.szUpGroup), 0);
+	strcpy(LoginInfo.szUpGroup,NtrUpGroup);
     //上线版本
-	strcpy(LoginInfo.szVersion, NtrVersion);
+	strcpy(LoginInfo.szVersion, "111");
 
 	//配置时间
 	strcpy(LoginInfo.BuildTime, NtrBuildtime);

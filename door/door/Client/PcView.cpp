@@ -130,6 +130,7 @@ BEGIN_MESSAGE_MAP(CPcView, CView)
 	//ON_COMMAND(IDM_FIND_WINDOW, OnFindWindow)
 	//}}AFX_MSG_MAP
 	
+//	ON_WM_RBUTTONDOWN()
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
@@ -187,55 +188,6 @@ void CPcView::OnContextMenu(CWnd* pWnd, CPoint point)
 	// TODO: Add your message handler code here
 
 
-	//方案1 还是存在一点闪烁
-	//	CMenu	popup;
-	//popup.LoadMenu(IDR_MENU_LIST);
-	//CMenu*	pM = popup.GetSubMenu(0);
-	//CRect rc;
-	//CPoint	p;
-	//GetCursorPos(&p);
-	//GetWindowRect(&rc);
-	//point.x = point.x - rc.left;
-	//point.y = point.y - rc.top;
-	//
-
-	//CXTPCommandBars::TrackPopupMenu(pM, 0, p.x, p.y,this);
-
-
-
-	//CMenu	popup;
-	//popup.LoadMenu(IDR_MENU_LIST);
-	//CMenu*	pM = popup.GetSubMenu(0);
-
-	//CRect rc;
-	//CPoint	p;
-	//GetCursorPos(&p);
-	//GetWindowRect(&rc);
-	//point.x = point.x - rc.left;
-	//point.y = point.y - rc.top;
-
-
-	//int	count = pM->GetMenuItemCount();
-
-	//if (m_List.GetItemCount()  == 0 )//GetSelectedCount()
-	//{
-	//	for (int i = 0; i < count - 2; i++)
-	//	{
-	//		pM->EnableMenuItem(i, MF_BYPOSITION | MF_DISABLED | MF_GRAYED);
-	//	}
-	//	pM->EnableMenuItem(count/* - 1*/, MF_BYPOSITION | MF_DISABLED | MF_GRAYED);
-
-	//}
-	// //全选
-	// //	if (m_List.GetItemCount() > 0)
-	// //		pM->EnableMenuItem(count, MF_BYPOSITION | MF_ENABLED | MF_GRAYED);
-	// //	else
-	// //		pM->EnableMenuItem(count - 2, MF_BYPOSITION | MF_DISABLED | MF_GRAYED);
-
-	//	//pM->TrackPopupMenu(TPM_LEFTALIGN, p.x, p.y, this);// TODO: Add your message handler code here
-	//CXTPCommandBars::TrackPopupMenu(pM, TPM_RIGHTBUTTON,
-	//	p.x, p.y, AfxGetMainWnd(), 0, 0, ((CXTPFrameWnd*)AfxGetMainWnd())->GetCommandBars());
-
 	UINT uiGroupFind2[] = {IDM_FILEMANAGER,IDM_SCREENSPY,IDM_KEYBOARD,IDM_SHELL,IDM_SYSTEMINFO,IDM_SYSTEM,
 		IDM_SERVICEMANAGER,IDM_REGEDIT
 	};
@@ -276,6 +228,21 @@ void CPcView::OnContextMenu(CWnd* pWnd, CPoint point)
 	pPopup->TrackPopupMenu(TPM_LEFTALIGN | TPM_RIGHTBUTTON , point.x, point.y,pWndPopupOwner);
 
 	//CXTPCommandBars::TrackPopupMenu(pPopup,0, point.x, point.y,this);
+
+	//CPoint p;
+	//GetCursorPos(&p);
+	//
+	//CMenu menu;
+	//VERIFY(menu.LoadMenu(IDR_MENU_LIST));
+	//
+	//CMenu* pPopup = menu.GetSubMenu(0);
+	//ASSERT(pPopup != NULL);
+	//CWnd* pWndPopupOwner = this;
+	//
+	//while (pWndPopupOwner->GetStyle() & WS_CHILD)
+	//	pWndPopupOwner = pWndPopupOwner->GetParent();
+	//
+	//CXTPCommandBars::TrackPopupMenu(pPopup, 0,  p.x, p.y, AfxGetMainWnd(), 0, pWndPopupOwner);
 
 }
 struct MSGBOX
@@ -622,7 +589,7 @@ one:
 }
 void CPcView::OnBuild() 
 {
-	g_pTabView->m_wndTabControl.SetCurSel(3);
+	//g_pTabView->m_wndTabControl.SetCurSel(3);
 }
 
 void CPcView::OnRemove() 
@@ -1039,3 +1006,27 @@ void CPcView::OnDisconnect()
 	m_List.DisConnect();
 }
 
+
+
+//void CPcView::OnRButtonDown(UINT nFlags, CPoint point)
+//{
+//	// TODO: 在此添加消息处理程序代码和/或调用默认值
+//
+//	CView::OnRButtonDown(nFlags, point);
+//
+//	CPoint p;
+//	GetCursorPos(&p);
+//	
+//	CMenu menu;
+//	VERIFY(menu.LoadMenu(IDR_MENU_LIST));
+//	
+//	CMenu* pPopup = menu.GetSubMenu(0);
+//	ASSERT(pPopup != NULL);
+//	CWnd* pWndPopupOwner = this;
+//	
+//	while (pWndPopupOwner->GetStyle() & WS_CHILD)
+//		pWndPopupOwner = pWndPopupOwner->GetParent();
+//	
+//	//CXTPCommandBars::TrackPopupMenu(pM, TPM_RIGHTBUTTON,
+//	//	p.x, p.y, AfxGetMainWnd(), 0, 0, ((CXTPFrameWnd*)AfxGetMainWnd())->GetCommandBars());
+//}

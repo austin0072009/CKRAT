@@ -1,39 +1,21 @@
-﻿生成启动时间为 2022/4/28 19:42:03。
-     1>项目“C:\Users\andi\Documents\GitHub\CKRAT\door\door\验证器\ZzhPass.vcxproj”在节点 3 上(build 个目标)。
+﻿生成启动时间为 2022/5/3 18:28:35。
+     1>项目“C:\Users\andi\Documents\GitHub\CKRAT\door\door\验证器\ZzhPass.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在创建“.\Release\ZzhPass.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Ob1 /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /D _AFXDLL /GF /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp".\Release\ZzhPass.pch" /Fo".\Release\\" /Fd".\Release\vc100.pdb" /FR".\Release\\" /Gd /TP /analyze- /errorReport:prompt StdAfx.cpp
-         StdAfx.cpp
-         _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Ob1 /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /D _AFXDLL /GF /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp".\Release\ZzhPass.pch" /Fo".\Release\\" /Fd".\Release\vc100.pdb" /FR".\Release\\" /Gd /TP /analyze- /errorReport:prompt IniFile.cpp ZzhPass.cpp ZzhPassDlg.cpp
-         IniFile.cpp
-     1>IniFile.cpp(33): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(110) : 参见“strcat”的声明
-         ZzhPass.cpp
-     1>ZzhPass.cpp(52): warning C4996: 'CWinApp::Enable3dControls': CWinApp::Enable3dControls is no longer needed. You should remove this call.
-                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\atlmfc\include\afxwin.h(5344) : 参见“CWinApp::Enable3dControls”的声明
-         ZzhPassDlg.cpp
-     1>ZzhPassDlg.cpp(220): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\time.inl(112) : 参见“localtime”的声明
-     1>ZzhPassDlg.cpp(230): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : 参见“sprintf”的声明
-         正在生成代码...
+         所有输出均为最新。
+         所有输出均为最新。
        ResourceCompile:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D NDEBUG /D _VC80_UPGRADE=0x0600 /D _AFXDLL /l"0x0804" /nologo /fo".\Release\ZzhPass.res" ZzhPass.rc 
+         所有输出均为最新。
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(990,5): warning MSB8012: TargetPath(C:\Users\andi\Documents\GitHub\CKRAT\door\door\验证器\.\Release\ZzhPass.exe) 与 Linker 的 OutputFile 属性值(C:\Users\andi\Documents\GitHub\CKRAT\door\door\bin\验证器.exe)不匹配。这可能导致项目生成不正确。若要更正此问题，请确保 $(OutDir)、$(TargetName) 和 $(TargetExt) 属性值与 %(Link.OutputFile) 中指定的值匹配。
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(992,5): warning MSB8012: TargetName(ZzhPass) 与 Linker 的 OutputFile 属性值(验证器)不匹配。这可能导致项目生成不正确。若要更正此问题，请确保 $(OutDir)、$(TargetName) 和 $(TargetExt) 属性值与 %(Link.OutputFile) 中指定的值匹配。
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"../bin/验证器.exe" /INCREMENTAL:NO /NOLOGO ws2_32.lib /MANIFEST /ManifestFile:".\Release\ZzhPass.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"C:\Users\andi\Documents\GitHub\CKRAT\door\door\验证器\Release\ZzhPass.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Release\ZzhPass.lib" /MACHINE:X86 .\Release\ZzhPass.res
-         .\Release\IniFile.obj
-         .\Release\StdAfx.obj
-         .\Release\ZzhPass.obj
-         .\Release\ZzhPassDlg.obj
+         所有输出均为最新。
          ZzhPass.vcxproj -> C:\Users\andi\Documents\GitHub\CKRAT\door\door\验证器\.\Release\ZzhPass.exe
        Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"../bin/验证器.exe;#1" /manifest .\Release\ZzhPass.exe.intermediate.manifest "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
+         所有输出均为最新。
        BscMake:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\bscmake.exe /nologo /o".\Release\ZzhPass.bsc" .\Release\IniFile.sbr .\Release\StdAfx.sbr .\Release\ZzhPass.sbr .\Release\ZzhPassDlg.sbr
+         所有输出均为最新。
        FinalizeBuildStatus:
          正在删除文件“.\Release\ZzhPass.unsuccessfulbuild”。
          正在对“.\Release\ZzhPass.lastbuildstate”执行 Touch 任务。
@@ -41,4 +23,4 @@
 
 生成成功。
 
-已用时间 00:00:10.62
+已用时间 00:00:00.28

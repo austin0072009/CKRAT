@@ -304,7 +304,7 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	
 
 
-	//SetMenu(NULL);//去除菜单
+	SetMenu(NULL);//去除菜单
 
 	//////////////////////////////////////////////////////////////////////////////////////
  	//if (!m_wndDlgBar.Create(this, IDD_DIALOGBAR, WS_VISIBLE|WS_CHILD|CBRS_SIZE_DYNAMIC|CBRS_ALIGN_TOP, IDD_DIALOGBAR)) 
@@ -1679,7 +1679,7 @@ BOOL CMainFrame::CreateRibbonBar()
 	
 	CMenu menu;
 	menu.Attach(::GetMenu(m_hWnd));
-	SetMenu(NULL);
+	//SetMenu(NULL);
 	
 	
 	/*CXTPRibbonBar* pRibbonBar = (CXTPRibbonBar*)pCommandBars->Add(_T("欢迎使用本远程管理系统"), xtpBarTop, RUNTIME_CLASS(CXTPRibbonBar));

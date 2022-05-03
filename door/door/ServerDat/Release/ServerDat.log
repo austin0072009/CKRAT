@@ -1,23 +1,16 @@
-﻿生成启动时间为 2022/4/28 19:41:55。
-     1>项目“C:\Users\andi\Documents\GitHub\CKRAT\door\door\ServerDat\ServerDat.vcxproj”在节点 3 上(build 个目标)。
+﻿生成启动时间为 2022/5/3 19:41:22。
+     1>项目“C:\Users\andi\Documents\GitHub\CKRAT\door\door\ServerDat\ServerDat.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在创建“.\Release\ServerDat.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Ob1 /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /GF /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp".\Release\ServerDat.pch" /Fo".\Release\\" /Fd".\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt StdAfx.cpp
-         StdAfx.cpp
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Ob1 /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /GF /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release\\" /Fd".\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ServerDat.cpp
-         ServerDat.cpp
-     1>c:\users\andi\documents\github\ckrat\door\door\serverdat\MemLoadDll.h(10): warning C4005: “IMAGE_SIZEOF_BASE_RELOCATION”: 宏重定义
-                 c:\users\andi\documents\github\ckrat\door\door\serverdat\MemLoadDll.h(8) : 参见“IMAGE_SIZEOF_BASE_RELOCATION”的前一个定义
+         所有输出均为最新。
+         所有输出均为最新。
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(990,5): warning MSB8012: TargetPath(C:\Users\andi\Documents\GitHub\CKRAT\door\door\ServerDat\.\Release\ServerDat.exe) 与 Linker 的 OutputFile 属性值(C:\Users\andi\Documents\GitHub\CKRAT\door\door\Bin\Cache\Install.dat)不匹配。这可能导致项目生成不正确。若要更正此问题，请确保 $(OutDir)、$(TargetName) 和 $(TargetExt) 属性值与 %(Link.OutputFile) 中指定的值匹配。
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(991,5): warning MSB8012: TargetExt(.exe) 与 Linker 的 OutputFile 属性值(.dat)不匹配。这可能导致项目生成不正确。若要更正此问题，请确保 $(OutDir)、$(TargetName) 和 $(TargetExt) 属性值与 %(Link.OutputFile) 中指定的值匹配。
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(992,5): warning MSB8012: TargetName(ServerDat) 与 Linker 的 OutputFile 属性值(Install)不匹配。这可能导致项目生成不正确。若要更正此问题，请确保 $(OutDir)、$(TargetName) 和 $(TargetExt) 属性值与 %(Link.OutputFile) 中指定的值匹配。
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"../Bin/Cache/Install.dat" /INCREMENTAL:NO /NOLOGO odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:".\Release\ServerDat.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"C:\Users\andi\Documents\GitHub\CKRAT\door\door\ServerDat\Release\ServerDat.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Release\ServerDat.lib" /MACHINE:X86 .\Release\ServerDat.obj
-         .\Release\StdAfx.obj
+         所有输出均为最新。
          ServerDat.vcxproj -> C:\Users\andi\Documents\GitHub\CKRAT\door\door\ServerDat\.\Release\ServerDat.exe
-       Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"../Bin/Cache/Install.dat;#1" /manifest .\Release\ServerDat.exe.intermediate.manifest
        FinalizeBuildStatus:
          正在删除文件“.\Release\ServerDat.unsuccessfulbuild”。
          正在对“.\Release\ServerDat.lastbuildstate”执行 Touch 任务。
@@ -25,4 +18,4 @@
 
 生成成功。
 
-已用时间 00:00:03.72
+已用时间 00:00:00.05
