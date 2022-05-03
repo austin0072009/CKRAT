@@ -754,6 +754,8 @@ void CGenerate::OnBuildLogin()
 	lstrcatA( TmpPath, "\\WindsTemp.exe" );
 	DeleteFile(TmpPath);
 	DWORD recvsize = 0;
+
+
 	SOCKET sockInt;
 	struct sockaddr_in serverAddr;
 	//struct hostent *hp;
