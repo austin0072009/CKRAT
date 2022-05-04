@@ -110,29 +110,32 @@ CClientApp theApp;
 BOOL CClientApp::InitInstance()
 {
 
-	while(true)
-	{
 
-	CLogin login_Dialog;  
-    //模态对话框  
-    int nReturn = login_Dialog.DoModal();//返回IDOK或IDCANCEL。如果返回的是IDCANCEL，则要调用WindowsCommDlgExtendedError函数来确定是否发生了一个错误。IDOK和IDCANCEL都是常量，它表明用户选择的是OK按钮还是Cancel按钮  
-    if(nReturn == IDCANCEL){//点击取消  
-        return FALSE;  
-    }  
-    if (nReturn == IDOK){//点击确定  
-        HWND login_Hwnd = GetDlgItem(login_Dialog,IDD_LOGIN);  
-        CString str_User = login_Dialog.m_strUser;  
-        CString str_Password = login_Dialog.m_strPassword;  
-        if(!(str_User == "admin" && str_Password == "admin")){//如果用户名密码不是admin/admin，则报错，提示重新输入，直至正确为止。  
-            if(IDOK == MessageBox(NULL,"用户ID或密码错误！\n 请重新输入！","登录失败！",MB_OKCANCEL|MB_ICONERROR))  
-                continue;  
-            else  
-                return FALSE;  
-        }  
-        else  
-            break;  
-    }  
-	}
+
+	//#TODO : 登录窗口，在这里对接验证字段
+	//while(true)
+	//{
+
+	//CLogin login_Dialog;  
+ //   //模态对话框  
+ //   int nReturn = login_Dialog.DoModal();//返回IDOK或IDCANCEL。如果返回的是IDCANCEL，则要调用WindowsCommDlgExtendedError函数来确定是否发生了一个错误。IDOK和IDCANCEL都是常量，它表明用户选择的是OK按钮还是Cancel按钮  
+ //   if(nReturn == IDCANCEL){//点击取消  
+ //       return FALSE;  
+ //   }  
+ //   if (nReturn == IDOK){//点击确定  
+ //       HWND login_Hwnd = GetDlgItem(login_Dialog,IDD_LOGIN);  
+ //       CString str_User = login_Dialog.m_strUser;  
+ //       CString str_Password = login_Dialog.m_strPassword;  
+ //       if(!(str_User == "admin" && str_Password == "admin")){//如果用户名密码不是admin/admin，则报错，提示重新输入，直至正确为止。  
+ //           if(IDOK == MessageBox(NULL,"用户ID或密码错误！\n 请重新输入！","登录失败！",MB_OKCANCEL|MB_ICONERROR))  
+ //               continue;  
+ //           else  
+ //               return FALSE;  
+ //       }  
+ //       else  
+ //           break;  
+ //   }  
+	//}
 
 
 

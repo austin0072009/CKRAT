@@ -103,6 +103,7 @@ BEGIN_MESSAGE_MAP(CMainFrame, CXTPFrameWnd)
 	ON_WM_SYSCOMMAND()
 	ON_WM_CLOSE()
 	ON_WM_TIMER()
+	ON_COMMAND(ID_WALL,OnVideoWall)
 	ON_COMMAND(ID_BUILD, OnBuild)
 	ON_COMMAND(ID_SETTING, OnSetting)
 	ON_COMMAND(IDM_TOOLS, OnTools)
@@ -672,6 +673,7 @@ void CMainFrame::LoadIcons()   //右键菜单显示图标
 	UINT uiGroupFind8[] = {ID_BUILD};
 	UINT uiGroupFind9[] = {ID_APP_ABOUT};
 	UINT uiGroupFind10[] = {ID_APP_EXIT};
+	//UINT uiGroupFind11[] = {ID_APP_SHIP};
 
 
 
@@ -1462,6 +1464,20 @@ LRESULT CMainFrame::OnDockingPaneNotify(WPARAM wParam, LPARAM lParam)
 	}
 	return FALSE;
 }
+
+void CMainFrame::OnVideoWall()
+{
+	//AfxMessageBox("启动视频墙");
+	
+	m_dlg_video.Create(IDD_VIDEOWALL);
+
+	m_dlg_video.CenterWindow();
+	m_dlg_video.ShowWindow(SW_SHOW);
+
+	
+}
+
+
 
 void CMainFrame::OnBuild() 
 {

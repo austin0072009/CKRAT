@@ -167,25 +167,48 @@ LONG MyToolBar::OnInitDialog(UINT wParam, LONG lParam)
 	EnableDocking(CBRS_ALIGN_ANY);  //此框架任何地方允许可拖动，如果已经为别的ToolBar写过可以不用再写
 	
    	m_ToolBarList.Create(60,32,ILC_COLOR24|ILC_MASK,0,0);
-	CSize m_Size = 
-	LoadMyBitmap(IDB_BITMAP_XTSZ);
-	LoadMyBitmap(IDB_BITMAP_SYGN);
-	LoadMyBitmap(IDB_BITMAP_CJKF);
-	LoadMyBitmap(IDB_BITMAP_GYCX);
-	LoadMyBitmap(IDB_BITMAP_TCCX);
+	//CSize m_Size = LoadMyBitmap(IDB_BITMAP_XTSZ);
+	//LoadMyBitmap(IDB_BITMAP_SYGN);
+	//LoadMyBitmap(IDB_BITMAP_CJKF);
+	//LoadMyBitmap(IDB_BITMAP_GYCX);
+	//LoadMyBitmap(IDB_BITMAP_SHIP);
+	//LoadMyBitmap(IDB_BITMAP_TCCX);
+
+	m_bitmap1.LoadBitmapA(IDB_BITMAP_XTSZ);
+	m_bitmap2.LoadBitmapA(IDB_BITMAP_SYGN);
+	m_bitmap3.LoadBitmapA(IDB_BITMAP_CJKF);
+	m_bitmap4.LoadBitmapA(IDB_BITMAP_GYCX);
+	m_bitmap5.LoadBitmapA(IDB_BITMAP_TCCX);
+	m_bitmap6.LoadBitmapA(IDB_BITMAP_SHIP);
+
+	m_ToolBarList.Add(&m_bitmap1,RGB(0,0,0));
+	m_ToolBarList.Add(&m_bitmap2,RGB(0,0,0));
+	m_ToolBarList.Add(&m_bitmap3,RGB(0,0,0));
+	m_ToolBarList.Add(&m_bitmap4,RGB(0,0,0));
+	m_ToolBarList.Add(&m_bitmap5,RGB(0,0,0));
+	m_ToolBarList.Add(&m_bitmap6,RGB(0,0,0));
 	
 	
     m_wndToolBar.SetButtonText(0,_T("系统设置"));
 	m_wndToolBar.SetButtonText(1,_T("实用功能"));
 	m_wndToolBar.SetButtonText(2,_T("创建客户"));
 	m_wndToolBar.SetButtonText(3,_T("关于程序"));
-	m_wndToolBar.SetButtonText(4,_T("退出程序"));
-	   
+	
+	m_wndToolBar.SetButtonText(4,_T("屏幕墙"));
+	m_wndToolBar.SetButtonText(5,_T("退出程序"));   
+
+	CDC * pDC = GetDC();
+	CDC m_MemDC;
+	m_MemDC.CreateCompatibleDC(pDC);
+	CSize m_Size = pDC->GetTextExtent("刷新");
 	   
 	m_wndToolBar.GetToolBarCtrl().SetImageList(&m_ToolBarList);
 	m_wndToolBar.GetToolBarCtrl().SetDisabledImageList(&m_ToolBarList);
 	m_wndToolBar.GetToolBarCtrl().SetButtonSize(CSize(60,32 + m_Size.cy + 20));
 	m_wndToolBar.GetToolBarCtrl().SetBitmapSize(CSize(60,32));
+
+
+
 	   
  	RepositionBars(AFX_IDW_CONTROLBAR_FIRST, AFX_IDW_CONTROLBAR_LAST, 0); //显示状态栏
 

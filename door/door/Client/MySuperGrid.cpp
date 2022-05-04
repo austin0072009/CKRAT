@@ -82,8 +82,8 @@ BEGIN_MESSAGE_MAP(CMySuperGrid, CSuperGridCtrl)
 ON_WM_CREATE()
 ON_NOTIFY_REFLECT(NM_CUSTOMDRAW, OnCustomDraw)
 //}}AFX_MSG_MAP
-ON_MESSAGE(WM_ADDTOLIST, OnAddToList)
-ON_MESSAGE(WM_REMOVEFROMLIST, OnReMoveList)
+//ON_MESSAGE(WM_ADDTOLIST, OnAddToList)
+//ON_MESSAGE(WM_REMOVEFROMLIST, OnReMoveList)
 ON_MESSAGE(WM_OPENMANAGERDIALOG, OnOpenManagerDialog)
 ON_MESSAGE(WM_OPENSCREENSPYDIALOG, OnOpenScreenSpyDialog)
 ON_MESSAGE(WM_OPENKEYBOARDDIALOG, OnOpenKeyBoardDialog)
@@ -1978,6 +1978,19 @@ LRESULT CMySuperGrid::OnOpenScreenSpyDialog(WPARAM wParam, LPARAM lParam)
 	return 0;
 }
 
+
+afx_msg LRESULT CMySuperGrid::OnOpenWallDialog(WPARAM wParam, LPARAM lParam)
+{
+
+
+
+
+
+	return 0;
+}
+
+
+
 LRESULT CMySuperGrid::OnOpenKeyBoardDialog(WPARAM wParam, LPARAM lParam)
 {
 	ClientContext	*pContext = (ClientContext *)lParam;
@@ -2260,4 +2273,5 @@ void CMySuperGrid::OnCustomDraw(NMHDR* pNMHDR, LRESULT* pResult)
 		*pResult = CDRF_DODEFAULT; 
 	} 
 } 
+
 

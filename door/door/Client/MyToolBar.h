@@ -30,6 +30,13 @@ protected:
 	afx_msg HBRUSH OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor);
 	afx_msg LONG OnInitDialog ( UINT, LONG );
 	afx_msg void OnPaint();
+
+	CBitmap m_bitmap1;  
+    CBitmap m_bitmap2;  
+    CBitmap m_bitmap3;  
+	CBitmap m_bitmap4;  
+    CBitmap m_bitmap5;  
+    CBitmap m_bitmap6;  
 	
 
 protected:
