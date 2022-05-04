@@ -1,17 +1,17 @@
-﻿生成启动时间为 2022/5/3 21:07:54。
+﻿生成启动时间为 2022/5/5 2:59:50。
      1>项目“C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Client.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在创建“.\Release\Client.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
          所有输出均为最新。
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IInclude /I..\common /Zi /nologo /W0 /WX- /Od /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm- /EHsc /MT /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release\\" /Fd".\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Generate.cpp  /Zm1000   /Zm1000 
-         Generate.cpp
+         所有输出均为最新。
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IInclude /I..\common /Zi /nologo /W0 /WX- /Od /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm- /EHsc /MT /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release\\" /Fd".\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt MyToolBar.cpp  /Zm1000 
+         MyToolBar.cpp
          _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
          Automatically linking with ToolkitPro1501vc100S.lib
          所有输出均为最新。
-         所有输出均为最新。
        ResourceCompile:
-         所有输出均为最新。
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D NDEBUG /D _VC80_UPGRADE=0x0600 /l"0x0804" /nologo /fo".\Release\Client.res" Client.rc 
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Release\Client.exe" /INCREMENTAL:NO /NOLOGO ..\common\libxvidcore.lib ..\common\va_g729a.lib nafxcw.lib /MANIFEST:NO /DEBUG /PDB:"C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\Client.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Release\Client.lib" /MACHINE:X86 .\Release\Client.res
          .\Release\Audio.obj
@@ -72,6 +72,7 @@
          .\Release\TextChatDlg.obj
          .\Release\Tools.obj
          .\Release\TrueColorToolBar.obj
+         .\Release\VideoWall.obj
          .\Release\WebCamDlg.obj
          .\Release\XvidDec.obj
      1>ToolkitPro1501vc100S.lib(XTPCommandBar.obj) : warning LNK4204: “C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Release\vc100.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
@@ -232,4 +233,4 @@
 
 生成成功。
 
-已用时间 00:00:20.34
+已用时间 00:00:05.85

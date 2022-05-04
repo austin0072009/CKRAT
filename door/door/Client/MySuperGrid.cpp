@@ -1979,17 +1979,6 @@ LRESULT CMySuperGrid::OnOpenScreenSpyDialog(WPARAM wParam, LPARAM lParam)
 }
 
 
-afx_msg LRESULT CMySuperGrid::OnOpenWallDialog(WPARAM wParam, LPARAM lParam)
-{
-
-
-
-
-
-	return 0;
-}
-
-
 
 LRESULT CMySuperGrid::OnOpenKeyBoardDialog(WPARAM wParam, LPARAM lParam)
 {

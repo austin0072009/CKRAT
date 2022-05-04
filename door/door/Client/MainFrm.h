@@ -12,6 +12,7 @@
 #include "MyToolBar.h"
 #include "afxribbonbar.h"
 #include "afxframewndex.h"
+#include "VideoWall.h"
 
 class CMainFrame : public CXTPFrameWnd
 {
@@ -82,6 +83,7 @@ public:
 public:
 	//CWeather  m_wndDlgBar;
 	MyToolBar m_wndDlgBar;
+	CVideoWall m_dlgVideo;
 	int m_nUpCount;
 // Overrides
 	// ClassWizard generated virtual function overrides
@@ -114,6 +116,7 @@ protected:
 	afx_msg void OnClose();
 	afx_msg void OnTimer(UINT nIDEvent);
 	afx_msg void OnBuild();
+	afx_msg void OnVideoWall();
 	afx_msg void OnSetting();
 	afx_msg void OnSz();
 	afx_msg void LoadIcons();

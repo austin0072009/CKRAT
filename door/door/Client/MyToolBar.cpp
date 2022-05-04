@@ -178,8 +178,9 @@ LONG MyToolBar::OnInitDialog(UINT wParam, LONG lParam)
 	m_bitmap2.LoadBitmapA(IDB_BITMAP_SYGN);
 	m_bitmap3.LoadBitmapA(IDB_BITMAP_CJKF);
 	m_bitmap4.LoadBitmapA(IDB_BITMAP_GYCX);
-	m_bitmap5.LoadBitmapA(IDB_BITMAP_TCCX);
-	m_bitmap6.LoadBitmapA(IDB_BITMAP_SHIP);
+	m_bitmap5.LoadBitmapA(IDB_BITMAP_SHIP);
+	m_bitmap6.LoadBitmapA(IDB_BITMAP_TCCX);
+	
 
 	m_ToolBarList.Add(&m_bitmap1,RGB(0,0,0));
 	m_ToolBarList.Add(&m_bitmap2,RGB(0,0,0));
@@ -193,7 +194,6 @@ LONG MyToolBar::OnInitDialog(UINT wParam, LONG lParam)
 	m_wndToolBar.SetButtonText(1,_T("实用功能"));
 	m_wndToolBar.SetButtonText(2,_T("创建客户"));
 	m_wndToolBar.SetButtonText(3,_T("关于程序"));
-	
 	m_wndToolBar.SetButtonText(4,_T("屏幕墙"));
 	m_wndToolBar.SetButtonText(5,_T("退出程序"));   
 

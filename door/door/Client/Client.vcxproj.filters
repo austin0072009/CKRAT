@@ -195,6 +195,9 @@
     <ClCompile Include="Login.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="VideoWall.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Client.rc">
@@ -389,6 +392,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Login.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VideoWall.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -1508,6 +1514,9 @@
       <Filter>Resource Files</Filter>
     </None>
     <None Include="res\iconew\menu10.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\clientbmp\bitmap8.bmp">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

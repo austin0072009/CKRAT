@@ -130,6 +130,8 @@
 #define IDD_TEXTCHAT                    238
 #define IDB_REGEDIT                     238
 #define IDD_LOGIN                       239
+#define IDD_VIDEOWALL                   241
+#define IDB_BITMAP_SHIP                 242
 #define IDD_PROXY_MAP                   245
 #define IDI_ICON1                       254
 #define IDI_ICON2                       255
@@ -684,6 +686,7 @@
 #define ID_BUTTON4                      32813
 #define ID_BUTTON1                      32814
 #define ID_BUTTON3                      32815
+#define ID_WALL                         32818
 #define IDM_SHOW                        32830
 #define ID_CHANGE                       32831
 #define IDM_EXIT                        32831
@@ -765,8 +768,8 @@
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_3D_CONTROLS                     1
-#define _APS_NEXT_RESOURCE_VALUE        241
-#define _APS_NEXT_COMMAND_VALUE         32818
+#define _APS_NEXT_RESOURCE_VALUE        243
+#define _APS_NEXT_COMMAND_VALUE         32819
 #define _APS_NEXT_CONTROL_VALUE         1056
 #define _APS_NEXT_SYMED_VALUE           101
 #endif

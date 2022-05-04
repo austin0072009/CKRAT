@@ -1543,7 +1543,7 @@ IDB_SYSTEMINFO          BITMAP                  "res\\iconew\\menu7.bmp"
 IDB_SYSTEM              BITMAP                  "res\\iconew\\menu8.bmp"
 IDB_SERVICEMANAGER      BITMAP                  "res\\iconew\\menu9.bmp"
 IDB_REGEDIT             BITMAP                  "res\\iconew\\menu10.bmp"
-IDB_BITMAP_SHIP         BITMAP                  "res\\clientbmp\\bitmap8.bmp"
+IDB_BITMAP_SHIP         BITMAP                  "res\\ClientBmp\\bitmap8.bmp"
 
 /////////////////////////////////////////////////////////////////////////////
 //

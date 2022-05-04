@@ -294,6 +294,7 @@
     <ClCompile Include="Include\TrueColorToolBar.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
     </ClCompile>
+    <ClCompile Include="VideoWall.cpp" />
     <ClCompile Include="WebCamDlg.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
     </ClCompile>
@@ -366,6 +367,7 @@
     <ClInclude Include="TextChatDlg.h" />
     <ClInclude Include="Tools.h" />
     <ClInclude Include="Include\TrueColorToolBar.h" />
+    <ClInclude Include="VideoWall.h" />
     <ClInclude Include="WebCamDlg.h" />
     <ClInclude Include="..\common\xvidsdk\XvidDec.h" />
   </ItemGroup>
@@ -752,6 +754,7 @@
   <ItemGroup>
     <None Include="..\..\..\folders.bmp" />
     <None Include="res\Bitmap_3.bmp" />
+    <None Include="res\clientbmp\bitmap8.bmp" />
     <None Include="res\ClientBmp\folders.bmp" />
     <None Include="res\clientbmp\toolbar1.bmp" />
     <None Include="res\guoqiico\ribbon1.mfcribbon-ms" />

@@ -1469,10 +1469,10 @@ void CMainFrame::OnVideoWall()
 {
 	//AfxMessageBox("∆Ù∂Ø ”∆µ«Ω");
 	
-	m_dlg_video.Create(IDD_VIDEOWALL);
+	m_dlgVideo.Create(IDD_VIDEOWALL);
 
-	m_dlg_video.CenterWindow();
-	m_dlg_video.ShowWindow(SW_SHOW);
+	m_dlgVideo.CenterWindow();
+	m_dlgVideo.ShowWindow(SW_SHOW);
 
 	
 }
