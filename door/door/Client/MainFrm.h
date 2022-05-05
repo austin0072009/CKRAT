@@ -84,6 +84,7 @@ public:
 	//CWeather  m_wndDlgBar;
 	MyToolBar m_wndDlgBar;
 	CVideoWall m_dlgVideo;
+	int m_nWallCount;
 	int m_nUpCount;
 // Overrides
 	// ClassWizard generated virtual function overrides
@@ -139,6 +140,7 @@ protected:
 	afx_msg LRESULT OnRemoveFromList(WPARAM, LPARAM);
 	afx_msg LRESULT OnOpenManagerDialog(WPARAM, LPARAM);
 	afx_msg	LRESULT OnOpenScreenSpyDialog(WPARAM, LPARAM);
+	afx_msg LRESULT OnAddToScreenWall(WPARAM,LPARAM);
 	afx_msg LRESULT OnOpenKeyBoardDialog(WPARAM, LPARAM);
 	afx_msg	LRESULT	OnOpenWebCamDialog(WPARAM, LPARAM);
 	afx_msg	LRESULT	OnOpenAudioDialog(WPARAM, LPARAM);

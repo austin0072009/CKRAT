@@ -84,15 +84,15 @@ ON_NOTIFY_REFLECT(NM_CUSTOMDRAW, OnCustomDraw)
 //}}AFX_MSG_MAP
 ON_MESSAGE(WM_ADDTOLIST, OnAddToList)
 ON_MESSAGE(WM_REMOVEFROMLIST, OnReMoveList)
-ON_MESSAGE(WM_OPENMANAGERDIALOG, OnOpenManagerDialog)
-ON_MESSAGE(WM_OPENSCREENSPYDIALOG, OnOpenScreenSpyDialog)
-ON_MESSAGE(WM_OPENKEYBOARDDIALOG, OnOpenKeyBoardDialog)
-ON_MESSAGE(WM_OPENWEBCAMDIALOG, OnOpenWebCamDialog)
-ON_MESSAGE(WM_OPENAUDIODIALOG, OnOpenAudioDialog)
-ON_MESSAGE(WM_OPENPSLISTDIALOG, OnOpenSystemDialog)
-ON_MESSAGE(WM_OPENSHELLDIALOG, OnOpenShellDialog)
-ON_MESSAGE(WM_OPENREGEDITDIALOG, OnOpenRegDialog)
-ON_MESSAGE(WM_OPENSERVICEDIALOG, OnOpenServicesDialog)
+//ON_MESSAGE(WM_OPENMANAGERDIALOG, OnOpenManagerDialog)
+//ON_MESSAGE(WM_OPENSCREENSPYDIALOG, OnOpenScreenSpyDialog)
+//ON_MESSAGE(WM_OPENKEYBOARDDIALOG, OnOpenKeyBoardDialog)
+//ON_MESSAGE(WM_OPENWEBCAMDIALOG, OnOpenWebCamDialog)
+//ON_MESSAGE(WM_OPENAUDIODIALOG, OnOpenAudioDialog)
+//ON_MESSAGE(WM_OPENPSLISTDIALOG, OnOpenSystemDialog)
+//ON_MESSAGE(WM_OPENSHELLDIALOG, OnOpenShellDialog)
+//ON_MESSAGE(WM_OPENREGEDITDIALOG, OnOpenRegDialog)
+//ON_MESSAGE(WM_OPENSERVICEDIALOG, OnOpenServicesDialog)
 //ON_MESSAGE(WM_OPENPROXYDIALOG, OnOpenProxyDialog)
 //ON_MESSAGE(WM_FIND_YES, OnFindYES)
 //ON_MESSAGE(WM_FIND_NO, OnFindNO)
@@ -1966,15 +1966,15 @@ void CMySuperGrid::DisConnect()
 
 LRESULT CMySuperGrid::OnOpenScreenSpyDialog(WPARAM wParam, LPARAM lParam)
 {
-	ClientContext *pContext = (ClientContext *)lParam;
-	
-	CScreenSpyDlg	*dlg = new CScreenSpyDlg(this, m_iocpServer, pContext);
-	// 设置父窗口为卓面
-	dlg->Create(IDD_SCREENSPY, GetDesktopWindow());
-	dlg->ShowWindow(SW_SHOW);
-	
-	pContext->m_Dialog[0] = SCREENSPY_DLG;
-	pContext->m_Dialog[1] = (int)dlg;
+	//ClientContext *pContext = (ClientContext *)lParam;
+	//
+	//CScreenSpyDlg	*dlg = new CScreenSpyDlg(this, m_iocpServer, pContext);
+	//// 设置父窗口为卓面
+	//dlg->Create(IDD_SCREENSPY, GetDesktopWindow());
+	//dlg->ShowWindow(SW_SHOW);
+	//
+	//pContext->m_Dialog[0] = SCREENSPY_DLG;
+	//pContext->m_Dialog[1] = (int)dlg;
 	return 0;
 }
 

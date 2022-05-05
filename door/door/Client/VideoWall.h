@@ -11,6 +11,9 @@ public:
 	CVideoWall(CWnd* pParent = NULL);   // 标准构造函数
 	virtual ~CVideoWall();
 
+	CStatic* pStatic0,pStatic1,pStatic2,pStatic3,pStatic4,pStatic5,
+		pStatic6,pStatic7,pStatic8;
+
 // 对话框数据
 	enum { IDD = IDD_VIDEOWALL };
 
@@ -19,6 +22,8 @@ protected:
 
 	DECLARE_MESSAGE_MAP()
 	virtual void PostNcDestroy();
+public:
+	afx_msg void OnClose();
 };
 
 

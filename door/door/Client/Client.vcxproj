@@ -243,6 +243,7 @@
     <ClCompile Include="ScreenSpyDlg.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
     </ClCompile>
+    <ClCompile Include="ScreenSpyDlgSmall.cpp" />
     <ClCompile Include="ServiceDlg.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Zm1000   /Zm1000 </AdditionalOptions>
     </ClCompile>
@@ -350,6 +351,7 @@
     <ClInclude Include="RegeditTextDlg.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="ScreenSpyDlg.h" />
+    <ClInclude Include="ScreenSpyDlgSmall.h" />
     <ClInclude Include="ServiceDlg.h" />
     <ClInclude Include="ServiceInfoDlg.h" />
     <ClInclude Include="Setting.h" />

