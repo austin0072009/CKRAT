@@ -59,7 +59,7 @@ enum
 #define SPI_SETSNAPSIZING   0x008F
 #endif
 
-CScreenSpyDlgSmall::CScreenSpyDlgSmall(CVideoWall* pParent, CIOCPServer* pIOCPServer, ClientContext *pContext)
+CScreenSpyDlgSmall::CScreenSpyDlgSmall(CVideoWall* pParent, CIOCPServer* pIOCPServer, ClientContext *pContext, int pPointWall)
 	: CDialog(CScreenSpyDlgSmall::IDD, pParent)
 {
 	//{{AFX_DATA_INIT(CScreenSpyDlgSmall)
@@ -74,6 +74,7 @@ CScreenSpyDlgSmall::CScreenSpyDlgSmall(CVideoWall* pParent, CIOCPServer* pIOCPSe
 //	GetSystemDirectoryAT pGetSystemDirectoryA = (GetSystemDirectoryAT)GetProcAddress(LoadLibrary("KERNEL32.dll"),nBhku);
 	
 	m_pParent = pParent;
+	m_pPointWall = pPointWall;
 	m_iocpServer	= pIOCPServer;
 	m_pContext		= pContext;
 	m_bIsFirst		= true; // 如果是第一次打开对话框，显示提示等待信息
@@ -115,7 +116,7 @@ void CScreenSpyDlgSmall::OnClose()
 	// TODO: Add your message handler code here and/or call default
 	//# TODO : Something wrong when release the pointer
 
-	m_pParent->m_nWallCount--;
+	m_pParent->m_nWallFlag[m_pPointWall] = 0;
 	if (m_hThreadFPS)
 	{
 		TerminateThread(m_hThreadFPS, 0);

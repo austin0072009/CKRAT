@@ -1,14 +1,14 @@
-﻿生成启动时间为 2022/5/7 15:52:46。
+﻿生成启动时间为 2022/5/7 16:50:14。
      1>项目“C:\Users\andi\Documents\GitHub\CKRAT\door\door\Client\Client.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在创建“.\Release\Client.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
          所有输出均为最新。
-         所有输出均为最新。
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IInclude /I..\common /Zi /nologo /W0 /WX- /Od /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm- /EHsc /MT /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release\\" /Fd".\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ScreenSpyDlgSmall.cpp  /Zm1000 
-         ScreenSpyDlgSmall.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IInclude /I..\common /Zi /nologo /W0 /WX- /Od /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm- /EHsc /MT /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release\\" /Fd".\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt MainFrm.cpp  /Zm1000   /Zm1000 
+         MainFrm.cpp
          _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
          Automatically linking with ToolkitPro1501vc100S.lib
+         所有输出均为最新。
          所有输出均为最新。
        ResourceCompile:
          所有输出均为最新。
@@ -234,4 +234,4 @@
 
 生成成功。
 
-已用时间 00:00:07.20
+已用时间 00:00:08.50

@@ -30,13 +30,13 @@ public:
 	void OnReceiveComplete();
 	void OnReceive();
 	//CScreenSpyDlgSmall(CWnd* pParent = NULL, CIOCPServer* pIOCPServer = NULL, ClientContext *pContext = NULL);   // standard constructor
-	CScreenSpyDlgSmall(CVideoWall* pParent = NULL, CIOCPServer* pIOCPServer = NULL, ClientContext *pContext = NULL);
+	CScreenSpyDlgSmall(CVideoWall* pParent = NULL, CIOCPServer* pIOCPServer = NULL, ClientContext *pContext = NULL, int pPointWall = 0);
 // Dialog Data
 	//{{AFX_DATA(CScreenSpyDlgSmall)
 	enum { IDD = IDD_SCREENSPY_SMALL };
 		// NOTE: the ClassWizard will add data members here
 	//}}AFX_DATA
-
+	int m_pPointWall;
 
 // Overrides
 	// ClassWizard generated virtual function overrides

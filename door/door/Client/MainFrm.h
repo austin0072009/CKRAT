@@ -84,7 +84,7 @@ public:
 	//CWeather  m_wndDlgBar;
 	MyToolBar m_wndDlgBar;
 	CVideoWall m_dlgVideo;
-	//int m_nWallCount;
+	//int m_nWallPoint;
 	// count variable should put in VideoWall
 	int m_nUpCount;
 // Overrides

