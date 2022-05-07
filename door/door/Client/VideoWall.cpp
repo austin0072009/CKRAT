@@ -11,10 +11,12 @@
 
 IMPLEMENT_DYNAMIC(CVideoWall, CDialog)
 
+
+	bool m_nWallFlag[9] = {0,0,0,0,0,0,0,0,0};
 CVideoWall::CVideoWall(CWnd* pParent /*=NULL*/)
 	: CDialog(CVideoWall::IDD, pParent)
 {
-
+	m_nWallCount = 0;
 }
 
 CVideoWall::~CVideoWall()

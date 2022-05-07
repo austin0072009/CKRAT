@@ -14,8 +14,12 @@ public:
 	CStatic* pStatic0,pStatic1,pStatic2,pStatic3,pStatic4,pStatic5,
 		pStatic6,pStatic7,pStatic8;
 
+	int m_nWallCount;
+	static bool m_nWallFlag[9];
+
 // 对话框数据
 	enum { IDD = IDD_VIDEOWALL };
+
 
 protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV 支持

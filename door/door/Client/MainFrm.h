@@ -84,7 +84,8 @@ public:
 	//CWeather  m_wndDlgBar;
 	MyToolBar m_wndDlgBar;
 	CVideoWall m_dlgVideo;
-	int m_nWallCount;
+	//int m_nWallCount;
+	// count variable should put in VideoWall
 	int m_nUpCount;
 // Overrides
 	// ClassWizard generated virtual function overrides

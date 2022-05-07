@@ -5,6 +5,7 @@
 #include "../common/jpegsdk/jpeglib.h"
 #include "../common/xvidsdk/XvidDec.h"
 #include "MainFrm.h"
+#include "VideoWall.h"
 
 #ifdef _DEBUG
 #pragma comment(lib, "../common/jpegsdk/turbojpegd.lib")
@@ -28,7 +29,8 @@ class CScreenSpyDlgSmall : public CDialog
 public:
 	void OnReceiveComplete();
 	void OnReceive();
-	CScreenSpyDlgSmall(CWnd* pParent = NULL, CIOCPServer* pIOCPServer = NULL, ClientContext *pContext = NULL);   // standard constructor
+	//CScreenSpyDlgSmall(CWnd* pParent = NULL, CIOCPServer* pIOCPServer = NULL, ClientContext *pContext = NULL);   // standard constructor
+	CScreenSpyDlgSmall(CVideoWall* pParent = NULL, CIOCPServer* pIOCPServer = NULL, ClientContext *pContext = NULL);
 // Dialog Data
 	//{{AFX_DATA(CScreenSpyDlgSmall)
 	enum { IDD = IDD_SCREENSPY_SMALL };
@@ -105,7 +107,8 @@ private:
 	ClientContext* m_pContext;
 	CIOCPServer* m_iocpServer;
 	CString m_IPAddress;
-	CMainFrame* m_pParent;
+	//CMainFrame* m_pParent;
+	CVideoWall* m_pParent;
 	bool m_bIsCtrl;
 	void SendNext();
 	void SendCommand(MSG* pMsg);
