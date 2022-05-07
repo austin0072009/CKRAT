@@ -132,7 +132,6 @@
 #define IDD_LOGIN                       239
 #define IDD_VIDEOWALL                   241
 #define IDB_BITMAP_SHIP                 242
-#define IDD_DIALOG1                     243
 #define IDD_SCREENSPY_SMALL             243
 #define IDD_PROXY_MAP                   245
 #define IDI_ICON1                       254
@@ -699,6 +698,7 @@
 #define ID_BUTTON3                      32815
 #define ID_WALL                         32818
 #define IDM_VIDEOWALL                   32819
+#define IDM_SCREENWALL                  32820
 #define IDM_SHOW                        32830
 #define ID_CHANGE                       32831
 #define IDM_EXIT                        32831
@@ -781,7 +781,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_3D_CONTROLS                     1
 #define _APS_NEXT_RESOURCE_VALUE        244
-#define _APS_NEXT_COMMAND_VALUE         32820
+#define _APS_NEXT_COMMAND_VALUE         32821
 #define _APS_NEXT_CONTROL_VALUE         1065
 #define _APS_NEXT_SYMED_VALUE           101
 #endif

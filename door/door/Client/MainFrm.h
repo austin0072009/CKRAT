@@ -70,6 +70,7 @@ public:
 	UINT Host;
 	int m_nCount;
 	int nOSCount [12];
+	int m_ScreenMode;
 	void ShowConnectionsNumber();
 	void ShowOSCount();
 	void SetIpInfo();
@@ -79,6 +80,8 @@ public:
 	static void ProcessReceive(ClientContext *pContext);
     BOOL CreateRibbonBar();
 	BOOL CreateMessageBar(char* lpszMessage);
+	void SetMode(int mode);
+	int GetMode();
 // Operations
 public:
 	//CWeather  m_wndDlgBar;

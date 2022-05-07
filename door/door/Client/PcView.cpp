@@ -74,7 +74,7 @@ BEGIN_MESSAGE_MAP(CPcView, CView)
 	ON_WM_CONTEXTMENU()
 	ON_COMMAND(IDM_FILEMANAGER, OnFilemanager)
 	ON_COMMAND(IDM_SCREENSPY, OnScreenspy)
-	ON_COMMAND(IDM_VIDEOWALL, OnVideowall)
+	ON_COMMAND(IDM_SCREENWALL, OnVideowall)
 	ON_COMMAND(IDM_KEYBOARD, OnKeyboard)
 	ON_COMMAND(IDM_SHELL, OnShell)
 	ON_COMMAND(IDM_QQINFO, OnQqinfo)
@@ -291,12 +291,16 @@ void CPcView::OnScreenspy()
 {
 	// TODO: Add your command handler code here
 	//BYTE	bToken = COMMAND_SCREEN_SPY;
+	CMainFrame *pFrame = (CMainFrame*)AfxGetApp()->m_pMainWnd;
+	pFrame->SetMode(1);
 	m_List.SendSelectCommand(lpScreenPacket , nScreenPacketLength);
 }
 
 void CPcView::OnVideowall()
 {
 	// TODO: 在此添加命令处理程序代码
+	CMainFrame *pFrame = (CMainFrame*)AfxGetApp()->m_pMainWnd;
+	pFrame->SetMode(2);
 	m_List.SendSelectCommand(lpScreenPacket,nScreenPacketLength);
 
 }

